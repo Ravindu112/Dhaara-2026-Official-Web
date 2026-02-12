@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Initial state: stacked and straight */
+  .ticket-fan-base {
+    @apply absolute transition-all duration-700 ease-out origin-bottom;
+    transform: rotate(0deg) translateX(0);
+  }
+
+  /* Fan-out positions */
+  .group:hover .ticket-1 { transform: rotate(-25deg) translateX(-60px); }
+  .group:hover .ticket-2 { transform: rotate(-10deg) translateX(-20px); }
+  .group:hover .ticket-3 { transform: rotate(5deg) translateX(20px); }
+  .group:hover .ticket-4 { transform: rotate(20deg) translateX(60px); }
+}

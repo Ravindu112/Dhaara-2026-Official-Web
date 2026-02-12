@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import Countdown from './components/Countdown'
 import Gallery from './components/Gallery'
+import Tickets from './components/Tickets'
 import dhaaraLogo from './assets/logo_gold.png'
 
 function App() {
@@ -127,6 +128,9 @@ function App() {
 </section>
 
  <Gallery />
+
+ {/* Tickets Section with Glass Effect */}
+ <Tickets />
 
   <section id="contact" className="py-20 px-4 backdrop-blur-md bg-slate-900/60">
         <div className="container mx-auto max-w-2xl text-center">
