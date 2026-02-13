@@ -1,3 +1,4 @@
+import { useEffect,useState } from 'react'
 import Header from './components/Header'
 import Countdown from './components/Countdown'
 import Gallery from './components/Gallery'
@@ -5,6 +6,23 @@ import dhaaraLogo from './assets/logo_gold.png'
 import Timeline from './components/Timeline'
 import { motion } from 'framer-motion';
 function App() {
+
+  //Setup state to track if we are on mobile
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // 768px is the standard 'md' breakpoint
+    };
+
+    // Run once on mount
+    handleResize();
+    
+    // Add event listener for window resizing
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div className="relative min-h-screen text-white">
       {/* Fixed Background Image */}
@@ -49,18 +67,23 @@ function App() {
       <Countdown targetDate="2026-04-22" />
 
       {/* About Section with Glass Effect */}
-   <section id="about" className="relative py-12 md:py-24 px-4 backdrop-blur-md bg-slate-900/60 overflow-hidden">
+<section id="about" className="relative py-12 md:py-24 px-4 backdrop-blur-md bg-slate-900/60 overflow-hidden">
       
-      {/* Main Content Container */}
       <div className="container mx-auto max-w-full px-4 md:px-10 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           
           {/* Left Column: Text Content */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            // FIXED: Added 'key' to force animation update when switching views
+            key={isMobile ? "mobile" : "desktop"}
+            initial={{ 
+              opacity: 0, 
+              y: isMobile ? 50 : 0,   // Mobile: Start 50px down
+              x: isMobile ? 0 : -50   // Desktop: Start 50px left
+            }}
+            whileInView={{ opacity: 1, y: 0, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-left space-y-6 md:space-y-8"
           >
             <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent tracking-wide uppercase">
@@ -96,57 +119,61 @@ function App() {
           {/* Right Column: Image Stack */}
           <div className="w-full mt-12 md:mt-0 flex flex-row flex-wrap justify-center gap-4 h-auto md:block md:relative md:h-[700px]">
 
-            {/* Card 1: Back Card */}
+            {/* Card 1 */}
             <motion.div 
               initial={{ opacity: 0, y: 100, rotate: 0 }}
-              whileInView={{ opacity: 1, y: 0, rotate: -2 }} // Desktop rotate
+              whileInView={{ opacity: 1, y: 0, rotate: -2 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }} // First to appear
-              className="relative md:absolute md:top-0 md:right-0 transform md:-rotate-2 hover:rotate-12 transition-all duration-700 z-10"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative md:absolute md:top-0 md:right-0 transform md:rotate-20 hover:rotate-12 transition-all duration-700 z-10"
             >
-              <img 
+              <motion.img 
                 src="src/assets/About_page_images/image1.png"
                 alt="Event Poster 1" 
-                className="h-[380px] md:h-[450px] w-auto" 
+                className="h-[380px] md:h-[450px] w-auto " 
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               />
             </motion.div>
 
-            {/* Card 2: Middle Card */}
+            {/* Card 2 */}
             <motion.div 
               initial={{ opacity: 0, y: 100, rotate: 0 }}
-              whileInView={{ opacity: 1, y: 0, rotate: -5 }} // Desktop rotate
+              whileInView={{ opacity: 1, y: 0, rotate: -5 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }} // Second to appear
-              className="relative md:absolute md:bottom-32 md:right-48 transform md:-rotate-5 hover:rotate-0 transition-all duration-500 z-20"
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="relative md:absolute md:bottom-32 md:right-48 transform md:-rotate-5 hover:rotate-5 transition-all duration-500 z-20"
             >
-              <img 
+              <motion.img 
                 src="src/assets/About_page_images/image2.png"
                 alt="Event Poster 2" 
-                className="h-[380px] md:h-[450px] w-auto"
+                className="h-[380px] md:h-[450px] w-auto "
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               />
             </motion.div>
 
-            {/* Card 3: Front Card */}
+            {/* Card 3 */}
             <motion.div 
               initial={{ opacity: 0, y: 100, rotate: 0 }}
-              whileInView={{ opacity: 1, y: 0, rotate: -12 }} // Desktop rotate
+              whileInView={{ opacity: 1, y: 0, rotate: -12 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.6 }} // Last to appear
+              transition={{ duration: 0.8, delay: 0.6 }}
               className="relative md:absolute md:bottom-0 md:right-0 transform md:-rotate-12 hover:rotate-0 transition-all duration-500 z-30"
             >
-              <img 
+              <motion.img 
                 src="src/assets/About_page_images/image3.png"
                 alt="Event Poster 3"
-                className="h-[380px] md:h-[420px] w-auto"
+                className="h-[380px] md:h-[420px] w-auto "
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               />
             </motion.div>
 
           </div>
-        
         </div>
       </div>
     </section>
-
  <Gallery />
  <Timeline/>
 
