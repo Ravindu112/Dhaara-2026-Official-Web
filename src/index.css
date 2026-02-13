@@ -6,16 +6,24 @@
   }
 }
 
+
 @layer utilities {
-  /* Initial state: stacked and straight */
   .ticket-fan-base {
-    @apply absolute transition-all duration-700 ease-out origin-bottom;
+    @apply absolute transition-all duration-1000 ease-out origin-bottom;
     transform: rotate(0deg) translateX(0);
   }
 
-  /* Fan-out positions */
-  .group:hover .ticket-1 { transform: rotate(-25deg) translateX(-60px); }
-  .group:hover .ticket-2 { transform: rotate(-10deg) translateX(-20px); }
-  .group:hover .ticket-3 { transform: rotate(5deg) translateX(20px); }
-  .group:hover .ticket-4 { transform: rotate(20deg) translateX(60px); }
+  /* MOBILE: Smaller spread so they don't hit the screen edges */
+  .is-visible .ticket-1 { transform: rotate(-15deg) translateX(-30px); }
+  .is-visible .ticket-2 { transform: rotate(-5deg) translateX(-10px); }
+  .is-visible .ticket-3 { transform: rotate(5deg) translateX(10px); }
+  .is-visible .ticket-4 { transform: rotate(15deg) translateX(30px); }
+
+  /* DESKTOP: Full spread (md: 768px and up) */
+  @media (min-width: 768px) {
+    .is-visible .ticket-1 { transform: rotate(-25deg) translateX(-60px); }
+    .is-visible .ticket-2 { transform: rotate(-10deg) translateX(-20px); }
+    .is-visible .ticket-3 { transform: rotate(5deg) translateX(20px); }
+    .is-visible .ticket-4 { transform: rotate(20deg) translateX(60px); }
+  }
 }
