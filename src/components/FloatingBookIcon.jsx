@@ -63,12 +63,12 @@ export default function FloatingBookIcon() {
         </svg>
 
         {/* Tooltip */}
-        <div className="absolute bottom-full right-0 mb-3 px-3 py-2 bg-slate-900 text-amber-300 text-xs font-semibold rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg border border-amber-500/30">
+        <div className="absolute bottom-full right-0 mb-3 px-3 py-2 bg-slate-900 text-white text-xs font-semibold rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg border border-amber-500/30" style={{ color: 'rgba(251, 191, 36, 0.85)' }}>
           Book Your Slot
         </div>
 
         {/* Pulse Ring Animation */}
-        <div className="absolute inset-0 rounded-full border-2 border-amber-300 opacity-0 group-hover:opacity-100 group-hover:animate-pulse"></div>
+        <div className="absolute inset-0 rounded-full border-2 opacity-0 group-hover:opacity-100 group-hover:animate-pulse" style={{ borderColor: 'rgba(251, 191, 36, 0.85)' }}></div>
       </button>
 
       {/* Animated Particle Effect (Optional) */}

@@ -5,7 +5,7 @@ export default function Tickets() {
     {
       id: 1,
       name: 'VIP Seats',
-      price: 5500,
+      price: 5000,
       capacity: 1500,
       soldOut: 65,
       color: 'from-red-500 to-red-600',
@@ -26,8 +26,8 @@ export default function Tickets() {
       price: 2500,
       capacity: 3000,
       soldOut: 72,
-      color: 'from-yellow-500 to-amber-500',
-      borderColor: 'border-yellow-500/50'
+      color: 'from-amber-600 to-amber-500',
+      borderColor: 'border-amber-600/50'
     },
     {
       id: 4,
@@ -35,7 +35,7 @@ export default function Tickets() {
       price: 1500,
       capacity: 5000,
       soldOut: 58,
-      color: 'from-orange-500 to-yellow-600',
+      color: 'from-orange-500 to-amber-600',
       borderColor: 'border-orange-500/50'
     }
   ]);
@@ -49,20 +49,26 @@ export default function Tickets() {
   const overallSoldOutPercentage = Math.round((totalSoldOut / totalCapacity) * 100);
 
   return (
-    <section id="tickets" className="py-20 px-4 backdrop-blur-md bg-slate-900/60">
+    <section id="tickets" className="py-20 px-4 ">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-linear-to-r from-amber-400 via-orange-500 to-amber-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{
+            backgroundImage: `linear-gradient(to right, rgba(251, 191, 36, 0.85), rgba(251, 191, 36, 1))`,
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            color: 'transparent'
+          }}>
             Book Your Tickets
           </h2>
-          <p className="text-lg text-gray-300 font-light mb-8">
-            Secure your seat for the grandest musical event of the year
+          <p className="text-lg text-white font-light mb-10">
+            Secure your seat for the grandest musical event of the year!
           </p>
 
           {/* Overall Statistics */}
           <div className="inline-flex flex-col items-center gap-4">
-            <div className="text-sm text-gray-300">
+            <div className="text-sm text-white">
               <span className="font-semibold">{totalSoldOut.toLocaleString()}</span> / <span className="font-semibold">{totalCapacity.toLocaleString()}</span> tickets sold
             </div>
             <div className="w-64 h-2 bg-slate-700 rounded-full overflow-hidden border border-amber-500/30">
@@ -71,7 +77,7 @@ export default function Tickets() {
                 style={{ width: `${overallSoldOutPercentage}%` }}
               ></div>
             </div>
-            <div className="text-2xl font-bold text-amber-400">
+            <div className="text-2xl font-bold" style={{ color: 'rgba(251, 191, 36, 0.85)' }}>
               {overallSoldOutPercentage}% Sold Out
             </div>
           </div>
@@ -110,14 +116,14 @@ export default function Tickets() {
                       </h3>
                     </div>
                     <div className="text-right">
-                      <p className="text-sm text-gray-400">Price</p>
-                      <p className="text-2xl font-bold text-amber-400">Rs {category.price.toLocaleString()}</p>
+                      <p className="text-sm text-white">Price</p>
+                      <p className="text-2xl font-bold" style={{ color: 'rgba(251, 191, 36, 0.85)' }}>Rs {category.price.toLocaleString()}</p>
                     </div>
                   </div>
 
                   {/* Capacity Info */}
-                  <p className="text-sm text-gray-400 mb-4">
-                    Total Capacity: <span className="text-amber-300 font-semibold">{category.capacity.toLocaleString()}</span>
+                  <p className="text-sm text-white mb-4">
+                    Total Capacity: <span className="font-semibold" style={{ color: 'rgba(251, 191, 36, 0.85)' }}>{category.capacity.toLocaleString()}</span>
                   </p>
 
                   {/* Progress Bar */}
@@ -133,11 +139,11 @@ export default function Tickets() {
                   {/* Stats Row */}
                   <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                     <div className="bg-slate-700/50 rounded-lg p-3 border border-slate-600/50">
-                      <p className="text-gray-400 text-xs mb-1">Sold</p>
-                      <p className="text-amber-300 font-bold text-lg">{ticketsSold.toLocaleString()}</p>
+                      <p className="text-white text-xs mb-1">Sold</p>
+                      <p className="font-bold text-lg" style={{ color: 'rgba(251, 191, 36, 0.85)' }}>{ticketsSold.toLocaleString()}</p>
                     </div>
                     <div className="bg-slate-700/50 rounded-lg p-3 border border-slate-600/50">
-                      <p className="text-gray-400 text-xs mb-1">Available</p>
+                      <p className="text-white text-xs mb-1">Available</p>
                       <p className={`font-bold text-lg ${ticketsAvailable > 0 ? 'text-green-400' : 'text-red-400'}`}>
                         {ticketsAvailable.toLocaleString()}
                       </p>
@@ -147,8 +153,8 @@ export default function Tickets() {
                   {/* Sold Out Percentage */}
                   <div className="mb-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs text-gray-400">Sold Out</span>
-                      <span className={`font-bold text-lg ${category.soldOut >= 80 ? 'text-red-400' : 'text-amber-400'}`}>
+                      <span className="text-xs text-white">Sold Out</span>
+                      <span className="font-bold text-lg" style={{ color: category.soldOut >= 80 ? '#ef4444' : 'rgba(251, 191, 36, 0.85)' }}>
                         {category.soldOut}%
                       </span>
                     </div>

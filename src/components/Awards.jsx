@@ -12,7 +12,7 @@ export default function Awards() {
   ];
 
   return (
-    <section id="awards" className="py-20 px-4 backdrop-blur-md bg-slate-900/60">
+    <section id="awards" className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">

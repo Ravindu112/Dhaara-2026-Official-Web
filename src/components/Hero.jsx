@@ -1,9 +1,13 @@
+
+
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      
+
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4 py-20 max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 bg-linear-to-r from-amber-400 via-orange-500 to-amber-400 bg-clip-text text-transparent animate-pulse">
+       {/* <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 bg-linear-to-r from-amber-400 via-orange-500 to-amber-400 bg-clip-text text-transparent animate-pulse">
           DHAARA
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 font-light">
@@ -11,7 +15,7 @@ export default function Hero() {
         </p>
         <button className="bg-linear-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold px-8 py-3 md:px-10 md:py-4 rounded-full transition-all transform hover:scale-105 shadow-lg">
           Book Now!
-        </button>
+        </button> */}
       </div>
 
       {/* Scroll Indicator */}

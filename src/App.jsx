@@ -6,12 +6,11 @@ import About from './components/About'
 import Gallery from './components/Gallery'
 import Testimonials from './components/Testimonials'
 import Tickets from './components/Tickets'
-import Awards from './components/Awards'
 import Sponsors from './components/Sponsors'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import FloatingBookIcon from './components/FloatingBookIcon'
-import dhaaraLogo from './assets/logo_gold.png'
+import dhaaraLogo from './assets/Background.svg'
 
 function App() {
   return (
@@ -21,12 +20,10 @@ function App() {
         className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
         style={{
           backgroundImage: `url(${dhaaraLogo})`,
-          filter: 'brightness(0.3)'
+          filter: 'brightness(1.6) contrast(1.1) saturate(1)',
         }}
       />
       
-      {/* Fixed Dark Overlay */}
-      <div className="fixed inset-0 bg-slate-900/40 -z-10" />
       
       {/* Header */}
       <Header />
@@ -34,9 +31,9 @@ function App() {
       {/* Hero Section */}
       <Hero />
 
+    <section id="RestContent" className="py-20 px-4 backdrop-blur-md bg-slate-900/50">
       {/* Countdown Timer */}
-      <Countdown targetDate="2026-04-22" />
-
+      <Countdown targetDate="2026-04-24" />
 
       {/* About Section */}
       <About />
@@ -64,6 +61,7 @@ function App() {
 
       {/* Footer */}
       <Footer />
+      </section>
 
       {/* Floating Book Icon */}
       <FloatingBookIcon />

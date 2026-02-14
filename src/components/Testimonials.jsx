@@ -23,14 +23,20 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="py-20 px-4 backdrop-blur-md bg-slate-900/60">
+    <section id="testimonials" className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-linear-to-r from-amber-400 via-orange-500 to-amber-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{
+            backgroundImage: `linear-gradient(to right, rgba(251, 191, 36, 0.85), rgba(251, 191, 36, 1))`,
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            color: 'transparent'
+          }}>
             Words of Inspiration
           </h2>
-          <p className="text-lg text-gray-300 font-light">
+          <p className="text-lg text-white font-light">
             Hear from the leaders who drive DHAARA's vision and excellence
           </p>
         </div>
@@ -50,16 +56,24 @@ export default function Testimonials() {
               <div className="w-full md:w-5/12 flex justify-center">
                 <div className="relative">
                   {/* Glow Background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-3xl blur-2xl"></div>
+                  <div className="absolute inset-0 rounded-3xl blur-2xl" style={{
+                    background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2))',
+                    pointerEvents: 'none'
+                  }}></div>
                   
                   {/* Image Box */}
-                  <div className="relative w-48 h-56 md:w-64 md:h-72 bg-gradient-to-br from-amber-900/40 to-orange-900/40 backdrop-blur-md border border-amber-500/30 rounded-3xl overflow-hidden flex items-center justify-center hover:border-amber-500/60 transition-all">
+                  <div className="relative w-48 h-56 md:w-64 md:h-72 rounded-3xl overflow-hidden flex items-center justify-center" style={{
+                    border: '1px solid rgba(251, 191, 36, 0.25)',
+                    background: 'linear-gradient(160deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.85))',
+                    backdropFilter: 'blur(10px)'
+                  }}>
                     {/* Placeholder Icon */}
                     <svg
-                      className="w-20 h-20 text-amber-400/50"
+                      className="w-20 h-20"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
+                      style={{ color: 'rgba(251, 191, 36, 0.5)' }}
                     >
                       <path
                         fillRule="evenodd"
@@ -69,35 +83,39 @@ export default function Testimonials() {
                     </svg>
 
                     {/* Decorative Elements */}
-                    <div className="absolute top-4 right-4 w-3 h-3 bg-amber-400 rounded-full opacity-60"></div>
-                    <div className="absolute bottom-6 left-4 w-2 h-2 bg-orange-500 rounded-full opacity-60"></div>
+                    <div className="absolute top-4 right-4 w-3 h-3 rounded-full opacity-60" style={{ backgroundColor: 'rgba(251, 191, 36, 0.85)' }}></div>
+                    <div className="absolute bottom-6 left-4 w-2 h-2 rounded-full opacity-60" style={{ backgroundColor: 'rgba(251, 191, 36, 0.85)' }}></div>
                   </div>
                 </div>
               </div>
 
               {/* Quote Box */}
               <div className="w-full md:w-7/12">
-                <div className="bg-gradient-to-br from-amber-900/30 to-orange-900/20 backdrop-blur-sm border border-amber-500/30 rounded-2xl p-6 md:p-8 hover:border-amber-500/60 transition-all hover:shadow-lg hover:shadow-amber-500/20 relative">
+                <div className="rounded-2xl p-6 md:p-8 relative" style={{
+                  border: '1px solid rgba(251, 191, 36, 0.25)',
+                  background: 'linear-gradient(160deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.85))',
+                  backdropFilter: 'blur(10px)'
+                }}>
                   {/* Quote Mark */}
-                  <div className="absolute top-4 left-6 text-4xl text-amber-500/30 font-bold">"</div>
+                  <div className="absolute top-4 left-6 text-4xl font-bold" style={{ color: 'rgba(251, 191, 36, 0.3)' }}>"</div>
 
                   {/* Quote Text */}
-                  <p className="text-sm md:text-base lg:text-lg text-gray-200 leading-relaxed mb-6 relative z-10 pt-4">
+                  <p className="text-sm md:text-base lg:text-lg text-white leading-relaxed mb-6 relative z-10 pt-4">
                     {testimonial.quote}
                   </p>
 
                   {/* Name and Title */}
-                  <div className="border-t border-amber-500/20 pt-4">
-                    <h3 className="text-lg font-bold text-amber-100 mb-1">
+                  <div className="pt-4" style={{ borderTop: '1px solid rgba(251, 191, 36, 0.25)' }}>
+                    <h3 className="text-lg font-bold text-white mb-1">
                       {testimonial.name}
                     </h3>
-                    <p className="text-sm text-amber-300/80 font-light">
+                    <p className="text-sm font-light" style={{ color: 'rgba(251, 191, 36, 0.85)' }}>
                       {testimonial.title}
                     </p>
                   </div>
 
                   {/* Closing Quote Mark */}
-                  <div className="absolute bottom-4 right-6 text-4xl text-amber-500/30 font-bold">"</div>
+                  <div className="absolute bottom-4 right-6 text-4xl font-bold" style={{ color: 'rgba(251, 191, 36, 0.3)' }}>"</div>
                 </div>
               </div>
             </div>
@@ -107,9 +125,9 @@ export default function Testimonials() {
         {/* Decorative Bottom Element */}
         <div className="mt-16 text-center">
           <div className="inline-flex space-x-2">
-            <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
-            <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-            <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgba(251, 191, 36, 0.85)' }}></div>
+            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgba(251, 191, 36, 0.85)' }}></div>
+            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgba(251, 191, 36, 0.85)' }}></div>
           </div>
         </div>
       </div>

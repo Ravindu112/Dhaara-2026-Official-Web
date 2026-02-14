@@ -5,81 +5,103 @@ export default function Roadmap() {
     {
       date: '24th FEB',
       title: 'Band Auditions',
-      category: null
+      category: null,
+      completed: true
     },
     {
       date: '25th JAN',
-      title: 'Vocal Training Workshop',
-      category: 'DHAARA APPLICATIONS CALLING'
+      title: 'DHAARA APPLICATIONS CALLING',
+      category: 'ROAD TO DHAARA',
+      completed: true
     },
     {
       date: '5th FEB',
-      title: 'Stage Performance Workshop',
-      category: 'STAGE PERFORMANCE WORKSHOP'
-    },
-    {
-      date: '12th FEB',
-      title: 'Audition 1st Round',
-      category: 'EVENT MANAGEMENT WORKSHOP'
+      title: 'VOCAL TRAINING WORKSHOP',
+      category: 'STAGE PERFORMANCE WORKSHOP',
+      completed: true
     },
     {
       date: '18th FEB',
-      title: 'More Workshops',
-      category: 'DHAARA ACADEMY'
+      title: '1st ROUND AUDITIONS',
+      category: 'DHAARA ACADEMY',
+      completed: false
+    },
+    {
+      date: '24th FEB',
+      title: 'STAGE PERFORMANCE WORKSHOP',
+      category: 'EVENT MANAGEMENT WORKSHOP',
+      completed: false
     },
     {
       date: '4th MARCH',
-      title: 'Dhaara Academy',
-      category: 'DHAARA ACADEMY'
+      title: 'DHAARA ACADEMY',
+      category: 'DHAARA ACADEMY',
+      completed: false
     },
     {
       date: '19th MARCH',
-      title: 'Dhaara Semi Finals',
-      category: 'DHAARA SEMI FINALS'
+      title: 'DHAARA SEMI FINALS',
+      category: 'DHAARA SEMI FINALS',
+      completed: false
     },
     {
       date: '24th APR',
-      title: 'Dhaara Grand Finale',
+      title: 'DHAARA GRAND FINALE',
       subtitle: 'Nelum Pokuna Mahinda Rajapaksha Theatre, Colombo 07',
-      category: 'DHAARA GRAND FINALE'
+      category: 'DHAARA GRAND FINALE',
+      completed: false
     }
   ];
 
   return (
-    <section id="roadmap" className="py-20 px-4 backdrop-blur-md bg-slate-900/60">
+    <section id="roadmap" className="py-20 px-4">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-linear-to-r from-amber-400 via-orange-500 to-amber-400 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{
+            backgroundImage: `linear-gradient(to right, rgba(251, 191, 36, 0.85), rgba(251, 191, 36, 1))`,
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            color: 'transparent'
+          }}>
             The Dhaara Roadmap
           </h2>
-          <p className="text-lg text-gray-300 font-light">
-            Key Dates & Venues - Your Journey to DHAARA 26'
+          <p className="text-lg text-white font-light">
+          Your Journey to DHAARA 26'
           </p>
         </div>
 
         {/* Vertical Timeline */}
         <div className="relative">
-          {/* Vertical Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-amber-400 via-orange-500 to-amber-400"></div>
-
           {/* Events Container */}
           <div className="space-y-12 md:space-y-16">
             {events.map((event, index) => (
-              <div key={index} className={`flex ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}>
+              <div key={index} className={`flex relative ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center`}>
+                {/* Vertical Timeline Line Segment */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-1" style={{
+                  top: '-3rem',
+                  height: 'calc(100% + 6rem)',
+                  backgroundColor: event.completed ? 'rgba(251, 191, 36, 0.85)' : 'white',
+                  display: index === 0 ? 'none' : 'block'
+                }}></div>
                 {/* Content Box */}
                 <div className="w-full md:w-5/12">
-                  <div className="bg-gradient-to-br from-amber-900/30 to-orange-900/20 backdrop-blur-sm border border-amber-500/30 rounded-lg p-6 hover:border-amber-500/60 transition-all hover:shadow-lg hover:shadow-amber-500/20">
+                  <div className="rounded-lg p-6" style={{
+                    border: '1px solid rgba(251, 191, 36, 0.25)',
+                    background: 'linear-gradient(160deg, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.3))',
+                    backdropFilter: 'blur(10px)'
+                  }}>
                     {event.category && (
-                      <div className="text-xs font-bold tracking-widest text-amber-300 mb-2 uppercase">
+                      <div className="text-xs font-bold tracking-widest mb-2 uppercase text-white">
                         {event.category}
                       </div>
                     )}
-                    <h3 className="text-xl md:text-2xl font-bold text-amber-100 mb-2">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2" style={{ color: 'rgba(251, 191, 36, 0.85)' }}>
                       {event.title}
                     </h3>
                     {event.subtitle && (
-                      <p className="text-sm text-gray-300 italic">
+                      <p className="text-sm text-white italic">
                         {event.subtitle}
                       </p>
                     )}
@@ -90,9 +112,15 @@ export default function Roadmap() {
                 <div className="hidden md:flex md:w-2/12 justify-center">
                   <div className="relative flex flex-col items-center">
                     {/* Dot */}
-                    <div className="w-6 h-6 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full border-4 border-slate-900 shadow-lg shadow-amber-500/50 z-10"></div>
+                    <div className="w-6 h-6 rounded-full border-4 border-slate-900 shadow-lg z-10" style={{
+                      background: 'linear-gradient(135deg, rgba(251, 191, 36, 0.85), rgba(251, 191, 36, 0.85))',
+                      boxShadow: '0 0 20px rgba(251, 191, 36, 0.5)'
+                    }}></div>
                     {/* Date Badge */}
-                    <div className="mt-4 bg-gradient-to-r from-amber-500 to-orange-600 px-4 py-2 rounded-full font-bold text-white text-xs whitespace-nowrap shadow-lg">
+                    <div className="mt-4 px-4 py-2 rounded-full font-bold text-xs whitespace-nowrap shadow-lg" style={{
+                      backgroundColor: event.completed ? 'rgba(251, 191, 36, 0.85)' : 'white',
+                      color: event.completed ? 'white' : 'rgba(15, 23, 42, 0.85)'
+                    }}>
                       {event.date}
                     </div>
                   </div>
@@ -103,7 +131,10 @@ export default function Roadmap() {
 
                 {/* Date Badge - Mobile */}
                 <div className="md:hidden text-center">
-                  <div className="bg-gradient-to-r from-amber-500 to-orange-600 px-4 py-2 rounded-full font-bold text-white text-xs whitespace-nowrap shadow-lg">
+                  <div className="px-4 py-2 rounded-full font-bold text-xs whitespace-nowrap shadow-lg" style={{
+                    backgroundColor: event.completed ? 'rgba(251, 191, 36, 0.85)' : 'white',
+                    color: event.completed ? 'white' : 'rgba(15, 23, 42, 0.85)'
+                  }}>
                     {event.date}
                   </div>
                 </div>

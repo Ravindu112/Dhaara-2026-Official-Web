@@ -54,9 +54,9 @@ export default function Sponsors() {
 
   // Group sponsors by tier
   const tierConfig = {
-    title: { name: 'Title Partner', color: 'from-amber-500 to-yellow-600', borderColor: 'border-amber-500/50' },
+    title: { name: 'Title Partner', color: 'from-amber-500 to-amber-600', borderColor: 'border-amber-500/50' },
     platinum: { name: 'Platinum Partner', color: 'from-gray-300 to-gray-500', borderColor: 'border-gray-400/50' },
-    gold: { name: 'Gold Partner', color: 'from-yellow-500 to-yellow-600', borderColor: 'border-yellow-500/50' },
+    gold: { name: 'Gold Partner', color: 'from-amber-500 to-amber-600', borderColor: 'border-amber-500/50' },
     silver: { name: 'Silver Partner', color: 'from-slate-300 to-slate-500', borderColor: 'border-slate-400/50' },
     bronze: { name: 'Bronze Partner', color: 'from-orange-700 to-orange-800', borderColor: 'border-orange-600/50' }
   };
@@ -126,7 +126,7 @@ export default function Sponsors() {
   };
 
   return (
-    <section id="sponsors" className="py-20 px-4 backdrop-blur-md bg-slate-900/60">
+    <section id="sponsors" className="py-20 px-4 ">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -212,7 +212,7 @@ export default function Sponsors() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 bg-gradient-to-r from-amber-900/30 to-orange-900/30 border border-amber-500/30 rounded-2xl p-8 text-center">
+        <div className="mt-16 backdrop-blur-md bg-slate-900/60.border border-amber-500/30 rounded-2xl p-8 text-center">
           <h4 className="text-2xl font-bold text-amber-100 mb-4">
             Interested in Becoming a Partner?
           </h4>
