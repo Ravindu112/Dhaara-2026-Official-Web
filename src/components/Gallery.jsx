@@ -3,7 +3,7 @@ import './Gallery.css';
 
 const Gallery = () => {
   // Create array of 12 gallery items
-  const galleryItems = Array.from({ length: 12 }, (_, i) => i + 1);
+  const galleryItems = Array.from({ length: 16 }, (_, i) => i + 1);
 
   return (
     <section id="gallery" className="py-20 px-4 backdrop-blur-md bg-slate-800/40">

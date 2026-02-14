@@ -34,7 +34,7 @@ const Countdown = ({ targetDate = '2026-04-22' }) => {
   }, [targetDate]);
 
   return (
-    <section className="py-16 px-4 backdrop-blur-md bg-gradient-to-r from-orange-600/80 via-amber-500/80 to-orange-600/80">
+    <section className="py-16 px-4 relative">
       <div className="container mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-8">
           DHAARA 26' 

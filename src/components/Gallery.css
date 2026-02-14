@@ -4,6 +4,9 @@
   --orange: rgba(249, 115, 22, 1);
   --gold: rgba(234, 179, 8, 1);
   --dark: rgba(15, 23, 42, 0.8);
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .diamond-grid {
@@ -12,6 +15,8 @@
   margin: 100px -20px;
   list-style: none;
   padding: 0;
+  max-width: 1400px;
+  width: 100%;
 }
 
 .diamond-item {
