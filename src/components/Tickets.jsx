@@ -1,52 +1,46 @@
 import React, { useState } from 'react';
 
+const TICKET_COLORS = {
+  color: 'from-amber-500 to-amber-600',
+  borderColor: 'border-amber-500/50'
+};
+
 export default function Tickets() {
   const [categories] = useState([
     {
       id: 1,
       name: 'VIP Seats',
       price: 5000,
-      capacity: 1500,
-      soldOut: 65,
-      color: 'from-red-500 to-red-600',
-      borderColor: 'border-red-500/50'
+      percentage: 100,
+      ...TICKET_COLORS
     },
     {
       id: 2,
       name: 'Premium Seats',
       price: 3500,
-      capacity: 2000,
-      soldOut: 48,
-      color: 'from-amber-500 to-orange-600',
-      borderColor: 'border-amber-500/50'
+      percentage: 48,
+      ...TICKET_COLORS
     },
     {
       id: 3,
       name: 'Standard Seats',
       price: 2500,
-      capacity: 3000,
-      soldOut: 72,
-      color: 'from-amber-600 to-amber-500',
-      borderColor: 'border-amber-600/50'
+      percentage: 72,
+      ...TICKET_COLORS
     },
     {
       id: 4,
       name: 'General Seats',
       price: 1500,
-      capacity: 5000,
-      soldOut: 58,
-      color: 'from-orange-500 to-amber-600',
-      borderColor: 'border-orange-500/50'
+      percentage: 58,
+      ...TICKET_COLORS
     }
   ]);
 
-  const getTotalCapacity = () => categories.reduce((sum, cat) => sum + cat.capacity, 0);
   const getTotalSoldOut = () => 
-    categories.reduce((sum, cat) => sum + Math.round((cat.capacity * cat.soldOut) / 100), 0);
+    Math.round(categories.reduce((sum, cat) => sum + cat.percentage, 0) / categories.length);
 
-  const totalCapacity = getTotalCapacity();
-  const totalSoldOut = getTotalSoldOut();
-  const overallSoldOutPercentage = Math.round((totalSoldOut / totalCapacity) * 100);
+  const overallSoldOutPercentage = getTotalSoldOut();
 
   return (
     <section id="tickets" className="py-20 px-4 ">
@@ -68,9 +62,6 @@ export default function Tickets() {
 
           {/* Overall Statistics */}
           <div className="inline-flex flex-col items-center gap-4">
-            <div className="text-sm text-white">
-              <span className="font-semibold">{totalSoldOut.toLocaleString()}</span> / <span className="font-semibold">{totalCapacity.toLocaleString()}</span> tickets sold
-            </div>
             <div className="w-64 h-2 bg-slate-700 rounded-full overflow-hidden border border-amber-500/30">
               <div
                 className="h-full bg-gradient-to-r from-amber-500 to-orange-600 transition-all duration-1000"
@@ -86,21 +77,18 @@ export default function Tickets() {
         {/* Ticket Categories Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => {
-            const ticketsSold = Math.round((category.capacity * category.soldOut) / 100);
-            const ticketsAvailable = category.capacity - ticketsSold;
-
             return (
               <div
                 key={category.id}
                 className={`relative group overflow-hidden rounded-2xl border ${category.borderColor} bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm hover:border-opacity-100 transition-all duration-300 hover:shadow-lg`}
                 style={{
-                  boxShadow: category.soldOut >= 80 
+                  boxShadow: category.percentage >= 80 
                     ? `0 0 20px rgba(239, 68, 68, 0.3)` 
                     : `0 0 20px rgba(251, 146, 60, 0.2)`
                 }}
               >
                 {/* Sold Out Badge (if > 80%) */}
-                {category.soldOut >= 80 && (
+                {category.percentage >= 80 && (
                   <div className="absolute top-3 right-3 px-3 py-1 bg-red-500/80 text-white text-xs font-bold rounded-full backdrop-blur-sm z-10">
                     Almost Full
                   </div>
@@ -121,63 +109,37 @@ export default function Tickets() {
                     </div>
                   </div>
 
-                  {/* Capacity Info */}
-                  <p className="text-sm text-white mb-4">
-                    Total Capacity: <span className="font-semibold" style={{ color: 'rgba(251, 191, 36, 0.85)' }}>{category.capacity.toLocaleString()}</span>
-                  </p>
-
                   {/* Progress Bar */}
                   <div className="mb-4">
                     <div className="h-3 bg-slate-700 rounded-full overflow-hidden border border-slate-600">
                       <div
                         className={`h-full bg-gradient-to-r ${category.color} transition-all duration-1000`}
-                        style={{ width: `${category.soldOut}%` }}
+                        style={{ width: `${category.percentage}%` }}
                       ></div>
                     </div>
                   </div>
 
-                  {/* Stats Row */}
-                  <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
-                    <div className="bg-slate-700/50 rounded-lg p-3 border border-slate-600/50">
-                      <p className="text-white text-xs mb-1">Sold</p>
-                      <p className="font-bold text-lg" style={{ color: 'rgba(251, 191, 36, 0.85)' }}>{ticketsSold.toLocaleString()}</p>
-                    </div>
-                    <div className="bg-slate-700/50 rounded-lg p-3 border border-slate-600/50">
-                      <p className="text-white text-xs mb-1">Available</p>
-                      <p className={`font-bold text-lg ${ticketsAvailable > 0 ? 'text-green-400' : 'text-red-400'}`}>
-                        {ticketsAvailable.toLocaleString()}
+                  {/* Sold Out Percentage Card */}
+                  <div className="bg-slate-700/50 rounded-lg p-3 border border-slate-600/50 mb-4">
+                    <div className="flex flex-col items-center justify-center">
+                      <p className="font-bold text-2xl" style={{ color: category.percentage >= 80 ? '#ef4444' : 'rgba(251, 191, 36, 0.85)' }}>
+                        {category.percentage}%
                       </p>
-                    </div>
-                  </div>
-
-                  {/* Sold Out Percentage */}
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs text-white">Sold Out</span>
-                      <span className="font-bold text-lg" style={{ color: category.soldOut >= 80 ? '#ef4444' : 'rgba(251, 191, 36, 0.85)' }}>
-                        {category.soldOut}%
-                      </span>
+                      <p className="text-white text-xs font-extralight">Sold Out</p>
                     </div>
                   </div>
 
                   {/* Book Button */}
                   <button
-                    disabled={ticketsAvailable <= 0}
+                    disabled={category.percentage >= 100}
                     className={`w-full py-2 px-4 rounded-lg font-semibold transition-all transform duration-300 ${
-                      ticketsAvailable > 0
+                      category.percentage < 100
                         ? `bg-gradient-to-r ${category.color} text-white hover:shadow-lg hover:shadow-${category.color.split('-')[1]}-500/50 hover:scale-105 cursor-pointer`
                         : 'bg-slate-700 text-gray-500 cursor-not-allowed'
                     }`}
                   >
-                    {ticketsAvailable > 0 ? 'Book Now' : 'Sold Out'}
+                    {category.percentage < 100 ? 'Book Now' : 'Sold Out'}
                   </button>
-
-                  {/* Availability Warning */}
-                  {ticketsAvailable > 0 && ticketsAvailable <= 100 && (
-                    <p className="text-xs text-red-400 mt-2 text-center font-semibold">
-                      Only {ticketsAvailable} left!
-                    </p>
-                  )}
                 </div>
 
                 {/* Hover Glow Effect */}

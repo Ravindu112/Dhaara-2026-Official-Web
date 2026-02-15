@@ -31,7 +31,7 @@ function App() {
       {/* Hero Section */}
       <Hero />
 
-    <section id="RestContent" className="py-20 px-4 backdrop-blur-md bg-slate-900/50">
+    <section id="RestContent" className="py-20 px-4 backdrop-blur-md md:backdrop-blur-md bg-black/70 md:bg-slate-900/50">
       {/* Countdown Timer */}
       <Countdown targetDate="2026-04-24" />
 

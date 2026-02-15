@@ -11,7 +11,7 @@ export default function About() {
           {/* Left - Text Content */}
           <div className="space-y-4 md:col-span-2">
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-12 text-center bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
             What is DHAARA?
             </h2>
 

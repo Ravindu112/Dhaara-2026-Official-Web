@@ -38,9 +38,12 @@ const Countdown = ({ targetDate = '2026-04-22' }) => {
     <section className="py-16 px-4 relative">
       <div className="container mx-auto">
       
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-amber-500 mb-8">
+        <h1 className="text-5xl md:text-9xl font-extrabold text-center text-amber-500 mb-2">
           DHAARA 26' 
-        </h2>
+        </h1>
+        <h3 className="text-1xl md:text-2xl  font-light text-center text-white mb-8">
+          Nelum Pokuna Mahinda Rajapaksha Theatre, Colombo 07  
+        </h3>
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
           {/* Days */}
           <div className="flex flex-col items-center bg-white/20 backdrop-blur-sm rounded-xl p-4 md:p-6 min-w-[100px] md:min-w-[130px] border border-white/30">
