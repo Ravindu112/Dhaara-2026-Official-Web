@@ -5,6 +5,9 @@ import Gallery from './components/Gallery'
 import dhaaraLogo from './assets/logo_gold.png'
 import Timeline from './components/Timeline'
 import { motion } from 'framer-motion';
+import MessagesPage from './components/MessagesPage';
+
+
 function App() {
 
   //Setup state to track if we are on mobile
@@ -176,6 +179,7 @@ function App() {
     </section>
  <Gallery />
  <Timeline/>
+ <MessagesPage />
 
   <section id="contact" className="py-20 px-4 backdrop-blur-md bg-slate-900/60">
         <div className="container mx-auto max-w-2xl text-center">
