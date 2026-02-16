@@ -34,10 +34,10 @@ const Tickets = () => {
           <div className={`relative h-[350px] md:h-[550px] flex items-center justify-center order-2 md:order-1 ${isVisible ? 'is-visible' : ''}`}>
             
             <div className="relative w-48 h-72 md:w-80 md:h-[450px]">
-              <img src={ticketImg} alt="Ticket" className="ticket-fan-base ticket-4 z-10 drop-shadow-2xl" />
-              <img src={ticketImg} alt="Ticket" className="ticket-fan-base ticket-3 z-20 drop-shadow-2xl" />
-              <img src={ticketImg} alt="Ticket" className="ticket-fan-base ticket-2 z-30 drop-shadow-2xl" />
-              <img src={ticketImg} alt="Ticket" className="ticket-fan-base ticket-1 z-40 drop-shadow-2xl" />
+              <img src={ticketImg} alt="Dhaara 2026 event ticket" className="ticket-fan-base ticket-4 z-10 drop-shadow-2xl" />
+              <img src={ticketImg} alt="Dhaara 2026 event ticket" className="ticket-fan-base ticket-3 z-20 drop-shadow-2xl" />
+              <img src={ticketImg} alt="Dhaara 2026 event ticket" className="ticket-fan-base ticket-2 z-30 drop-shadow-2xl" />
+              <img src={ticketImg} alt="Dhaara 2026 event ticket" className="ticket-fan-base ticket-1 z-40 drop-shadow-2xl" />
             </div>
           </div>
 
