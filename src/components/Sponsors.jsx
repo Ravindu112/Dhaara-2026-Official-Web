@@ -188,22 +188,28 @@ export default function Sponsors() {
             {/* Duplicate items for seamless loop */}
             <div className="sponsors-scroll">
               {[...otherSponsors, ...otherSponsors].map((sponsor, index) => (
-                <div
-                  key={`${sponsor.id}-${index}`}
-                  className="sponsor-item flex flex-col items-center justify-center group"
-                >
-                  {/* Logo Container */}
-                  <div className="w-32 h-32 rounded-xl bg-gradient-to-br from-amber-900/30 to-orange-900/20 border border-amber-500/30 flex items-center justify-center group-hover:border-amber-500/70 transition-all group-hover:shadow-lg group-hover:shadow-amber-500/30">
-                    <span className="text-5xl" aria-hidden="true">{sponsor.icon}</span>
-                    <span className="sr-only">{sponsor.name} sponsor logo</span>
-                  </div>
+              {Array.from(
+                { length: otherSponsors.length * 2 },
+                (_, index) => {
+                  const sponsor = otherSponsors[index % otherSponsors.length];
+                  return (
+                    <div
+                      key={`${sponsor.id}-loop-${index}`}
+                      className="sponsor-item flex flex-col items-center justify-center group"
+                    >
+                      {/* Logo Container */}
+                      <div className="w-32 h-32 rounded-xl bg-gradient-to-br from-amber-900/30 to-orange-900/20 border border-amber-500/30 flex items-center justify-center group-hover:border-amber-500/70 transition-all group-hover:shadow-lg group-hover:shadow-amber-500/30">
+                        <span className="text-5xl">{sponsor.icon}</span>
+                      </div>
 
-                  {/* Sponsor Name */}
-                  <p className="text-gray-300 font-semibold text-center mt-3 text-sm group-hover:text-amber-300 transition-colors">
-                    {sponsor.name}
-                  </p>
-                </div>
-              ))}
+                      {/* Sponsor Name */}
+                      <p className="text-gray-300 font-semibold text-center mt-3 text-sm group-hover:text-amber-300 transition-colors">
+                        {sponsor.name}
+                      </p>
+                    </div>
+                  );
+                }
+              )}
             </div>
 
             {/* Fade edges */}
