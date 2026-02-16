@@ -12,7 +12,7 @@ const timelineData = [
   },
   {
     id: 2,
-    title: "1 ST ROUND AUDITIONS",
+    title: "1ST ROUND AUDITIONS",
     date: "2026-02-11", // Past
   },
   {
