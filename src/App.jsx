@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'; // Import AnimatePresence
 import Header from './components/Header'
+import Hero from './components/Hero'
 import Countdown from './components/Countdown'
+import Roadmap from './components/Roadmap'
+import About from './components/About'
 import Gallery from './components/Gallery'
 import Tickets from './components/Tickets'
 import dhaaraLogo from './assets/logo_gold.png'
@@ -9,6 +12,13 @@ import Timeline from './components/Timeline'
 import MessagesPage from './components/MessagesPage';
 import bgVideo from './assets/Landing video/LandingVideo.mp4'
 import Sponsors from './components/Sponsors'
+import Testimonials from './components/Testimonials'
+import Tickets from './components/Tickets'
+import Sponsors from './components/Sponsors'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+import FloatingBookIcon from './components/FloatingBookIcon'
+import dhaaraLogo from './assets/Background.svg'
 
 function App() {
 
@@ -80,6 +90,16 @@ function App() {
       
       {/* Fixed Dark Overlay */}
       <div className="fixed inset-0 backdrop-blur-md bg-slate-900/10" />
+    <div className="relative min-h-screen text-white overflow-x-hidden w-full">
+      {/* Fixed Background Image */}
+      <div 
+        className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10"
+        style={{
+          backgroundImage: `url(${dhaaraLogo})`,
+          filter: 'brightness(1.6) contrast(1.1) saturate(1)',
+        }}
+      />
+      
       
       {/* Header */}
       <Header />
@@ -160,9 +180,11 @@ function App() {
         </motion.div>
 
       </section>
+      <Hero />
 
+    <section id="RestContent" className="py-20 px-4 backdrop-blur-md md:backdrop-blur-md bg-black/70 md:bg-slate-900/50">
       {/* Countdown Timer */}
-      <Countdown targetDate="2026-04-22" />
+      <Countdown targetDate="2026-04-24" />
 
       {/* About Section */}
       <section id="about" className="relative py-12 md:py-24 px-4 backdrop-blur-md bg-slate-900/60 overflow-hidden">
@@ -268,6 +290,9 @@ function App() {
         </div>
       </section>
       
+      <About />
+
+      {/* Moments of DHAARA - Gallery Section */}
       <Gallery />
       <Timeline/>
       <Tickets />
@@ -294,6 +319,30 @@ function App() {
           <p>&copy; 2026 DHAARA. All rights reserved.</p>
         </div>
       </footer>
+      {/* DHAARA Roadmap */}
+      <Roadmap />
+
+      {/* Tickets Booking Section */}
+      <Tickets />
+
+      {/* Testimonials Section */}
+      <Testimonials />
+
+      {/* Awards Section */}
+      {/*<Awards />*/}
+
+      {/* Sponsors Section */}
+      <Sponsors />
+
+      {/* Contact Section */}
+      <Contact />
+
+      {/* Footer */}
+      <Footer />
+      </section>
+
+      {/* Floating Book Icon */}
+      <FloatingBookIcon />
     </div>
   )
 }
