@@ -219,7 +219,10 @@ export default function Sponsors() {
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             Join us in making DHAARA 26' the most memorable music competition. We offer various sponsorship packages to showcase your brand.
           </p>
-          <button className="px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105">
+          <button
+            className="px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105"
+            aria-label="Explore sponsorship opportunities for Dhaara 2026"
+          >
             Sponsorship Opportunities
           </button>
         </div>
