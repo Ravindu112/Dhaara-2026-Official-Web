@@ -172,7 +172,6 @@ function App() {
             
             {/* Left Column: Text Content */}
             <motion.div 
-              key={isMobile ? "mobile" : "desktop"}
               initial={{ 
                 opacity: 0, 
                 y: isMobile ? 50 : 0,   
