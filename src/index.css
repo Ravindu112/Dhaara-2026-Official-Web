@@ -26,6 +26,8 @@
     .is-visible .ticket-3 { transform: rotate(5deg) translateX(20px); }
     .is-visible .ticket-4 { transform: rotate(20deg) translateX(60px); }
   }
+}
+
 html, body {
   margin: 0;
   padding: 0;

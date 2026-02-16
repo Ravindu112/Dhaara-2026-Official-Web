@@ -126,8 +126,7 @@ export default function Sponsors() {
   };
 
   return (
-    <section id="sponsors" className="py-20 px-4  backdrop-blur-md bg-slate-900/60 ">
-    <section id="sponsors" className="py-20 px-4 ">
+    <section id="sponsors" className="py-20 px-4 backdrop-blur-md bg-slate-900/60 ">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -188,7 +187,6 @@ export default function Sponsors() {
 
             {/* Duplicate items for seamless loop */}
             <div className="sponsors-scroll">
-              {[...otherSponsors, ...otherSponsors].map((sponsor, index) => (
               {Array.from(
                 { length: otherSponsors.length * 2 },
                 (_, index) => {
@@ -211,21 +209,6 @@ export default function Sponsors() {
                   );
                 }
               )}
-                <div
-                  key={`${sponsor.id}-${index}`}
-                  className="sponsor-item flex flex-col items-center justify-center group"
-                >
-                  {/* Logo Container */}
-                  <div className="w-32 h-32 rounded-xl bg-gradient-to-br from-amber-900/30 to-orange-900/20 border border-amber-500/30 flex items-center justify-center group-hover:border-amber-500/70 transition-all group-hover:shadow-lg group-hover:shadow-amber-500/30">
-                    <span className="text-5xl">{sponsor.icon}</span>
-                  </div>
-
-                  {/* Sponsor Name */}
-                  <p className="text-gray-300 font-semibold text-center mt-3 text-sm group-hover:text-amber-300 transition-colors">
-                    {sponsor.name}
-                  </p>
-                </div>
-              ))}
             </div>
 
             {/* Fade edges */}
@@ -246,7 +229,6 @@ export default function Sponsors() {
             className="px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105"
             aria-label="Explore sponsorship opportunities for Dhaara 2026"
           >
-          <button className="px-8 py-3 bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105">
             Sponsorship Opportunities
           </button>
         </div>

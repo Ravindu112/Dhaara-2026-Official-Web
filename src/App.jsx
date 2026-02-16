@@ -13,12 +13,9 @@ import MessagesPage from './components/MessagesPage';
 import bgVideo from './assets/Landing video/LandingVideo.mp4'
 import Sponsors from './components/Sponsors'
 import Testimonials from './components/Testimonials'
-import Tickets from './components/Tickets'
-import Sponsors from './components/Sponsors'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import FloatingBookIcon from './components/FloatingBookIcon'
-import dhaaraLogo from './assets/Background.svg'
 
 function App() {
 
@@ -36,8 +33,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen text-white">
-      
+    <>
       {/* 2. LOADING SCREEN COMPONENT */}
       <AnimatePresence>
         {!isVideoLoaded && (
@@ -99,7 +95,6 @@ function App() {
           filter: 'brightness(1.6) contrast(1.1) saturate(1)',
         }}
       />
-      
       
       {/* Header */}
       <Header />
@@ -182,7 +177,7 @@ function App() {
       </section>
       <Hero />
 
-    <section id="RestContent" className="py-20 px-4 backdrop-blur-md md:backdrop-blur-md bg-black/70 md:bg-slate-900/50">
+    <section className="py-20 px-4 backdrop-blur-md md:backdrop-blur-md bg-black/70 md:bg-slate-900/50">
       {/* Countdown Timer */}
       <Countdown targetDate="2026-04-24" />
 
@@ -290,60 +285,30 @@ function App() {
         </div>
       </section>
       
-      <About />
 
       {/* Moments of DHAARA - Gallery Section */}
       <Gallery />
-      <Timeline/>
+      <Timeline />
       <Tickets />
-      <MessagesPage />
-      <Sponsors/>
+      <Testimonials />
+      <Sponsors />
 
 
-      <section id="contact" className="py-20 px-4 backdrop-blur-md bg-slate-900/60">
-        <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
-            Get In Touch
-          </h2>
-          <p className="text-base md:text-lg text-gray-200 mb-8">
-            Interested in DHAARA or learning more about our events? We'd love to hear from you!
-          </p>
-          <button className="bg-linear-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold px-8 py-3 rounded-full transition-all transform hover:scale-105 shadow-lg">
-            Contact Us
-          </button>
-        </div>
-      </section>
+      {/* Contact Section */}
+      <Contact />
 
       <footer className="py-8 px-4 backdrop-blur-md bg-slate-900/80 border-t border-amber-500/20">
         <div className="container mx-auto text-center text-gray-300 text-sm">
           <p>&copy; 2026 DHAARA. All rights reserved.</p>
         </div>
       </footer>
-      {/* DHAARA Roadmap */}
-      <Roadmap />
 
-      {/* Tickets Booking Section */}
-      <Tickets />
-
-      {/* Testimonials Section */}
-      <Testimonials />
-
-      {/* Awards Section */}
-      {/*<Awards />*/}
-
-      {/* Sponsors Section */}
-      <Sponsors />
-
-      {/* Contact Section */}
-      <Contact />
-
-      {/* Footer */}
-      <Footer />
       </section>
+    </div>
 
       {/* Floating Book Icon */}
       <FloatingBookIcon />
-    </div>
+    </>
   )
 }
 
