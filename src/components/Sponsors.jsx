@@ -194,7 +194,8 @@ export default function Sponsors() {
                 >
                   {/* Logo Container */}
                   <div className="w-32 h-32 rounded-xl bg-gradient-to-br from-amber-900/30 to-orange-900/20 border border-amber-500/30 flex items-center justify-center group-hover:border-amber-500/70 transition-all group-hover:shadow-lg group-hover:shadow-amber-500/30">
-                    <span className="text-5xl">{sponsor.icon}</span>
+                    <span className="text-5xl" aria-hidden="true">{sponsor.icon}</span>
+                    <span className="sr-only">{sponsor.name} sponsor logo</span>
                   </div>
 
                   {/* Sponsor Name */}
