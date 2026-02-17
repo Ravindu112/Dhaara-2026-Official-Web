@@ -182,7 +182,7 @@ function App() {
       <Countdown targetDate="2026-04-24" />
 
       {/* About Section */}
-      <section id="about" className="relative py-12 md:py-24 px-4 backdrop-blur-md bg-slate-900/60 overflow-hidden">
+      <section id="about" className="relative py-12 md:py-24 px-4 overflow-hidden">
         
         <div className="container mx-auto max-w-full px-4 md:px-10 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
