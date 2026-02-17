@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
 export default function Sponsors() {
-  const [activeId, setActiveId] = useState(null);
-
+  
   const [sponsors] = useState([
     {
       id: 1,
@@ -10,7 +9,6 @@ export default function Sponsors() {
       tier: 'title',
       image: '👑',
       description: 'Premier Title Partner',
-      longDescription: 'The lead visionary partner driving the rhythmic journey of DHAARA 26. Their commitment to excellence and cultural heritage makes this event possible.'
     },
     {
       id: 2,
@@ -18,7 +16,6 @@ export default function Sponsors() {
       tier: 'platinum',
       image: '💎',
       description: 'Platinum Partnership',
-      longDescription: 'A premium collaborator ensuring the highest quality experience for all our participants and audience members.'
     },
     {
       id: 4,
@@ -26,7 +23,6 @@ export default function Sponsors() {
       tier: 'gold',
       image: '🏆',
       description: 'Gold Partnership',
-      longDescription: 'Providing essential support to bring world-class musical talent to the forefront of the competition.'
     },
     {
       id: 5,
@@ -34,7 +30,6 @@ export default function Sponsors() {
       tier: 'silver',
       image: '⭐',
       description: 'Silver Partnership',
-      longDescription: 'Supporting our logistical operations and helping us reach a wider community of music enthusiasts.'
     },
     {
       id: 7,
@@ -42,7 +37,6 @@ export default function Sponsors() {
       tier: 'bronze',
       image: '🎯',
       description: 'Bronze Partnership',
-      longDescription: 'Key contributors to the ground-level success and operational efficiency of the DHAARA 26 festival.'
     },
   ]);
 
@@ -89,36 +83,37 @@ export default function Sponsors() {
           {tierSponsors.map((sponsor) => (
             <div
               key={sponsor.id}
-              className={`relative group rounded-[32px] transition-all duration-500 transform ${activeId !== sponsor.id ? 'hover:-translate-y-2' : ''} ${
+              className={`relative group rounded-[32px] transition-all duration-500 transform hover:-translate-y-2 ${
                 isTitle 
                 ? 'p-[2px] bg-gradient-to-b from-amber-400 via-orange-500 to-amber-600 shadow-[0_0_50px_-12px_rgba(251,191,36,0.4)]' 
                 : 'p-[1.5px] bg-gradient-to-br from-amber-200 via-yellow-600 to-amber-800 shadow-xl'
               }`}
             >
-              <div className="relative bg-slate-950 rounded-[30px] p-10 h-full overflow-hidden">
+              <div className="relative bg-slate-950 rounded-[30px] p-10 h-full overflow-hidden flex flex-col items-center">
                 {isTitle && (
                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-32 bg-amber-500/20 blur-[80px] pointer-events-none"></div>
                 )}
-                <div className={`relative z-10 mx-auto mb-6 flex items-center justify-center transition-all duration-500 ${isTitle ? 'text-8xl animate-bounce' : 'text-7xl'} ${activeId === sponsor.id ? 'scale-75' : ''}`}>
+                
+                <div className={`relative z-10 mb-6 flex items-center justify-center transition-all duration-500 ${isTitle ? 'text-8xl animate-bounce' : 'text-7xl'}`}>
                   {sponsor.image}
                 </div>
+
                 <h4 className={`relative z-10 font-black mb-3 tracking-tight ${isTitle ? 'text-4xl text-white' : `text-2xl ${config.textColor}`}`}>
                   {sponsor.name}
                 </h4>
-                {activeId !== sponsor.id ? (
-                  <div className="animate-in fade-in duration-500">
-                    <p className="relative z-10 text-gray-400 font-medium mb-8 italic line-clamp-2">"{sponsor.description}"</p>
-                    <button onClick={() => setActiveId(sponsor.id)} className={`relative z-10 px-8 py-3 rounded-full font-bold uppercase tracking-wider transition-all duration-300 ${isTitle ? 'bg-gradient-to-r from-amber-400 to-orange-600 text-black hover:scale-105' : 'bg-gradient-to-r from-amber-100 to-amber-300 text-black hover:brightness-110 shadow-md'}`}>
-                      Learn More
-                    </button>
-                  </div>
-                ) : (
-                  <div className="relative z-10 animate-in slide-in-from-bottom-4 fade-in duration-500">
-                    <div className="w-12 h-1 bg-amber-500 mx-auto mb-6 rounded-full"></div>
-                    <p className="text-gray-300 text-lg leading-relaxed italic mb-8">{sponsor.longDescription}</p>
-                    <button onClick={() => setActiveId(null)} className="px-8 py-3 bg-slate-800 text-white rounded-full font-bold uppercase text-xs hover:bg-red-500/20 transition-colors">Close Details ✕</button>
-                  </div>
-                )}
+
+                <p className="relative z-10 text-gray-400 font-medium mb-8 italic line-clamp-2">
+                  "{sponsor.description}"
+                </p>
+
+                
+                <button className={`relative z-10 px-8 py-3 rounded-full font-bold uppercase tracking-wider transition-all duration-300 ${
+                  isTitle 
+                  ? 'bg-gradient-to-r from-amber-400 to-orange-600 text-black hover:scale-105 shadow-[0_5px_15px_-5px_rgba(251,191,36,0.5)]' 
+                  : 'bg-gradient-to-r from-amber-100 to-amber-300 text-black hover:brightness-110 shadow-md'
+                }`}>
+                  Learn More
+                </button>
               </div>
             </div>
           ))}
@@ -133,10 +128,10 @@ export default function Sponsors() {
         
         {/* --- Section Header --- */}
         <div className="text-center mb-24">
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter uppercase italic">
-            <span className="text-white">OUR</span>{" "}
-            <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">SPONSORS</span>
-          </h2>
+          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter uppercase">
+    <span className="text-white">OUR</span>{" "}
+    <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">SPONSORS</span>
+  </h2>
           <p className="text-2xl md:text-3xl text-gray-300 font-bold tracking-tight">Proud Partners Making DHAARA 26' Possible</p>
           <div className="h-2 w-32 bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mt-8"></div>
         </div>
@@ -152,14 +147,12 @@ export default function Sponsors() {
 
         <div className="h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-24"></div>
 
-        {/* --- Supporting Partners Section (UPDATED) --- */}
+        {/* --- Supporting Partners Section --- */}
         <div className="mb-32">
-          {/* Title: Semibold as requested */}
           <h3 className="text-3xl md:text-3xl font-semibold text-amber-500 mb-12 text-center uppercase tracking-[0.3em]">
             Supporting Partners
           </h3>
           
-          {/* Box with Gold Border Gradient */}
           <div className="relative overflow-hidden bg-slate-900/30 rounded-[40px] p-[1.5px] bg-gradient-to-r from-amber-200 via-yellow-600 to-amber-800 backdrop-blur-sm">
             <div className="bg-slate-950 rounded-[38px] p-12 overflow-hidden">
               <style>{`
@@ -186,10 +179,10 @@ export default function Sponsors() {
           <h4 className="relative z-10 text-4xl md:text-6xl font-semibold mb-8 tracking-tight bg-gradient-to-r from-amber-200 to-amber-800 bg-clip-text text-transparent uppercase">
             BECOME PART OF THE LEGACY
           </h4>
-          <p className="relative z-10 text-white text-xl md:text-3xl font-bold mb-12 max-w-4xl mx-auto leading-tight">
-            Join us in making DHAARA 26' the most memorable music competition. 
-            We offer various sponsorship packages to showcase your brand.
-          </p>
+          <p className="relative z-10 text-gray-300 text-base md:text-lg font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
+  Join us in making DHAARA 26' the most memorable music competition. 
+  We offer various sponsorship packages to showcase your brand.
+</p>
           <button className="relative z-10 px-14 py-6 bg-gradient-to-r from-amber-200 to-amber-800 text-black font-black rounded-full hover:scale-110 transition-all transform duration-500 uppercase tracking-tighter shadow-[0_0_40px_-10px_rgba(251,191,36,0.6)] border-2 border-amber-400 active:scale-95">
             Sponsorship Opportunities
           </button>
