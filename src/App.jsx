@@ -85,7 +85,7 @@ function App() {
       </video>
       
       {/* Fixed Dark Overlay */}
-      <div className="fixed inset-0 backdrop-blur-md bg-slate-900/10" />
+      
     <div className="relative min-h-screen text-white overflow-x-hidden w-full">
       {/* Fixed Background Image */}
       <div 
@@ -118,33 +118,9 @@ function App() {
           }}
         >
           
-          <motion.h1 
-            variants={{
-              hidden: { opacity: 0, y: 50 }, 
-              visible: { 
-                opacity: 1, 
-                y: 0, 
-                transition: { duration: 0.8, ease: "easeOut" } 
-              }
-            }}
-            className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 bg-linear-to-r from-amber-400 via-orange-500 to-amber-400 bg-clip-text text-transparent animate-pulse"
-          >
-            DHAARA
-          </motion.h1>
+          
 
-          <motion.p 
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: { 
-                opacity: 1, 
-                y: 0, 
-                transition: { duration: 0.8, ease: "easeOut" }
-              }
-            }}
-            className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 font-light"
-          >
-            Celebrating the Rhythm of Our Culture
-          </motion.p>
+          
 
           <motion.div
             variants={{
@@ -161,17 +137,6 @@ function App() {
             </button>
           </motion.div>
 
-        </motion.div>
-
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }} 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
-        >
-          <svg className="w-6 h-6 text-amber-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
         </motion.div>
 
       </section>
