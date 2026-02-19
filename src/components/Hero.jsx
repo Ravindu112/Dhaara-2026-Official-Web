@@ -12,10 +12,7 @@ export default function Hero() {
         </h1>
         <p className="text-lg md:text-xl lg:text-2xl mb-8 text-gray-200 font-light">
           Celebrating the Rhythm of Our Culture
-        </p>
-        <button className="bg-linear-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-semibold px-8 py-3 md:px-10 md:py-4 rounded-full transition-all transform hover:scale-105 shadow-lg">
-          Book Now!
-        </button> */}
+        </p> */}
       </div>
 
       {/* Scroll Indicator */}

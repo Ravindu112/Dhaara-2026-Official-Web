@@ -7,43 +7,59 @@ import dhaaraLogo from '../assets/logo_gold.png';
 const timelineData = [
   {
     id: 1,
-    title: "VOCAL TRAINING WORKSHOP",
-    date: "2026-02-10", // Past
+    title: "Application Calling",
+    date: "2026-01-25",
+    happened: true,
   },
   {
     id: 2,
-    title: "1ST ROUND AUDITIONS",
-    date: "2026-03-11", // Past
+    title: "VOCAL TRAINING WORKSHOP",
+    date: "2026-02-10",
+    happened: true,
   },
   {
     id: 3,
-    title: "Stage Performing Workshop",
-    date: "2026-03-09", // Future
+    title: "1ST ROUND AUDITIONS",
+    date: "2026-03-11",
+    happened: true,
   },
   {
     id: 4,
-    title: "Event Management Workshop",
-    date: "2026-03-08", // Future
+    title: "Stage Performing Workshop",
+    date: "2026-03-09",
+    happened: false,
   },
   {
     id: 5,
+    title: "Event Management Workshop",
+    date: "2026-03-08",
+    happened: false,
+  },
+  {
+    id: 6,
+    title: "DHAARA Academy",
+    date: "2026-03-04",
+    happened: false,
+  },
+  {
+    id: 7,
     title: "Semi Final",
-    date: "2026-04-15", // Future
+    date: "2026-04-15",
+    happened: false,
+  },
+  {
+    id: 8,
+    title: "Final",
+    date: "2026-04-24",
+    happened: false,
   }
 ];
 
-const isActive = (dateString) => {
-  const eventDate = new Date(dateString);
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  eventDate.setHours(0, 0, 0, 0);
-  return eventDate <= today;
-};
 
 // --- Timeline Item Component ---
 const TimelineItem = ({ data, index }) => {
   const isEven = index % 2 === 0;
-  const active = isActive(data.date);
+  const active = data.happened;
 
   return (
     <motion.div 
@@ -100,11 +116,11 @@ const TimelineItem = ({ data, index }) => {
 const Timeline = () => {
   // Logic to calculate how tall the yellow line should be
   const totalItems = timelineData.length;
-  // Find the index of the last active item (e.g., if item 2 is active, index is 1)
-  const lastActiveIndex = timelineData.findLastIndex(item => isActive(item.date));
+  // Find the index of the last item where happened is true
+  const lastActiveIndex = timelineData.findLastIndex(item => item.happened);
   
   // Calculate percentage: (Index / (Total - 1)) * 100
-  // If no items are active, height is 0.
+  // If no items have happened, height is 0.
   const progressHeight = lastActiveIndex >= 0 
     ? (lastActiveIndex / (totalItems - 1)) * 100 
     : 0;
