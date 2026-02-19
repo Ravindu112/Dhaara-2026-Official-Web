@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 export default function AboutSection({ isMobile }) {
   return (
     <section id="about" className="relative py-12 md:py-24 px-4 overflow-hidden">
@@ -7,15 +5,7 @@ export default function AboutSection({ isMobile }) {
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           
           {/* Left Column: Text Content */}
-          <motion.div 
-            initial={{ 
-              opacity: 0, 
-              y: isMobile ? 50 : 0,   
-              x: isMobile ? 0 : -50   
-            }}
-            whileInView={{ opacity: 1, y: 0, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+          <div 
             className="text-left space-y-6 md:space-y-8"
           >
             <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent tracking-wide uppercase">
@@ -46,26 +36,22 @@ export default function AboutSection({ isMobile }) {
                 to nurturing arts, talent, and youthful innovation.
               </p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Column: Video */}
-          <motion.div 
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+          <div 
             className="w-full mt-12 md:mt-0 flex justify-center"
           >
             <video 
-              src="src/assets/videos/Award_Video.mp4"
+              src="src/assets/videos/BGRemove.mp4"
               alt="About Section Video" 
-              className="w-full md:max-w-lg h-auto rounded-lg shadow-lg"
+              className="w-full md:max-w-2xl h-auto rounded-lg shadow-lg"
               controls
               autoPlay
               loop
               muted
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

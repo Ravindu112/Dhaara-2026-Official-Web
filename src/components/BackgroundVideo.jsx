@@ -13,8 +13,7 @@ export default function BackgroundVideo({ bgVideo, onLoadedData }) {
         Your browser does not support the video tag.
       </video>
       
-      {/* Fixed Dark Overlay */}
-      <div className="fixed inset-0 backdrop-blur-md bg-slate-900/10" />
+      
     </>
   );
 }

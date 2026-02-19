@@ -1,5 +1,5 @@
 import galleryImage from '../assets/award.png';
-import './Gallery.css';
+import '../styles/gallery.css';
 
 const Gallery = () => {
   // Create array of gallery items

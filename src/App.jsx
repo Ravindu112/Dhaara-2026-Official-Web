@@ -3,7 +3,6 @@ import {
   FloatingBookIcon, 
   LoadingScreen, 
   BackgroundVideo, 
-  HeroScrollIndicator, 
   AboutSection, 
   PageFooter,
   Hero, 
@@ -17,7 +16,6 @@ import {
 } from './components'
 import { EVENT_CONFIG } from './constants'
 import { useIsMobile, useVideoLoading } from './utils/hooks'
-import './styles/gallery.css'
 import bgVideo from './assets/Landing video/LandingVideo.mp4'
 
 function App() {
@@ -34,7 +32,7 @@ function App() {
         
         {/* Hero Section with Scroll Indicator */}
         <section id="home" className="relative min-h-screen flex items-center justify-center">
-          <HeroScrollIndicator />
+         
         </section>
         
         <Hero />

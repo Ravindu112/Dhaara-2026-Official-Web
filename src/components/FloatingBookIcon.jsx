@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 export default function FloatingBookIcon() {
   const [isHovered, setIsHovered] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   return (
     <div 
@@ -48,8 +49,8 @@ export default function FloatingBookIcon() {
       {/* Main Button */}
       <button
         className={`floating-icon ${isHovered ? 'hovered' : ''} relative w-16 h-16 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 shadow-xl transition-all transform hover:scale-110 flex items-center justify-center group glow-effect`}
-        title="Book Your Slot"
-        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+        title="E-Souvenir"
+        onClick={() => setShowPopup(true)}
       >
         {/* Book Icon SVG */}
         <svg
@@ -64,7 +65,7 @@ export default function FloatingBookIcon() {
 
         {/* Tooltip */}
         <div className="absolute bottom-full right-0 mb-3 px-3 py-2 bg-slate-900 text-white text-xs font-semibold rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg border border-amber-500/30" style={{ color: 'rgba(251, 191, 36, 0.85)' }}>
-          Book Your Slot
+          E-Souvenir
         </div>
 
         {/* Pulse Ring Animation */}
@@ -76,6 +77,30 @@ export default function FloatingBookIcon() {
         animation: 'glow-pulse 1.5s ease-in-out infinite',
         boxShadow: '0 0 10px rgba(251, 146, 60, 0.8)'
       }}></div>
+
+      {/* Popup Modal */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-lg shadow-2xl border border-amber-500/30 p-6 max-w-sm w-full">
+            <h3 className="text-2xl font-bold text-amber-400 mb-3">E-Souvenir</h3>
+            <p className="text-gray-300 mb-4 text-lg">
+              This is a link to our E-Souvenir platform.
+            </p>
+            <div className="bg-amber-500/10 border border-amber-500/50 rounded-lg p-4 mb-6">
+              <p className="text-amber-400 font-semibold">🚧 Under Construction</p>
+              <p className="text-gray-400 text-sm mt-2">
+                The e-souvenir page is currently under construction. Please check back soon!
+              </p>
+            </div>
+            <button
+              onClick={() => setShowPopup(false)}
+              className="w-full bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white font-semibold py-2 px-4 rounded-lg transition-all transform hover:scale-105"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

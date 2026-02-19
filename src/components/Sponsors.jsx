@@ -90,9 +90,6 @@ export default function Sponsors() {
               }`}
             >
               <div className="relative bg-slate-950 rounded-[30px] p-10 h-full overflow-hidden flex flex-col items-center">
-                {isTitle && (
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-32 bg-amber-500/20 blur-[80px] pointer-events-none"></div>
-                )}
                 
                 <div className={`relative z-10 mb-6 flex items-center justify-center transition-all duration-500 ${isTitle ? 'text-8xl animate-bounce' : 'text-7xl'}`}>
                   {sponsor.image}
@@ -153,7 +150,7 @@ export default function Sponsors() {
             Supporting Partners
           </h3>
           
-          <div className="relative overflow-hidden bg-slate-900/30 rounded-[40px] p-[1.5px] bg-gradient-to-r from-amber-200 via-yellow-600 to-amber-800 backdrop-blur-sm">
+          <div className="relative overflow-hidden bg-slate-900/30 rounded-[40px] p-[1.5px] bg-gradient-to-r from-amber-200 via-yellow-600 to-amber-800">
             <div className="bg-slate-950 rounded-[38px] p-12 overflow-hidden">
               <style>{`
                 @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
@@ -175,7 +172,7 @@ export default function Sponsors() {
         </div>
 
         {/* --- Call to Action --- */}
-        <div className="relative overflow-hidden rounded-[40px] p-16 text-center border border-amber-500/20 bg-slate-900/60 backdrop-blur-md">
+        <div className="relative overflow-hidden rounded-[40px] p-16 text-center border border-amber-500/20 bg-slate-900/60">
           <h4 className="relative z-10 text-4xl md:text-6xl font-semibold mb-8 tracking-tight bg-gradient-to-r from-amber-200 to-amber-800 bg-clip-text text-transparent uppercase">
             BECOME PART OF THE LEGACY
           </h4>
