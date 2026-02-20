@@ -17,6 +17,7 @@ import {
 import { EVENT_CONFIG } from './constants'
 import { useIsMobile, useVideoLoading } from './utils/hooks'
 import bgVideo from './assets/Landing video/LandingVideo.mp4'
+import LeadershipTeam from './components/ContactTeam'
 
 function App() {
   const isMobile = useIsMobile();
@@ -46,7 +47,7 @@ function App() {
           <Tickets />
           <Testimonials />
           <Sponsors />
-          <Contact />
+          <LeadershipTeam/>
           <PageFooter />
         </section>
       </div>
