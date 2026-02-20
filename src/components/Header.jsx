@@ -79,6 +79,16 @@ const Header = () => {
               </a>
             </li>
             <li>
+              <a href="#tickets" className="hover:text-amber-400 transition-colors">
+                Tickets
+              </a>
+            </li>
+            <li>
+              <a href="#sponsors" className="hover:text-amber-400 transition-colors">
+                Sponsors
+              </a>
+            </li>
+            <li>
               <a href="#contact" className="hover:text-amber-400 transition-colors">
                 Contact
               </a>
@@ -115,6 +125,24 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Gallery
+                </a>
+              </li>
+               <li>
+                <a
+                  href="#tickets"
+                  className="block hover:text-amber-400 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Tickets
+                </a>
+              </li>
+               <li>
+                <a
+                  href="#sponsors"
+                  className="block hover:text-amber-400 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Sponsors
                 </a>
               </li>
               <li>
