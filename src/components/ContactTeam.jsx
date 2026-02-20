@@ -121,7 +121,9 @@ const LeadershipTeam = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6 
+               bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent 
+               drop-shadow-[0_0_20px_rgba(255,165,0,0.3)] text-center">
             Contact Us
           </h2>
           <p className="text-lg text-gray-300 font-light">

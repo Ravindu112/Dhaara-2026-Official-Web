@@ -133,11 +133,12 @@ const Timeline = () => {
 
       <div className="container mx-auto max-w-5xl relative z-10">
         <motion.h2 
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center text-white mb-20 tracking-wider uppercase bg-linear-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent"
-        >
+          className="text-3xl md:text-7xl font-black text-center uppercase tracking-tight mb-16 
+             bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent 
+             drop-shadow-[0_0_25px_rgba(255,160,0,0.4)]">
           Dhaara 2026 Timeline
         </motion.h2>
 

@@ -14,7 +14,7 @@ export default function AboutSection({ isMobile }) {
             
             <div className="max-w-2xl w-full space-y-4 md:space-y-6 text-gray-300 text-base md:text-lg leading-relaxed font-light">
               <p>
-                Dhaara 26 is the largest inter-university music competition 
+                Dhaara '26 is the largest inter-university music competition 
                 organized by the Flair Club of the University of Sri Jayewardenepura. 
                 Celebrating creativity, passion, and musical excellence, Dhaara has become a prestigious 
                 platform that brings together the most talented young musicians 
@@ -25,13 +25,13 @@ export default function AboutSection({ isMobile }) {
                 This iconic event provides a vibrant stage for performers to showcase 
                 their skills across diverse musical genres, encouraging originality, 
                 teamwork, and artistic expression. More than just a competition, 
-                Dhaara 26 is a cultural movement that unites students through the 
+                Dhaara '26 is a cultural movement that unites students through the 
                 universal language of music.
               </p>
               
               <p>
                 With breathtaking performances, expert judging, and an electrifying 
-                atmosphere, Dhaara 26 promises an unforgettable experience. It stands 
+                atmosphere, Dhaara '26 promises an unforgettable experience. It stands 
                 as a testament to the University of Sri Jayewardenepura's commitment 
                 to nurturing arts, talent, and youthful innovation.
               </p>

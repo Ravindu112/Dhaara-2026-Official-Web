@@ -125,11 +125,11 @@ export default function Sponsors() {
         
         {/* --- Section Header --- */}
         <div className="text-center mb-24">
-          <h2 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter uppercase">
-    <span className="text-white">OUR</span>{" "}
-    <span className="bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600 bg-clip-text text-transparent">SPONSORS</span>
+          <h2 className="text-4xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter uppercase mb-6">
+    <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(255,160,0,0.4)]">
+      OUR Sponsors</span>
   </h2>
-          <p className="text-2xl md:text-3xl text-gray-300 font-bold tracking-tight">Proud Partners Making DHAARA 26' Possible</p>
+          <p className="text-2xl md:text-3xl text-gray-300 font-bold tracking-tight">Proud Partners Making DHAARA '26 Possible</p>
           <div className="h-2 w-32 bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mt-8"></div>
         </div>
 
@@ -177,7 +177,7 @@ export default function Sponsors() {
             BECOME PART OF THE LEGACY
           </h4>
           <p className="relative z-10 text-gray-300 text-base md:text-lg font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
-  Join us in making DHAARA 26' the most memorable music competition. 
+  Join us in making DHAARA '26 the most memorable music competition. 
   We offer various sponsorship packages to showcase your brand.
 </p>
           <button className="relative z-10 px-14 py-6 bg-gradient-to-r from-amber-200 to-amber-800 text-black font-black rounded-full hover:scale-110 transition-all transform duration-500 uppercase tracking-tighter shadow-[0_0_40px_-10px_rgba(251,191,36,0.6)] border-2 border-amber-400 active:scale-95">

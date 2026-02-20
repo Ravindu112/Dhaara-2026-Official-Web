@@ -27,16 +27,13 @@ export default function Testimonials() {
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4" style={{
-            backgroundImage: `linear-gradient(to right, rgba(251, 191, 36, 0.85), rgba(251, 191, 36, 1))`,
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            color: 'transparent'
-          }}>
-            Words of Inspiration
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-center uppercase tracking-tight mb-8">
+            <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,165,0,0.3)]">
+              Words of Inspiration
+            </span>
           </h2>
-          <p className="text-lg text-white font-light">
+
+          <p className="text-xl md:text-2xl text-white font-medium text-center tracking-wide">
             Hear from the leaders who drive DHAARA's vision and excellence
           </p>
         </div>

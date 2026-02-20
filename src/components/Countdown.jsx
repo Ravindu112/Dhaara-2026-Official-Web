@@ -35,14 +35,19 @@ const Countdown = ({ targetDate = '2026-04-22' }) => {
   }, [targetDate]);
 
   return (
-    <section className="py-16 px-4 relative">
-      <div className="container mx-auto">
+    <section className="py-20 px-6 relative">
+      <div className="container mx-auto text-center">
       
-        <h1 className="text-5xl md:text-9xl font-extrabold text-center text-amber-500 mb-2">
-          DHAARA 26' 
+        <h1 className="text-5xl md:text-9xl font-black uppercase leading-[0.9] tracking-tighter mb-4">
+          <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(255,160,0,0.4)]">
+        DHAARA'26
+        </span>
         </h1>
-        <h3 className="text-1xl md:text-2xl  font-light text-center text-white mb-8">
-          Nelum Pokuna Mahinda Rajapaksha Theatre, Colombo 07  
+        <h3 className="text-2xl md:text-3xl font-semibold uppercase tracking-tight text-white mb-12">
+           <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+        Nelum Pokuna Mahinda Rajapaksha Theatre
+           </span>
+           <span className="text-gray-300">, Colombo 07</span>
         </h3>
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
           {/* Days */}

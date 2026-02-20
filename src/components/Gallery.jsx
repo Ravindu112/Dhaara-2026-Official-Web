@@ -8,14 +8,10 @@ const Gallery = () => {
   return (
     <section id="gallery" className="py-20 px-4">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center" style={{
-          backgroundImage: `linear-gradient(to right, rgba(251, 191, 36, 0.85), rgba(251, 191, 36, 1))`,
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          color: 'transparent'
-        }}>
-          Moments of DHAARA
+        <h2 className="text-3xl md:text-6xl font-black text-center uppercase tracking-tight mb-10">
+          <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,165,0,0.25)]">
+    Moments of DHAARA
+          </span>
         </h2>
         
         {/* Card Grid Gallery */}
