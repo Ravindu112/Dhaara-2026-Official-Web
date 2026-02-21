@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import logo from '../assets/logo26.svg';
 
 const Countdown = ({ targetDate = '2026-04-22' }) => {
   const [timeLeft, setTimeLeft] = useState({
@@ -43,11 +42,8 @@ const Countdown = ({ targetDate = '2026-04-22' }) => {
         DHAARA'26
         </span>
         </h1>
-        <h3 className="text-2xl md:text-3xl font-semibold uppercase tracking-tight text-white mb-12">
-           <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
-        Nelum Pokuna Mahinda Rajapaksha Theatre
-           </span>
-           <span className="text-gray-300">, Colombo 07</span>
+        <h3 className="text-1xl md:text-2xl font-semibold uppercase tracking-tight text-white mb-12">
+           <span className="text-gray-300">Nelum Pokuna Mahinda Rajapaksha Theatre, Colombo 07</span>
         </h3>
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
           {/* Days */}

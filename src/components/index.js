@@ -17,5 +17,7 @@ export {
   Tickets,
   Testimonials,
   Sponsors,
-  Contact,
+ 
 } from './sections';
+
+export { default as LeadershipTeam } from './ContactTeam';

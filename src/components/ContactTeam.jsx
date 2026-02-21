@@ -10,7 +10,6 @@ const teamMembers = [
     name: "Eleanor Fitzgerald",
     roleSubtitle: "President",
     imageSrc: "/src/assets/hod.jpg",
-    description: "Leading with vision and dedication, Eleanor oversees all strategic initiatives and external relations for the association.",
     email: "president@gmail.com",
     phone: "0765434323"
   },
@@ -20,7 +19,6 @@ const teamMembers = [
     name: "Dr. Aris Thorne",
     roleSubtitle: "Vice President",
     imageSrc: "/src/assets/hod.jpg",
-    description: "Supporting the president and spearheading key operational projects to ensure smooth execution of our mission.",
     email: "vp@gmail.com",
     phone: "0786565453"
   },
@@ -30,7 +28,6 @@ const teamMembers = [
     name: "Clara M. Davis",
     roleSubtitle: "Secretary",
     imageSrc: "/src/assets/hod.jpg",
-    description: "Managing official records, communications, and ensuring compliance with all organizational bylaws and procedures.",
     email: "secretaryassociation@gmail.com",
     phone: "0708978675"
   }
@@ -39,12 +36,7 @@ const teamMembers = [
 // --- Individual Card Component ---
 const TeamCard = ({ member, index }) => {
   return (
-    <motion.div 
-      // Animation: slide up and fade in, staggered by index
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
+    <div 
       className="flex flex-col items-center bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-amber-500/20"
     >
       {/* Role Heading */}
@@ -66,9 +58,6 @@ const TeamCard = ({ member, index }) => {
       {/* Member Details */}
       <h4 className="text-2xl font-bold text-gray-100">{member.name}</h4>
       <p className="text-amber-500 font-semibold mb-4">{member.roleSubtitle}</p>
-      <p className="text-gray-400 text-center text-sm mb-6 flex-grow">
-        {member.description}
-      </p>
 
       {/* Separator */}
       <div className="w-full h-px bg-slate-700/50 mb-6"></div>
@@ -101,7 +90,7 @@ const TeamCard = ({ member, index }) => {
         </a>
 
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -114,13 +103,7 @@ const LeadershipTeam = () => {
       <div className="container mx-auto max-w-7xl relative z-10">
         
         {/* Section Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6 
                bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent 
                drop-shadow-[0_0_20px_rgba(255,165,0,0.3)] text-center">
@@ -129,7 +112,7 @@ const LeadershipTeam = () => {
           <p className="text-lg text-gray-300 font-light">
             Get in touch with our executive board members.
           </p>
-        </motion.div>
+        </div>
 
         {/* Grid Container for Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">

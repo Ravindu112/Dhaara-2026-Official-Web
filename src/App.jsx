@@ -11,13 +11,13 @@ import {
   Timeline, 
   Tickets, 
   Testimonials, 
-  Sponsors, 
-  Contact 
+  Sponsors,
+  LeadershipTeam
 } from './components'
 import { EVENT_CONFIG } from './constants'
 import { useIsMobile, useVideoLoading } from './utils/hooks'
 import bgVideo from './assets/Landing video/LandingVideo.mp4'
-import LeadershipTeam from './components/ContactTeam'
+import mobileBg from './assets/Background.svg'
 
 function App() {
   const isMobile = useIsMobile();
@@ -26,20 +26,19 @@ function App() {
   return (
     <>
       <LoadingScreen isVideoLoaded={isVideoLoaded} />
-      <BackgroundVideo bgVideo={bgVideo} onLoadedData={handleVideoLoaded} />
+      <BackgroundVideo 
+        bgVideo={bgVideo} 
+        mobileBackground={mobileBg}
+        onLoadedData={handleVideoLoaded} 
+      />
       
       <div className="relative min-h-screen text-white overflow-x-hidden w-full">
         <Header />
         
-        {/* Hero Section with Scroll Indicator */}
-        <section id="home" className="relative min-h-screen flex items-center justify-center">
-         
-        </section>
-        
         <Hero />
 
         {/* Main Content Section */}
-        <section className="py-10 px-4 backdrop-blur-md md:backdrop-blur-md bg-black/70 md:bg-slate-900/50">
+        <section className="py-15 px-4 backdrop-blur-md md:backdrop-blur-md bg-slate-950/95 md:bg-slate-950/80">
           <Countdown targetDate={EVENT_CONFIG.targetDate} />
           <AboutSection isMobile={isMobile} />
           <Gallery />

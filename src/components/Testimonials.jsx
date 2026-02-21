@@ -27,13 +27,13 @@ export default function Testimonials() {
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-center uppercase tracking-tight mb-8">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-center uppercase tracking-tight mb-2">
             <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,165,0,0.3)]">
               Words of Inspiration
             </span>
           </h2>
 
-          <p className="text-xl md:text-2xl text-white font-medium text-center tracking-wide">
+          <p className="text-xl md:text-xl text-white font-medium text-center tracking-wide">
             Hear from the leaders who drive DHAARA's vision and excellence
           </p>
         </div>
@@ -59,11 +59,7 @@ export default function Testimonials() {
                   }}></div>
                   
                   {/* Image Box */}
-                  <div className="relative w-48 h-56 md:w-64 md:h-72 rounded-3xl overflow-hidden flex items-center justify-center" style={{
-                    border: '1px solid rgba(251, 191, 36, 0.25)',
-                    background: 'linear-gradient(160deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.85))',
-                    backdropFilter: 'blur(10px)'
-                  }}>
+                  <div className="relative w-48 h-56 md:w-64 md:h-72 rounded-3xl overflow-hidden flex items-center justify-center border border-white/10 bg-white/5 hover:border-amber-500/30 transition-all">
                     {/* Placeholder Icon */}
                     <svg
                       className="w-20 h-20"
@@ -88,11 +84,7 @@ export default function Testimonials() {
 
               {/* Quote Box */}
               <div className="w-full md:w-7/12">
-                <div className="rounded-2xl p-6 md:p-8 relative" style={{
-                  border: '1px solid rgba(251, 191, 36, 0.25)',
-                  background: 'linear-gradient(160deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.85))',
-                  backdropFilter: 'blur(10px)'
-                }}>
+                <div className="rounded-2xl p-6 md:p-8 relative border border-white/10 bg-white/5 hover:border-amber-500/30 transition-all">
                   {/* Quote Mark */}
                   <div className="absolute top-4 left-6 text-4xl font-bold" style={{ color: 'rgba(251, 191, 36, 0.3)' }}>"</div>
 

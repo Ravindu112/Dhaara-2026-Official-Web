@@ -62,12 +62,7 @@ const TimelineItem = ({ data, index }) => {
   const active = data.happened;
 
   return (
-    <motion.div 
-      // 1. Animation Settings
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.5, delay: index * 0.2 }} // Stagger effect
+    <div 
       className={`relative flex flex-col md:flex-row items-center md:justify-between mb-12 w-full
         ${isEven ? 'md:flex-row-reverse' : ''}
       `}
@@ -108,7 +103,7 @@ const TimelineItem = ({ data, index }) => {
         </p>
       </div>
 
-    </motion.div>
+    </div>
   );
 };
 
@@ -132,15 +127,12 @@ const Timeline = () => {
        
 
       <div className="container mx-auto max-w-5xl relative z-10">
-        <motion.h2 
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <h2 
           className="text-3xl md:text-7xl font-black text-center uppercase tracking-tight mb-16 
              bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent 
              drop-shadow-[0_0_25px_rgba(255,160,0,0.4)]">
           Dhaara 2026 Timeline
-        </motion.h2>
+        </h2>
 
         <div className="relative">
           
@@ -148,13 +140,10 @@ const Timeline = () => {
           <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-700 rounded-full"></div>
 
           {/* 2. The Yellow Progress Line (Calculated Height) */}
-          <motion.div 
-            initial={{ height: 0 }}
-            whileInView={{ height: `${progressHeight}%` }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
+          <div 
+            style={{ height: `${progressHeight}%` }}
             className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-1 bg-amber-400 rounded-full shadow-[0_0_15px_rgba(251,191,36,0.8)] z-0"
-          ></motion.div>
+          ></div>
 
           {/* Render Items */}
           {timelineData.map((item, index) => (

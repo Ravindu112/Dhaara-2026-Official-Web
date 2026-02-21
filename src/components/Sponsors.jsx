@@ -120,7 +120,7 @@ export default function Sponsors() {
   };
 
   return (
-    <section id="sponsors" className="py-24 px-4 bg-slate-950 text-white min-h-screen relative overflow-hidden">
+    <section id="sponsors" className="py-24 px-4  text-white min-h-screen relative overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         
         {/* --- Section Header --- */}
@@ -180,9 +180,11 @@ export default function Sponsors() {
   Join us in making DHAARA '26 the most memorable music competition. 
   We offer various sponsorship packages to showcase your brand.
 </p>
-          <button className="relative z-10 px-14 py-6 bg-gradient-to-r from-amber-200 to-amber-800 text-black font-black rounded-full hover:scale-110 transition-all transform duration-500 uppercase tracking-tighter shadow-[0_0_40px_-10px_rgba(251,191,36,0.6)] border-2 border-amber-400 active:scale-95">
-            Sponsorship Opportunities
-          </button>
+          <div className="flex justify-center">
+            <a href="#leadership" className="relative z-10 px-14 py-6 bg-gradient-to-r from-amber-200 to-amber-800 text-black font-black rounded-full hover:scale-110 transition-all transform duration-500 uppercase tracking-tighter shadow-[0_0_40px_-10px_rgba(251,191,36,0.6)] border-2 border-amber-400 active:scale-95">
+              Sponsorship Opportunities
+            </a>
+          </div>
         </div>
 
       </div>

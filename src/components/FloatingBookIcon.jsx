@@ -83,9 +83,6 @@ export default function FloatingBookIcon() {
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
           <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-lg shadow-2xl border border-amber-500/30 p-6 max-w-sm w-full">
             <h3 className="text-2xl font-bold text-amber-400 mb-3">E-Souvenir</h3>
-            <p className="text-gray-300 mb-4 text-lg">
-              This is a link to our E-Souvenir platform.
-            </p>
             <div className="bg-amber-500/10 border border-amber-500/50 rounded-lg p-4 mb-6">
               <p className="text-amber-400 font-semibold">🚧 Under Construction</p>
               <p className="text-gray-400 text-sm mt-2">
