@@ -1,39 +1,35 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import { EVENT_CONFIG } from '../constants';
+import '../styles/loading-screen.css';
 
 export default function LoadingScreen({ isVideoLoaded }) {
+  const [shouldRender, setShouldRender] = useState(true);
+  const [isExiting, setIsExiting] = useState(false);
+
+  useEffect(() => {
+    if (isVideoLoaded) {
+      setIsExiting(true);
+      // Wait for fade animation to complete before removing from DOM
+      const timer = setTimeout(() => {
+        setShouldRender(false);
+      }, 500); // Match fade-out duration
+      return () => clearTimeout(timer);
+    }
+  }, [isVideoLoaded]);
+
+  if (!shouldRender) return null;
+
   return (
-    <AnimatePresence>
-      {!isVideoLoaded && (
-        <motion.div
-          key="loader"
-          initial={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950"
-        >
-          <motion.div
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.5, 1, 0.5] 
-            }}
-            transition={{ 
-              duration: 2, 
-              repeat: Infinity,
-              ease: "easeInOut" 
-            }}
-            className="relative"
-          >
-            <div className="w-24 h-24 rounded-full border-4 border-t-amber-400 border-r-transparent border-b-orange-500 border-l-transparent animate-spin"></div>
-            <div className="absolute inset-0 flex items-center justify-center font-bold text-amber-500 text-xl animate-pulse">
-              D{EVENT_CONFIG.year}
-            </div>
-          </motion.div>
-          <p className="mt-4 text-amber-400/80 font-light tracking-widest text-sm uppercase animate-pulse">
-            Loading...
-          </p>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div className={`loading-screen ${isExiting ? 'fade-exit' : ''}`}>
+      <div className="loading-spinner-container">
+        <div className="loading-spinner"></div>
+        <div className="loading-year">
+          D{EVENT_CONFIG.year}
+        </div>
+      </div>
+      <p className="loading-text">
+        Loading...
+      </p>
+    </div>
   );
 }
