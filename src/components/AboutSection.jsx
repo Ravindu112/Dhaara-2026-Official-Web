@@ -1,4 +1,4 @@
-export default function AboutSection({ isMobile }) {
+export default function AboutSection() {
   return (
     <section id="about" className="relative py-12 md:py-24 px-4 overflow-hidden">
       <div className="container mx-auto max-w-full px-4 md:px-10 relative z-10">

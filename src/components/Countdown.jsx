@@ -47,35 +47,43 @@ const Countdown = ({ targetDate = '2026-04-22' }) => {
         </h3>
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
           {/* Days */}
-          <div className="flex flex-col items-center bg-white/20 backdrop-blur-sm rounded-xl p-4 md:p-6 min-w-[100px] md:min-w-[130px] border border-white/30">
-            <span className="text-4xl md:text-6xl font-bold text-white mb-2">
-              {timeLeft.days}
-            </span>
-            <span className="text-white text-sm md:text-base font-semibold uppercase tracking-wider">Days</span>
+          <div className="p-[2px] bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 rounded-xl min-w-[100px] md:min-w-[130px] shadow-lg hover:shadow-amber-500/30 transition-all">
+            <div className="flex flex-col items-center bg-slate-950 backdrop-blur-sm rounded-xl p-4 md:p-6 h-full">
+              <span className="text-4xl md:text-6xl font-bold text-white mb-2">
+                {timeLeft.days}
+              </span>
+              <span className="text-white text-sm md:text-base font-semibold uppercase tracking-wider">Days</span>
+            </div>
           </div>
           
           {/* Hours */}
-          <div className="flex flex-col items-center bg-white/20 backdrop-blur-sm rounded-xl p-4 md:p-6 min-w-[100px] md:min-w-[130px] border border-white/30">
-            <span className="text-4xl md:text-6xl font-bold text-white mb-2">
-              {String(timeLeft.hours).padStart(2, '0')}
-            </span>
-            <span className="text-white text-sm md:text-base font-semibold uppercase tracking-wider">Hours</span>
+          <div className="p-[2px] bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 rounded-xl min-w-[100px] md:min-w-[130px] shadow-lg hover:shadow-amber-500/30 transition-all">
+            <div className="flex flex-col items-center bg-slate-950 backdrop-blur-sm rounded-xl p-4 md:p-6 h-full">
+              <span className="text-4xl md:text-6xl font-bold text-white mb-2">
+                {String(timeLeft.hours).padStart(2, '0')}
+              </span>
+              <span className="text-white text-sm md:text-base font-semibold uppercase tracking-wider">Hours</span>
+            </div>
           </div>
           
           {/* Minutes */}
-          <div className="flex flex-col items-center bg-white/20 backdrop-blur-sm rounded-xl p-4 md:p-6 min-w-[100px] md:min-w-[130px] border border-white/30">
-            <span className="text-4xl md:text-6xl font-bold text-white mb-2">
-              {String(timeLeft.minutes).padStart(2, '0')}
-            </span>
-            <span className="text-white text-sm md:text-base font-semibold uppercase tracking-wider">Minutes</span>
+          <div className="p-[2px] bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 rounded-xl min-w-[100px] md:min-w-[130px] shadow-lg hover:shadow-amber-500/30 transition-all">
+            <div className="flex flex-col items-center bg-slate-950 backdrop-blur-sm rounded-xl p-4 md:p-6 h-full">
+              <span className="text-4xl md:text-6xl font-bold text-white mb-2">
+                {String(timeLeft.minutes).padStart(2, '0')}
+              </span>
+              <span className="text-white text-sm md:text-base font-semibold uppercase tracking-wider">Minutes</span>
+            </div>
           </div>
           
           {/* Seconds */}
-          <div className="flex flex-col items-center bg-white/20 backdrop-blur-sm rounded-xl p-4 md:p-6 min-w-[100px] md:min-w-[130px] border border-white/30">
-            <span className="text-4xl md:text-6xl font-bold text-white mb-2">
-              {String(timeLeft.seconds).padStart(2, '0')}
-            </span>
-            <span className="text-white text-sm md:text-base font-semibold uppercase tracking-wider">Seconds</span>
+          <div className="p-[2px] bg-gradient-to-br from-amber-400 via-orange-500 to-amber-600 rounded-xl min-w-[100px] md:min-w-[130px] shadow-lg hover:shadow-amber-500/30 transition-all">
+            <div className="flex flex-col items-center bg-slate-950 backdrop-blur-sm rounded-xl p-4 md:p-6 h-full">
+              <span className="text-4xl md:text-6xl font-bold text-white mb-2">
+                {String(timeLeft.seconds).padStart(2, '0')}
+              </span>
+              <span className="text-white text-sm md:text-base font-semibold uppercase tracking-wider">Seconds</span>
+            </div>
           </div>
         </div>
       </div>

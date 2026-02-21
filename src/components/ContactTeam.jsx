@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 // --- Team Member Data ---
 // Easily add, remove, or edit team members here without touching the UI code.
@@ -7,7 +6,7 @@ const teamMembers = [
   {
     id: 1,
     roleTitle: "President",
-    name: "Eleanor Fitzgerald",
+    name: "Kavinga",
     roleSubtitle: "President",
     imageSrc: "/src/assets/hod.jpg",
     email: "president@gmail.com",
@@ -16,7 +15,7 @@ const teamMembers = [
   {
     id: 2,
     roleTitle: "Vice President",
-    name: "Dr. Aris Thorne",
+    name: "Ushan",
     roleSubtitle: "Vice President",
     imageSrc: "/src/assets/hod.jpg",
     email: "vp@gmail.com",
@@ -25,7 +24,32 @@ const teamMembers = [
   {
     id: 3,
     roleTitle: "Secretary",
-    name: "Clara M. Davis",
+    name: "Venuri",
+    roleSubtitle: "Secretary",
+    imageSrc: "/src/assets/hod.jpg",
+    email: "secretaryassociation@gmail.com",
+    phone: "0708978675"
+  },
+  {
+    id: 4,
+    roleTitle: "Secretary",
+    name: "Vihanga",
+    roleSubtitle: "Secretary",
+    imageSrc: "/src/assets/hod.jpg",
+    email: "secretaryassociation@gmail.com",
+    phone: "0708978675"
+  },{
+    id: 5,
+    roleTitle: "Secretary",
+    name: "Maleesha",
+    roleSubtitle: "Secretary",
+    imageSrc: "/src/assets/hod.jpg",
+    email: "secretaryassociation@gmail.com",
+    phone: "0708978675"
+  },
+  {  id: 6,
+    roleTitle: "Secretary",
+    name: "Tharushi",
     roleSubtitle: "Secretary",
     imageSrc: "/src/assets/hod.jpg",
     email: "secretaryassociation@gmail.com",

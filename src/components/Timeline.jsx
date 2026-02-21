@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 // Ensure this path is correct for your project
 import dhaaraLogo from '../assets/logo_gold.png'; 
 

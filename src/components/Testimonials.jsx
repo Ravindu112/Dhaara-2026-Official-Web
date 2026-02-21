@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/testimonials.css';
 
 export default function Testimonials() {
   const testimonials = [
@@ -53,20 +54,16 @@ export default function Testimonials() {
               <div className="w-full md:w-5/12 flex justify-center">
                 <div className="relative">
                   {/* Glow Background */}
-                  <div className="absolute inset-0 rounded-3xl blur-2xl" style={{
-                    background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2))',
-                    pointerEvents: 'none'
-                  }}></div>
+                  <div className="absolute inset-0 rounded-3xl blur-2xl testimonials-glow-bg"></div>
                   
                   {/* Image Box */}
                   <div className="relative w-48 h-56 md:w-64 md:h-72 rounded-3xl overflow-hidden flex items-center justify-center border border-white/10 bg-white/5 hover:border-amber-500/30 transition-all">
                     {/* Placeholder Icon */}
                     <svg
-                      className="w-20 h-20"
+                      className="w-20 h-20 testimonials-avatar-icon"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
-                      style={{ color: 'rgba(251, 191, 36, 0.5)' }}
                     >
                       <path
                         fillRule="evenodd"
@@ -76,8 +73,8 @@ export default function Testimonials() {
                     </svg>
 
                     {/* Decorative Elements */}
-                    <div className="absolute top-4 right-4 w-3 h-3 rounded-full opacity-60" style={{ backgroundColor: 'rgba(251, 191, 36, 0.85)' }}></div>
-                    <div className="absolute bottom-6 left-4 w-2 h-2 rounded-full opacity-60" style={{ backgroundColor: 'rgba(251, 191, 36, 0.85)' }}></div>
+                    <div className="absolute top-4 right-4 w-3 h-3 rounded-full opacity-60 testimonials-dot-top"></div>
+                    <div className="absolute bottom-6 left-4 w-2 h-2 rounded-full opacity-60 testimonials-dot-bottom"></div>
                   </div>
                 </div>
               </div>
@@ -86,7 +83,7 @@ export default function Testimonials() {
               <div className="w-full md:w-7/12">
                 <div className="rounded-2xl p-6 md:p-8 relative border border-white/10 bg-white/5 hover:border-amber-500/30 transition-all">
                   {/* Quote Mark */}
-                  <div className="absolute top-4 left-6 text-4xl font-bold" style={{ color: 'rgba(251, 191, 36, 0.3)' }}>"</div>
+                  <div className="absolute top-4 left-6 text-4xl font-bold testimonials-quote-open">"</div>
 
                   {/* Quote Text */}
                   <p className="text-sm md:text-base lg:text-lg text-white leading-relaxed mb-6 relative z-10 pt-4">
@@ -94,17 +91,17 @@ export default function Testimonials() {
                   </p>
 
                   {/* Name and Title */}
-                  <div className="pt-4" style={{ borderTop: '1px solid rgba(251, 191, 36, 0.25)' }}>
+                  <div className="pt-4 testimonials-border-top">
                     <h3 className="text-lg font-bold text-white mb-1">
                       {testimonial.name}
                     </h3>
-                    <p className="text-sm font-light" style={{ color: 'rgba(251, 191, 36, 0.85)' }}>
+                    <p className="text-sm font-light testimonials-title-text">
                       {testimonial.title}
                     </p>
                   </div>
 
                   {/* Closing Quote Mark */}
-                  <div className="absolute bottom-4 right-6 text-4xl font-bold" style={{ color: 'rgba(251, 191, 36, 0.3)' }}>"</div>
+                  <div className="absolute bottom-4 right-6 text-4xl font-bold testimonials-quote-close">"</div>
                 </div>
               </div>
             </div>
@@ -114,9 +111,9 @@ export default function Testimonials() {
         {/* Decorative Bottom Element */}
         <div className="mt-16 text-center">
           <div className="inline-flex space-x-2">
-            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgba(251, 191, 36, 0.85)' }}></div>
-            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgba(251, 191, 36, 0.85)' }}></div>
-            <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgba(251, 191, 36, 0.85)' }}></div>
+            <div className="w-2 h-2 rounded-full testimonials-decorative-dot"></div>
+            <div className="w-2 h-2 rounded-full testimonials-decorative-dot"></div>
+            <div className="w-2 h-2 rounded-full testimonials-decorative-dot"></div>
           </div>
         </div>
       </div>

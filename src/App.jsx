@@ -15,12 +15,11 @@ import {
   LeadershipTeam
 } from './components'
 import { EVENT_CONFIG } from './constants'
-import { useIsMobile, useVideoLoading } from './utils/hooks'
+import { useVideoLoading } from './utils/hooks'
 import bgVideo from './assets/Landing video/LandingVideo.mp4'
 import mobileBg from './assets/Background.svg'
 
 function App() {
-  const isMobile = useIsMobile();
   const [isVideoLoaded, handleVideoLoaded] = useVideoLoading();
 
   return (
@@ -40,7 +39,7 @@ function App() {
         {/* Main Content Section */}
         <section className="py-15 px-4 backdrop-blur-md md:backdrop-blur-md bg-slate-950/95 md:bg-slate-950/80">
           <Countdown targetDate={EVENT_CONFIG.targetDate} />
-          <AboutSection isMobile={isMobile} />
+          <AboutSection />
           <Gallery />
           <Timeline />
           <Tickets />

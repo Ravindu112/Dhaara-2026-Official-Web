@@ -1,55 +1,57 @@
-import React, { useState } from 'react';
+import React from 'react';
+import '../styles/sponsors.css';
+
+// Sponsor Data - Static content
+const sponsors = [
+  {
+    id: 1,
+    name: 'Title Partner 1',
+    tier: 'title',
+    image: '👑',
+    description: 'Premier Title Partner',
+  },
+  {
+    id: 2,
+    name: 'Platinum Partner 1',
+    tier: 'platinum',
+    image: '💎',
+    description: 'Platinum Partnership',
+  },
+  {
+    id: 4,
+    name: 'Gold Partner 1',
+    tier: 'gold',
+    image: '🏆',
+    description: 'Gold Partnership',
+  },
+  {
+    id: 5,
+    name: 'Silver Partner 1',
+    tier: 'silver',
+    image: '⭐',
+    description: 'Silver Partnership',
+  },
+  {
+    id: 7,
+    name: 'Bronze Partner 1',
+    tier: 'bronze',
+    image: '🎯',
+    description: 'Bronze Partnership',
+  },
+];
+
+const otherSponsors = [
+  { id: 101, name: 'Partner A', icon: '🎯' },
+  { id: 102, name: 'Partner B', icon: '🎪' },
+  { id: 103, name: 'Partner C', icon: '🎨' },
+  { id: 104, name: 'Partner D', icon: '🎭' },
+  { id: 105, name: 'Partner E', icon: '🎬' },
+  { id: 106, name: 'Partner F', icon: '📱' },
+  { id: 107, name: 'Partner G', icon: '💡' },
+  { id: 108, name: 'Partner H', icon: '🌟' }
+];
 
 export default function Sponsors() {
-  
-  const [sponsors] = useState([
-    {
-      id: 1,
-      name: 'Title Partner 1',
-      tier: 'title',
-      image: '👑',
-      description: 'Premier Title Partner',
-    },
-    {
-      id: 2,
-      name: 'Platinum Partner 1',
-      tier: 'platinum',
-      image: '💎',
-      description: 'Platinum Partnership',
-    },
-    {
-      id: 4,
-      name: 'Gold Partner 1',
-      tier: 'gold',
-      image: '🏆',
-      description: 'Gold Partnership',
-    },
-    {
-      id: 5,
-      name: 'Silver Partner 1',
-      tier: 'silver',
-      image: '⭐',
-      description: 'Silver Partnership',
-    },
-    {
-      id: 7,
-      name: 'Bronze Partner 1',
-      tier: 'bronze',
-      image: '🎯',
-      description: 'Bronze Partnership',
-    },
-  ]);
-
-  const [otherSponsors] = useState([
-    { id: 101, name: 'Partner A', icon: '🎯' },
-    { id: 102, name: 'Partner B', icon: '🎪' },
-    { id: 103, name: 'Partner C', icon: '🎨' },
-    { id: 104, name: 'Partner D', icon: '🎭' },
-    { id: 105, name: 'Partner E', icon: '🎬' },
-    { id: 106, name: 'Partner F', icon: '📱' },
-    { id: 107, name: 'Partner G', icon: '💡' },
-    { id: 108, name: 'Partner H', icon: '🌟' }
-  ]);
 
   const tierConfig = {
     title: { name: 'Title Partner', textColor: 'text-amber-400' },
@@ -91,7 +93,7 @@ export default function Sponsors() {
             >
               <div className="relative bg-slate-950 rounded-[30px] p-10 h-full overflow-hidden flex flex-col items-center">
                 
-                <div className={`relative z-10 mb-6 flex items-center justify-center transition-all duration-500 ${isTitle ? 'text-8xl animate-bounce' : 'text-7xl'}`}>
+                <div className={`relative z-10 mb-6 flex items-center justify-center transition-all duration-500 ${isTitle ? 'text-8xl' : 'text-7xl'}`}>
                   {sponsor.image}
                 </div>
 
@@ -152,11 +154,6 @@ export default function Sponsors() {
           
           <div className="relative overflow-hidden bg-slate-900/30 rounded-[40px] p-[1.5px] bg-gradient-to-r from-amber-200 via-yellow-600 to-amber-800">
             <div className="bg-slate-950 rounded-[38px] p-12 overflow-hidden">
-              <style>{`
-                @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-                .sponsors-scroll { display: flex; width: max-content; animation: scroll-left 40s linear infinite; }
-                .sponsors-scroll:hover { animation-play-state: paused; }
-              `}</style>
               <div className="sponsors-scroll gap-12">
                 {[...otherSponsors, ...otherSponsors].map((sponsor, index) => (
                   <div key={index} className="flex flex-col items-center justify-center group w-40">
