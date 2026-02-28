@@ -3,12 +3,12 @@ export default function BackgroundVideo({ bgVideo, mobileBackground, onLoadedDat
     <>
       {/* Mobile Background Image - Hidden on desktop */}
       {mobileBackground && (
-        <div 
+        <div
           className="md:hidden fixed inset-0 w-full h-full bg-cover bg-center"
           style={{ backgroundImage: `url(${mobileBackground})` }}
         />
       )}
-      
+
       {/* Desktop Background Video - Hidden on mobile */}
       <video
         autoPlay
@@ -21,8 +21,8 @@ export default function BackgroundVideo({ bgVideo, mobileBackground, onLoadedDat
         <source src={bgVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      
-      
+
+
     </>
   );
 }

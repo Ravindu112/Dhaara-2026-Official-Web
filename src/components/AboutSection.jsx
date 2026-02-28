@@ -46,17 +46,11 @@ export default function AboutSection() {
               src="src/assets/videos/BGRemove.mp4"
               alt="About Section Video"
               className="w-full md:max-w-2xl h-auto rounded-lg shadow-lg"
-              controls
               autoPlay
               loop
               muted
             />
 
-            {/* <img
-                    src={animation}
-                    alt="Animation"
-                    className="w-64 h-auto"
-                  />*/}
 
           </div>
         </div>
