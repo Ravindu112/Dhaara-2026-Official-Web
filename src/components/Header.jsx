@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import logo from '../assets/logo26.svg';
+import logo from '../assets/Dhaara Word.png';
 import '../styles/header.css';
 
 const Header = () => {
@@ -21,14 +21,14 @@ const Header = () => {
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-12 py-8">
         <div className="flex justify-between items-center">
           {/* Logo/Brand */}
           <a href="#home" className="flex items-center">
             <img
               src={logo}
               alt="DHAARA Logo"
-              className="h-10 md:h-12 w-auto object-contain hover:opacity-80 transition-opacity"
+              className="h-8 md:h-10 w-auto object-contain hover:opacity-80 transition-opacity"
             />
           </a>
 

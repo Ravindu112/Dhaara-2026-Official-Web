@@ -6,55 +6,55 @@ const teamMembers = [
   {
     id: 1,
     roleTitle: "President",
-    name: "Kavinga",
+    name: "Kavinga Ranthilaka",
     roleSubtitle: "President",
     imageSrc: "/src/assets/hod.jpg",
-    email: "president@gmail.com",
-    phone: "0765434323"
+    email: "ranthilakakavinga@gmail.com",
+    phone: "0752158937"
   },
   {
     id: 2,
-    roleTitle: "Vice President",
-    name: "Ushan",
-    roleSubtitle: "Vice President",
+    roleTitle: "Vice President-Education ",
+    name: "Ushan Karunarathne",
+    roleSubtitle: "Vice President-Education",
     imageSrc: "/src/assets/hod.jpg",
-    email: "vp@gmail.com",
-    phone: "0786565453"
+    email: "karunarathnaushan22@gmail.com",
+    phone: "0778270975"
   },
   {
     id: 3,
     roleTitle: "Secretary",
-    name: "Venuri",
+    name: "Venuri Mettananda",
     roleSubtitle: "Secretary",
     imageSrc: "/src/assets/hod.jpg",
-    email: "secretaryassociation@gmail.com",
-    phone: "0708978675"
+    email: "mettanandavenuri@gmail.com",
+    phone: "0764112703"
   },
   {
     id: 4,
     roleTitle: "Secretary",
-    name: "Vihanga",
+    name: "Vihanga Rathnayake",
     roleSubtitle: "Secretary",
     imageSrc: "/src/assets/hod.jpg",
-    email: "secretaryassociation@gmail.com",
-    phone: "0708978675"
+    email: "vihangasan221@gmail.com",
+    phone: "0713537688"
   }, {
     id: 5,
-    roleTitle: "Secretary",
-    name: "Maleesha",
-    roleSubtitle: "Secretary",
+    roleTitle: "Threasurer",
+    name: "Maleesha Kalubowila",
+    roleSubtitle: "Threasurer",
     imageSrc: "/src/assets/hod.jpg",
-    email: "secretaryassociation@gmail.com",
-    phone: "0708978675"
+    email: "maleeshakalubowila@gmail.com",
+    phone: "07769795732"
   },
   {
     id: 6,
-    roleTitle: "Secretary",
-    name: "Tharushi",
-    roleSubtitle: "Secretary",
+    roleTitle: "Threasurer",
+    name: "Tharushi Dilshika",
+    roleSubtitle: "Threasurer",
     imageSrc: "/src/assets/hod.jpg",
-    email: "secretaryassociation@gmail.com",
-    phone: "0708978675"
+    email: "tharushidilshika@gmail.com",
+    phone: "0742912852"
   }
 ];
 
