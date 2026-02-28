@@ -1,6 +1,6 @@
 import React from 'react';
 // Ensure this path is correct for your project
-import dhaaraLogo from '../assets/logo_gold.png'; 
+import dhaaraLogo from '../assets/logo_gold.png';
 
 // --- Sample Data ---
 const timelineData = [
@@ -13,26 +13,26 @@ const timelineData = [
   {
     id: 2,
     title: "VOCAL TRAINING WORKSHOP",
-    date: "2026-02-10",
+    date: "2026-02-12",
     happened: true,
   },
   {
     id: 3,
     title: "1ST ROUND AUDITIONS",
-    date: "2026-03-11",
+    date: "2026-02-18",
     happened: true,
   },
   {
     id: 4,
     title: "Stage Performing Workshop",
-    date: "2026-03-09",
-    happened: false,
+    date: "2026-02-24",
+    happened: true,
   },
   {
     id: 5,
     title: "Event Management Workshop",
-    date: "2026-03-08",
-    happened: false,
+    date: "2026-02-26",
+    happened: true,
   },
   {
     id: 6,
@@ -43,7 +43,7 @@ const timelineData = [
   {
     id: 7,
     title: "Semi Final",
-    date: "2026-04-15",
+    date: "2026-03-19",
     happened: false,
   },
   {
@@ -61,12 +61,12 @@ const TimelineItem = ({ data, index }) => {
   const active = data.happened;
 
   return (
-    <div 
+    <div
       className={`relative flex flex-col md:flex-row items-center md:justify-between mb-12 w-full
         ${isEven ? 'md:flex-row-reverse' : ''}
       `}
     >
-      
+
       {/* Spacer for desktop layout */}
       <div className="hidden md:block w-5/12"></div>
 
@@ -79,7 +79,7 @@ const TimelineItem = ({ data, index }) => {
         top-0 md:top-1/2 md:-translate-y-1/2
       `}>
       </div>
-      
+
       {/* Horizontal Connector Line */}
       <div className={`absolute h-1 hidden md:block transition-all duration-500
          ${active ? 'bg-amber-400' : 'bg-gray-700'}
@@ -92,7 +92,7 @@ const TimelineItem = ({ data, index }) => {
         transition-all duration-500 cursor-default hover:scale-105 border border-slate-700/50
         ${active
           ? 'bg-gradient-to-br from-amber-400 to-amber-500 text-slate-900' // Gradient for active items
-          : 'bg-amber-50/20 backdrop-blur-sm text-gray-200' 
+          : 'bg-amber-50/20 backdrop-blur-sm text-gray-200'
         }
         ${isEven ? 'md:text-right' : 'md:text-left'}
       `}>
@@ -112,21 +112,21 @@ const Timeline = () => {
   const totalItems = timelineData.length;
   // Find the index of the last item where happened is true
   const lastActiveIndex = timelineData.findLastIndex(item => item.happened);
-  
+
   // Calculate percentage: (Index / (Total - 1)) * 100
   // If no items have happened, height is 0.
-  const progressHeight = lastActiveIndex >= 0 
-    ? (lastActiveIndex / (totalItems - 1)) * 100 
+  const progressHeight = lastActiveIndex >= 0
+    ? (lastActiveIndex / (totalItems - 1)) * 100
     : 0;
 
   return (
     <section id="timeline" className="relative py-24 px-4 overflow-hidden min-h-screen flex items-center justify-center">
-      
-       {/* Background */}
-       
+
+      {/* Background */}
+
 
       <div className="container mx-auto max-w-5xl relative z-10">
-        <h2 
+        <h2
           className="text-3xl md:text-7xl font-black text-center uppercase tracking-tight mb-16 
              bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent 
              drop-shadow-[0_0_25px_rgba(255,160,0,0.4)]">
@@ -134,12 +134,12 @@ const Timeline = () => {
         </h2>
 
         <div className="relative">
-          
+
           {/* 1. The Gray Background Line (Full Height) */}
           <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-700 rounded-full"></div>
 
           {/* 2. The Yellow Progress Line (Calculated Height) */}
-          <div 
+          <div
             style={{ height: `${progressHeight}%` }}
             className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-1 bg-amber-400 rounded-full shadow-[0_0_15px_rgba(251,191,36,0.8)] z-0"
           ></div>

@@ -38,7 +38,7 @@ const teamMembers = [
     imageSrc: "/src/assets/hod.jpg",
     email: "secretaryassociation@gmail.com",
     phone: "0708978675"
-  },{
+  }, {
     id: 5,
     roleTitle: "Secretary",
     name: "Maleesha",
@@ -47,7 +47,8 @@ const teamMembers = [
     email: "secretaryassociation@gmail.com",
     phone: "0708978675"
   },
-  {  id: 6,
+  {
+    id: 6,
     roleTitle: "Secretary",
     name: "Tharushi",
     roleSubtitle: "Secretary",
@@ -60,7 +61,7 @@ const teamMembers = [
 // --- Individual Card Component ---
 const TeamCard = ({ member, index }) => {
   return (
-    <div 
+    <div
       className="flex flex-col items-center bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-amber-500/20"
     >
       {/* Role Heading */}
@@ -71,9 +72,9 @@ const TeamCard = ({ member, index }) => {
       {/* Profile Image with theme accent border */}
       <div className="relative mb-4">
         <div className="w-28 h-28 rounded-full p-1 bg-gradient-to-r from-amber-400 to-orange-500">
-          <img 
-            src={member.imageSrc} 
-            alt={member.name} 
+          <img
+            src={member.imageSrc}
+            alt={member.name}
             className="w-full h-full rounded-full object-cover border-4 border-slate-900"
           />
         </div>
@@ -88,10 +89,10 @@ const TeamCard = ({ member, index }) => {
 
       {/* Contact Info List */}
       <div className="w-full space-y-3">
-        
+
         {/* Email Link */}
-        <a 
-          href={`mailto:${member.email}`} 
+        <a
+          href={`mailto:${member.email}`}
           className="flex items-center text-gray-300 hover:text-amber-400 transition-colors duration-200"
         >
           {/* Email SVG Icon */}
@@ -102,8 +103,8 @@ const TeamCard = ({ member, index }) => {
         </a>
 
         {/* Phone Link */}
-        <a 
-          href={`tel:${member.phone.replace(/[^0-9+]/g, '')}`} 
+        <a
+          href={`tel:${member.phone.replace(/[^0-9+]/g, '')}`}
           className="flex items-center text-gray-300 hover:text-amber-400 transition-colors duration-200"
         >
           {/* Phone SVG Icon */}
@@ -122,10 +123,10 @@ const TeamCard = ({ member, index }) => {
 const LeadershipTeam = () => {
   return (
     <section id="leadership" className="relative py-24 px-4 overflow-hidden min-h-screen flex items-center justify-center">
-      
+
       {/* Main Container */}
       <div className="container mx-auto max-w-7xl relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6 

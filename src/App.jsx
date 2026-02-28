@@ -1,22 +1,22 @@
-import { 
-  Header, 
-  FloatingBookIcon, 
-  LoadingScreen, 
-  BackgroundVideo, 
-  AboutSection, 
+import {
+  Header,
+  FloatingBookIcon,
+  LoadingScreen,
+  BackgroundVideo,
+  AboutSection,
   PageFooter,
-  Hero, 
-  Countdown, 
-  Gallery, 
-  Timeline, 
-  Tickets, 
-  Testimonials, 
+  Hero,
+  Countdown,
+  Gallery,
+  Timeline,
+  Tickets,
+  Testimonials,
   Sponsors,
   LeadershipTeam
 } from './components'
 import { EVENT_CONFIG } from './constants'
 import { useVideoLoading } from './utils/hooks'
-import bgVideo from './assets/Landing video/LandingVideo.mp4'
+import bgVideo from './assets/Landing video/DHAARA BG WEB.mp4'
 import mobileBg from './assets/Background.svg'
 
 function App() {
@@ -25,15 +25,15 @@ function App() {
   return (
     <>
       <LoadingScreen isVideoLoaded={isVideoLoaded} />
-      <BackgroundVideo 
-        bgVideo={bgVideo} 
+      <BackgroundVideo
+        bgVideo={bgVideo}
         mobileBackground={mobileBg}
-        onLoadedData={handleVideoLoaded} 
+        onLoadedData={handleVideoLoaded}
       />
-      
+
       <div className="relative min-h-screen text-white overflow-x-hidden w-full">
         <Header />
-        
+
         <Hero />
 
         {/* Main Content Section */}
@@ -45,7 +45,7 @@ function App() {
           <Tickets />
           <Testimonials />
           <Sponsors />
-          <LeadershipTeam/>
+          <LeadershipTeam />
           <PageFooter />
         </section>
       </div>
