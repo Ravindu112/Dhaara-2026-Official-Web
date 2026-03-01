@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-      <nav className="container mx-auto px-12 py-8">
+      <nav className="container mx-auto px-12 py-4">
         <div className="flex justify-between items-center">
           {/* Logo/Brand */}
           <a href="#home" className="flex items-center">
