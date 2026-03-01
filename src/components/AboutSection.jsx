@@ -45,7 +45,7 @@ export default function AboutSection() {
             <video
               src="src/assets/videos/BGRemove.mp4"
               alt="About Section Video"
-              className="w-full md:max-w-2xl h-auto rounded-lg shadow-lg"
+              className="w-full md:max-w-2xl h-auto rounded-lg shadow-lg object-cover object-[60%_40%]"
               autoPlay
               loop
               muted

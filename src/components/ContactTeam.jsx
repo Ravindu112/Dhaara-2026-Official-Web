@@ -1,148 +1,181 @@
-import React from 'react';
+import React from "react";
+import kImage from "../assets/Images/ContactUs/k.webp";
+import vImage from "../assets/Images/ContactUs/v.webp";
+import v2Image from "../assets/Images/ContactUs/v2.webp";
+import tImage from "../assets/Images/ContactUs/t.webp";
+import mImage from "../assets/Images/ContactUs/m.webp";
+
 
 // --- Team Member Data ---
-// Easily add, remove, or edit team members here without touching the UI code.
 const teamMembers = [
   {
     id: 1,
     roleTitle: "President",
     name: "Kavinga Ranthilaka",
     roleSubtitle: "President",
-    imageSrc: "/src/assets/hod.jpg",
+    imageSrc: kImage,
     email: "ranthilakakavinga@gmail.com",
-    phone: "0752158937"
+    phone: "0752158937",
   },
   {
     id: 2,
-    roleTitle: "Vice President-Education ",
+    roleTitle: "Vice President-Education",
     name: "Ushan Karunarathne",
     roleSubtitle: "Vice President-Education",
     imageSrc: "/src/assets/hod.jpg",
     email: "karunarathnaushan22@gmail.com",
-    phone: "0778270975"
+    phone: "0778270975",
   },
   {
     id: 3,
     roleTitle: "Secretary",
     name: "Venuri Mettananda",
     roleSubtitle: "Secretary",
-    imageSrc: "/src/assets/hod.jpg",
+    imageSrc: vImage,
     email: "mettanandavenuri@gmail.com",
-    phone: "0764112703"
+    phone: "0764112703",
   },
   {
     id: 4,
     roleTitle: "Secretary",
     name: "Vihanga Rathnayake",
     roleSubtitle: "Secretary",
-    imageSrc: "/src/assets/hod.jpg",
+    imageSrc: v2Image,
     email: "vihangasan221@gmail.com",
-    phone: "0713537688"
-  }, {
+    phone: "0713537688",
+  },
+  {
     id: 5,
-    roleTitle: "Threasurer",
+    roleTitle: "Treasurer",
     name: "Maleesha Kalubowila",
-    roleSubtitle: "Threasurer",
-    imageSrc: "/src/assets/hod.jpg",
+    roleSubtitle: "Treasurer",
+    imageSrc: mImage,
     email: "maleeshakalubowila@gmail.com",
-    phone: "07769795732"
+    phone: "07769795732",
   },
   {
     id: 6,
-    roleTitle: "Threasurer",
+    roleTitle: "Treasurer",
     name: "Tharushi Dilshika",
-    roleSubtitle: "Threasurer",
-    imageSrc: "/src/assets/hod.jpg",
+    roleSubtitle: "Treasurer",
+    imageSrc: tImage,
     email: "tharushidilshika@gmail.com",
-    phone: "0742912852"
-  }
+    phone: "0742912852",
+  },
 ];
 
-// --- Individual Card Component ---
-const TeamCard = ({ member, index }) => {
+// --- Individual Card ---
+const TeamCard = ({ member }) => {
   return (
-    <div
-      className="flex flex-col items-center bg-slate-900/60 backdrop-blur-md border border-slate-700/50 rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-amber-500/20"
-    >
-      {/* Role Heading */}
-      <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-wider">
+    <div className="flex flex-col items-center bg-slate-900/60 backdrop-blur-md border border-slate-700/50 
+                    rounded-xl p-4 md:p-8 shadow-xl transition-all duration-300 
+                    hover:scale-105 hover:shadow-amber-500/20">
+
+      {/* Role */}
+      <h3 className="text-[10px] md:text-lg font-bold text-white mb-3 md:mb-6 uppercase tracking-wider text-center">
         {member.roleTitle}
       </h3>
 
-      {/* Profile Image with theme accent border */}
-      <div className="relative mb-4">
-        <div className="w-28 h-28 rounded-full p-1 bg-gradient-to-r from-amber-400 to-orange-500">
+      {/* Profile Image */}
+      <div className="relative mb-3 md:mb-4">
+        <div className="w-20 h-20 md:w-28 md:h-28 rounded-full p-1 
+                        bg-gradient-to-r from-amber-400 to-orange-500">
           <img
             src={member.imageSrc}
             alt={member.name}
-            className="w-full h-full rounded-full object-cover border-4 border-slate-900"
+            className="w-full h-full rounded-full object-cover border-2 md:border-4 border-slate-900"
           />
         </div>
       </div>
 
-      {/* Member Details */}
-      <h4 className="text-2xl font-bold text-gray-100">{member.name}</h4>
-      <p className="text-amber-500 font-semibold mb-4">{member.roleSubtitle}</p>
+      {/* Name */}
+      <h4 className="text-xs md:text-xl font-bold text-gray-100 text-center">
+        {member.name}
+      </h4>
 
-      {/* Separator */}
-      <div className="w-full h-px bg-slate-700/50 mb-6"></div>
+      <p className="text-[10px] md:text-sm text-amber-500 font-semibold mb-3 md:mb-4 text-center">
+        {member.roleSubtitle}
+      </p>
 
-      {/* Contact Info List */}
-      <div className="w-full space-y-3">
+      <div className="w-full h-px bg-slate-700/50 mb-3 md:mb-6"></div>
 
-        {/* Email Link */}
+      {/* Contact */}
+      <div className="w-full space-y-2 md:space-y-3">
+
+        {/* Email */}
         <a
           href={`mailto:${member.email}`}
           className="flex items-center text-gray-300 hover:text-amber-400 transition-colors duration-200"
         >
-          {/* Email SVG Icon */}
-          <svg className="w-5 h-5 mr-3 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          <svg
+            className="w-3 h-3 md:w-5 md:h-5 mr-2 md:mr-3 text-amber-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            />
           </svg>
-          <span className="text-sm truncate">{member.email}</span>
+          <span className="text-[9px] md:text-sm truncate">
+            {member.email}
+          </span>
         </a>
 
-        {/* Phone Link */}
+        {/* Phone */}
         <a
-          href={`tel:${member.phone.replace(/[^0-9+]/g, '')}`}
+          href={`tel:${member.phone.replace(/[^0-9+]/g, "")}`}
           className="flex items-center text-gray-300 hover:text-amber-400 transition-colors duration-200"
         >
-          {/* Phone SVG Icon */}
-          <svg className="w-5 h-5 mr-3 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          <svg
+            className="w-3 h-3 md:w-5 md:h-5 mr-2 md:mr-3 text-amber-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+            />
           </svg>
-          <span className="text-sm">{member.phone}</span>
+          <span className="text-[9px] md:text-sm">
+            {member.phone}
+          </span>
         </a>
-
       </div>
     </div>
   );
 };
 
-// --- Main Leadership Team Component ---
+// --- Main Component ---
 const LeadershipTeam = () => {
   return (
-    <section id="leadership" className="relative py-24 px-4 overflow-hidden min-h-screen flex items-center justify-center">
-
-      {/* Main Container */}
+    <section
+      id="leadership"
+      className="relative py-16 md:py-24 px-3 md:px-6 overflow-hidden min-h-screen flex items-center justify-center"
+    >
       <div className="container mx-auto max-w-7xl relative z-10">
 
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6 
-               bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent 
-               drop-shadow-[0_0_20px_rgba(255,165,0,0.3)] text-center">
+        {/* Header */}
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl md:text-5xl font-black uppercase tracking-tight mb-4 md:mb-6
+                         bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
             Contact Us
           </h2>
-          <p className="text-lg text-gray-300 font-light">
+          <p className="text-sm md:text-lg text-gray-300 font-light">
             Get in touch with our executive board members.
           </p>
         </div>
 
-        {/* Grid Container for Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-          {teamMembers.map((member, index) => (
-            <TeamCard key={member.id} member={member} index={index} />
+        {/* Grid */}
+        <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
+          {teamMembers.map((member) => (
+            <TeamCard key={member.id} member={member} />
           ))}
         </div>
 

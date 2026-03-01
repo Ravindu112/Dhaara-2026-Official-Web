@@ -1,11 +1,13 @@
 import React from 'react';
 import '../styles/testimonials.css';
+import vcImage from '../assets/Images/vc.webp';
 
 export default function Testimonials() {
   const testimonials = [
     {
       name: 'Vice Chancellor',
       title: 'University of Sri Jayewardenepura',
+      image: vcImage,
       quote: 'DHAARA represents the pinnacle of cultural excellence and artistic expression at our university. This competition embodies our commitment to nurturing talented musicians and fostering a vibrant arts community. It stands as a testament to the creativity and passion of our students.',
       position: 'left'
     },
@@ -44,33 +46,25 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`flex flex-col ${
-                testimonial.position === 'left'
-                  ? 'md:flex-row'
-                  : 'md:flex-row-reverse'
-              } gap-6 md:gap-8 items-center`}
+              className={`flex flex-col ${testimonial.position === 'left'
+                ? 'md:flex-row'
+                : 'md:flex-row-reverse'
+                } gap-6 md:gap-8 items-center`}
             >
               {/* Image/Avatar Placeholder */}
               <div className="w-full md:w-5/12 flex justify-center">
                 <div className="relative">
                   {/* Glow Background */}
                   <div className="absolute inset-0 rounded-3xl blur-2xl testimonials-glow-bg"></div>
-                  
+
                   {/* Image Box */}
                   <div className="relative w-48 h-56 md:w-64 md:h-72 rounded-3xl overflow-hidden flex items-center justify-center border border-white/10 bg-white/5 hover:border-amber-500/30 transition-all">
                     {/* Placeholder Icon */}
-                    <svg
-                      className="w-20 h-20 testimonials-avatar-icon"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-full h-full object-cover"
+                    />
 
                     {/* Decorative Elements */}
                     <div className="absolute top-4 right-4 w-3 h-3 rounded-full opacity-60 testimonials-dot-top"></div>
