@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import logo from '../assets/logo26.svg';
+import logo from '../assets/Dhaara Word.png';
 import '../styles/header.css';
 
 const Header = () => {
@@ -20,15 +20,15 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`header ${isScrolled ? 'scrolled' : ''}`}> 
-      <nav className="container mx-auto px-4 py-4">
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+      <nav className="container mx-auto px-12 py-4">
         <div className="flex justify-between items-center">
           {/* Logo/Brand */}
           <a href="#home" className="flex items-center">
-            <img 
-              src={logo} 
-              alt="DHAARA Logo" 
-              className="h-10 md:h-12 w-auto object-contain hover:opacity-80 transition-opacity"
+            <img
+              src={logo}
+              alt="DHAARA Logo"
+              className="h-8 md:h-10 w-auto object-contain hover:opacity-80 transition-opacity"
             />
           </a>
 
@@ -91,66 +91,26 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4">
-            <ul className="flex flex-col space-y-4 text-white">
-              <li>
-                <a
-                  href="#home"
-                  className="block hover:text-amber-400 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="block hover:text-amber-400 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#gallery"
-                  className="block hover:text-amber-400 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Gallery
-                </a>
-              </li>
-               <li>
-                <a
-                  href="#tickets"
-                  className="block hover:text-amber-400 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Tickets
-                </a>
-              </li>
-               <li>
-                <a
-                  href="#sponsors"
-                  className="block hover:text-amber-400 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Sponsors
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="block hover:text-amber-400 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        )}
+        <div
+          className={`md:hidden transition-all duration-500 overflow-hidden ${isMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
+            }`}
+        >
+          <ul className="flex flex-col space-y-4 text-white bg-slate-900/80 backdrop-blur-xl p-6 rounded-xl">
+            {["home", "about", "gallery", "tickets", "sponsors", "contact"].map(
+              (item) => (
+                <li key={item}>
+                  <a
+                    href={`#${item}`}
+                    className="block hover:text-amber-400 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </a>
+                </li>
+              )
+            )}
+          </ul>
+        </div>
       </nav>
     </header>
   );

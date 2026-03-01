@@ -1,11 +1,11 @@
 // Common Components
-export { 
-  Header, 
-  FloatingBookIcon, 
-  LoadingScreen, 
-  BackgroundVideo, 
-  AboutSection, 
-  PageFooter 
+export {
+  Header,
+  FloatingBookIcon,
+  LoadingScreen,
+  BackgroundVideo,
+  AboutSection,
+  PageFooter
 } from './common';
 
 // Page Sections
@@ -17,7 +17,7 @@ export {
   Tickets,
   Testimonials,
   Sponsors,
- 
+
 } from './sections';
 
 export { default as LeadershipTeam } from './ContactTeam';
