@@ -5,35 +5,35 @@ import '../styles/sponsors.css';
 const sponsors = [
   {
     id: 1,
-    name: 'Title Partner 1',
+    name: 'Title Partner ',
     tier: 'title',
     image: '👑',
     description: 'Premier Title Partner',
   },
   {
     id: 2,
-    name: 'Platinum Partner 1',
+    name: 'Platinum Partner',
     tier: 'platinum',
     image: '💎',
     description: 'Platinum Partnership',
   },
   {
     id: 4,
-    name: 'Gold Partner 1',
+    name: 'Gold Partner ',
     tier: 'gold',
     image: '🏆',
     description: 'Gold Partnership',
   },
   {
     id: 5,
-    name: 'Silver Partner 1',
+    name: 'Silver Partner ',
     tier: 'silver',
     image: '⭐',
     description: 'Silver Partnership',
   },
   {
     id: 7,
-    name: 'Bronze Partner 1',
+    name: 'Bronze Partner ',
     tier: 'bronze',
     image: '🎯',
     description: 'Bronze Partnership',
@@ -85,14 +85,13 @@ export default function Sponsors() {
           {tierSponsors.map((sponsor) => (
             <div
               key={sponsor.id}
-              className={`relative group rounded-[32px] transition-all duration-500 transform hover:-translate-y-2 ${
-                isTitle 
-                ? 'p-[2px] bg-gradient-to-b from-amber-400 via-orange-500 to-amber-600 shadow-[0_0_50px_-12px_rgba(251,191,36,0.4)]' 
+              className={`relative group rounded-[32px] transition-all duration-500 transform hover:-translate-y-2 ${isTitle
+                ? 'p-[2px] bg-gradient-to-b from-amber-400 via-orange-500 to-amber-600 shadow-[0_0_50px_-12px_rgba(251,191,36,0.4)]'
                 : 'p-[1.5px] bg-gradient-to-br from-amber-200 via-yellow-600 to-amber-800 shadow-xl'
-              }`}
+                }`}
             >
               <div className="relative bg-slate-950 rounded-[30px] p-10 h-full overflow-hidden flex flex-col items-center">
-                
+
                 <div className={`relative z-10 mb-6 flex items-center justify-center transition-all duration-500 ${isTitle ? 'text-8xl' : 'text-7xl'}`}>
                   {sponsor.image}
                 </div>
@@ -105,12 +104,11 @@ export default function Sponsors() {
                   "{sponsor.description}"
                 </p>
 
-                
-                <button className={`relative z-10 px-8 py-3 rounded-full font-bold uppercase tracking-wider transition-all duration-300 ${
-                  isTitle 
-                  ? 'bg-gradient-to-r from-amber-400 to-orange-600 text-black hover:scale-105 shadow-[0_5px_15px_-5px_rgba(251,191,36,0.5)]' 
+
+                <button className={`relative z-10 px-8 py-3 rounded-full font-bold uppercase tracking-wider transition-all duration-300 ${isTitle
+                  ? 'bg-gradient-to-r from-amber-400 to-orange-600 text-black hover:scale-105 shadow-[0_5px_15px_-5px_rgba(251,191,36,0.5)]'
                   : 'bg-gradient-to-r from-amber-100 to-amber-300 text-black hover:brightness-110 shadow-md'
-                }`}>
+                  }`}>
                   Learn More
                 </button>
               </div>
@@ -124,13 +122,13 @@ export default function Sponsors() {
   return (
     <section id="sponsors" className="py-24 px-4  text-white min-h-screen relative overflow-hidden">
       <div className="container mx-auto max-w-7xl">
-        
+
         {/* --- Section Header --- */}
         <div className="text-center mb-24">
           <h2 className="text-4xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter uppercase mb-6">
-    <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(255,160,0,0.4)]">
-      OUR Sponsors</span>
-  </h2>
+            <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(255,160,0,0.4)]">
+              OUR Sponsors</span>
+          </h2>
           <p className="text-2xl md:text-3xl text-gray-300 font-bold tracking-tight">Proud Partners Making DHAARA '26 Possible</p>
           <div className="h-2 w-32 bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mt-8"></div>
         </div>
@@ -151,7 +149,7 @@ export default function Sponsors() {
           <h3 className="text-3xl md:text-3xl font-semibold text-amber-500 mb-12 text-center uppercase tracking-[0.3em]">
             Supporting Partners
           </h3>
-          
+
           <div className="relative overflow-hidden bg-slate-900/30 rounded-[40px] p-[1.5px] bg-gradient-to-r from-amber-200 via-yellow-600 to-amber-800">
             <div className="bg-slate-950 rounded-[38px] p-12 overflow-hidden">
               <div className="sponsors-scroll gap-12">
@@ -174,9 +172,9 @@ export default function Sponsors() {
             BECOME PART OF THE LEGACY
           </h4>
           <p className="relative z-10 text-gray-300 text-base md:text-lg font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
-  Join us in making DHAARA '26 the most memorable music competition. 
-  We offer various sponsorship packages to showcase your brand.
-</p>
+            Join us in making DHAARA '26 the most memorable music competition.
+            We offer various sponsorship packages to showcase your brand.
+          </p>
           <div className="flex justify-center">
             <a href="#leadership" className="relative z-10 px-14 py-6 bg-gradient-to-r from-amber-200 to-amber-800 text-black font-black rounded-full hover:scale-110 transition-all transform duration-500 uppercase tracking-tighter shadow-[0_0_40px_-10px_rgba(251,191,36,0.6)] border-2 border-amber-400 active:scale-95">
               Sponsorship Opportunities
