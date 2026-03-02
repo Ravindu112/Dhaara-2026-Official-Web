@@ -31,7 +31,7 @@ function TicketsCountdown() {
     }, []);
 
     return (
-        <section id="tickets-countdown" className="relative py-20 md:py-24 px-4 md:px-6 bg-gradient-to-b from-[#050816] to-[#0c1225] text-white overflow-hidden">
+        <section id="Tickets" className="relative py-20 md:py-24 px-4 md:px-6 bg-gradient-to-b from-[#050816] to-[#0c1225] text-white overflow-hidden">
             <div className="container mx-auto max-w-5xl text-center">
 
                 {/* 🔥 Heading */}

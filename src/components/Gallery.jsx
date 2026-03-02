@@ -1,4 +1,3 @@
-import galleryImage from '../assets/award.png';
 import img1 from '../assets/Images/Gallery/1.webp';
 import img2 from '../assets/Images/Gallery/2.webp';
 import img3 from '../assets/Images/Gallery/3.webp';
