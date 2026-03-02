@@ -1,6 +1,9 @@
 import React from 'react';
 import '../styles/testimonials.css';
 import vcImage from '../assets/Images/vc.webp';
+import directorImage from '../assets/Images/erangaSir.webp';
+import advisorImage from '../assets/Images/ChathuMdm.webp';
+import { image } from 'framer-motion/client';
 
 export default function Testimonials() {
   const testimonials = [
@@ -12,14 +15,16 @@ export default function Testimonials() {
       position: 'left'
     },
     {
-      name: 'Club Director',
-      title: 'Flair Club',
+      name: 'Director',
+      title: 'Career Guidance Unit',
+      image: directorImage,
       quote: 'DHAARA is more than just a competition—it\'s a movement that celebrates the heartbeat of our university. We witness incredible talent, dedication, and artistry every year. The platform we create allows young musicians to shine and inspire their peers across universities.',
       position: 'right'
     },
     {
-      name: 'Advisor',
-      title: 'Student Development & Events',
+      name: 'Senior Career Advisor',
+      title: 'Career Guidance Unit',
+      image: advisorImage,
       quote: 'The evolution of DHAARA over the years has been remarkable. From auditions to the grand finale, every stage is meticulously crafted to provide the best experience for our participants and audience. We take pride in creating a space where music, passion, and excellence converge.',
       position: 'left'
     }

@@ -3,6 +3,7 @@ import kImage from "../assets/Images/ContactUs/k.webp";
 import vImage from "../assets/Images/ContactUs/v.webp";
 import v2Image from "../assets/Images/ContactUs/v2.webp";
 import tImage from "../assets/Images/ContactUs/t.webp";
+import uImage from "../assets/Images/ContactUs/u.webp";
 import mImage from "../assets/Images/ContactUs/m.webp";
 
 
@@ -22,7 +23,7 @@ const teamMembers = [
     roleTitle: "Vice President-Education",
     name: "Ushan Karunarathne",
     roleSubtitle: "Vice President-Education",
-    imageSrc: "/src/assets/hod.jpg",
+    imageSrc: uImage,
     email: "karunarathnaushan22@gmail.com",
     phone: "0778270975",
   },
@@ -156,7 +157,7 @@ const TeamCard = ({ member }) => {
 const LeadershipTeam = () => {
   return (
     <section
-      id="leadership"
+      id="contact"
       className="relative py-16 md:py-24 px-3 md:px-6 overflow-hidden min-h-screen flex items-center justify-center"
     >
       <div className="container mx-auto max-w-7xl relative z-10">
