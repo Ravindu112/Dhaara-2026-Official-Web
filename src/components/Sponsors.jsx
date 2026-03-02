@@ -86,8 +86,8 @@ export default function Sponsors() {
             <div
               key={sponsor.id}
               className={`relative group rounded-[32px] transition-all duration-500 transform hover:-translate-y-2 ${isTitle
-                  ? 'p-[2px] bg-gradient-to-b from-amber-400 via-orange-500 to-amber-600 shadow-[0_0_50px_-12px_rgba(251,191,36,0.4)]'
-                  : 'p-[1.5px] bg-gradient-to-br from-amber-200 via-yellow-600 to-amber-800 shadow-xl'
+                ? 'p-[2px] bg-gradient-to-b from-amber-400 via-orange-500 to-amber-600 shadow-[0_0_50px_-12px_rgba(251,191,36,0.4)]'
+                : 'p-[1.5px] bg-gradient-to-br from-amber-200 via-yellow-600 to-amber-800 shadow-xl'
                 }`}
             >
               <div className="relative bg-slate-950 rounded-[30px] p-10 h-full overflow-hidden flex flex-col items-center">
@@ -106,8 +106,8 @@ export default function Sponsors() {
 
 
                 <button className={`relative z-10 px-8 py-3 rounded-full font-bold uppercase tracking-wider transition-all duration-300 ${isTitle
-                    ? 'bg-gradient-to-r from-amber-400 to-orange-600 text-black hover:scale-105 shadow-[0_5px_15px_-5px_rgba(251,191,36,0.5)]'
-                    : 'bg-gradient-to-r from-amber-100 to-amber-300 text-black hover:brightness-110 shadow-md'
+                  ? 'bg-gradient-to-r from-amber-400 to-orange-600 text-black hover:scale-105 shadow-[0_5px_15px_-5px_rgba(251,191,36,0.5)]'
+                  : 'bg-gradient-to-r from-amber-100 to-amber-300 text-black hover:brightness-110 shadow-md'
                   }`}>
                   Learn More
                 </button>
