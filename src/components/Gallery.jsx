@@ -1,6 +1,6 @@
-import img1 from '../assets/Images/Gallery/1.webp';
+import img1 from '../assets/Images/Gallery/1.jpg.jpeg';
 import img2 from '../assets/Images/Gallery/2.webp';
-import img3 from '../assets/Images/Gallery/3.webp';
+import img3 from '../assets/Images/Gallery/2.jpg.jpeg';
 import img4 from '../assets/Images/Gallery/4.webp';
 import img5 from '../assets/Images/Gallery/5.webp';
 import img6 from '../assets/Images/Gallery/6.webp';
@@ -10,14 +10,16 @@ import img9 from '../assets/Images/Gallery/9.webp';
 import img10 from '../assets/Images/Gallery/10.webp';
 import img11 from '../assets/Images/Gallery/11.webp';
 import img12 from '../assets/Images/Gallery/12.webp';
+import img13 from '../assets/Images/Gallery/3.jpeg';
+import img14 from '../assets/Images/Gallery/4.jpeg';
 import '../styles/gallery.css';
 
 const Gallery = () => {
   // Create array of gallery items
   const galleryItems = [
     img1, img2, img3, img4, img5,
-    img6, img7, img8, img9, img10,
-    img11, img12];
+    img6, img8, img7, img9, img10,
+    img11, img12, img13, img14];
 
   return (
     <section id="gallery" className="py-20 px-4">

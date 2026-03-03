@@ -44,6 +44,7 @@ function App() {
           <AboutSection />
           <Gallery />
           <Timeline />
+          {/*<Tickets />*/}
           <TicketsCountdown />
           <Testimonials />
           <Sponsors />
