@@ -1,33 +1,34 @@
 import React from 'react';
 import '../styles/testimonials.css';
-import vcImage from '../assets/Images/vc.webp';
+import kImage from '../assets/Images/k.webp';
 import directorImage from '../assets/Images/erangaSir.webp';
 import advisorImage from '../assets/Images/Chathumdm.webp';
 import { image } from 'framer-motion/client';
 
 export default function Testimonials() {
   const testimonials = [
-    // {
-    //   name: 'Vice Chancellor',
-    //   title: 'University of Sri Jayewardenepura',
-    //   image: vcImage,
-    //   quote: 'DHAARA represents the pinnacle of cultural excellence and artistic expression at our university. This competition embodies our commitment to nurturing talented musicians and fostering a vibrant arts community. It stands as a testament to the creativity and passion of our students.',
-    //   position: 'left'
-    // },
+
     {
       name: 'Director',
       title: 'Career Guidance Unit',
       image: directorImage,
       quote: 'DHAARA is more than just a competition—it\'s a movement that celebrates the heartbeat of our university. We witness incredible talent, dedication, and artistry every year. The platform we create allows young musicians to shine and inspire their peers across universities.',
-      position: 'right'
+      position: 'left'
     },
     {
       name: 'Senior Career Advisor',
       title: 'Career Guidance Unit',
       image: advisorImage,
       quote: 'The evolution of DHAARA over the years has been remarkable. From auditions to the grand finale, every stage is meticulously crafted to provide the best experience for our participants and audience. We take pride in creating a space where music, passion, and excellence converge.',
+      position: 'right'
+    },
+    {
+      name: 'President',
+      title: 'Flair Club - University of Sri Jayewardenepura',
+      image: kImage,
+      quote: 'The Flair Club has grown through creative projects like Rhythm, Personality, Nachna, G-Tune, Theatro, and Susara Thelithuda, celebrating student talent and artistic expression. Now, DHAARA 2026 rises as a grand celebration of voice and courage, uniting passion, teamwork, and dreams proving that when many voices harmonize, extraordinary moments are created.',
       position: 'left'
-    }
+    },
   ];
 
   return (
