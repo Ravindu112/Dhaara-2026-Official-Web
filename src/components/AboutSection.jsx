@@ -14,7 +14,7 @@ export default function AboutSection() {
               What is Dhaara?
             </h2>
 
-            <div className="max-w-2xl w-full space-y-4 md:space-y-6 text-gray-300 text-base md:text-lg leading-relaxed font-light">
+            <div className="w-full space-y-4 md:space-y-6 text-gray-300 text-base md:text-lg leading-relaxed font-light">
               <p>
                 Dhaara '26 is the largest inter-university music competition
                 organized by the Flair Club of the University of Sri Jayewardenepura.
@@ -46,7 +46,7 @@ export default function AboutSection() {
           >
             <video
               alt="About Section Video"
-              className="w-full md:max-w-2xl h-auto rounded-lg shadow-lg object-cover object-[60%_40%]"
+              className="w-3/4 md:max-w-2xl h-auto rounded-lg shadow-lg object-cover object-[60%_40%]"
               autoPlay
               loop
               muted
