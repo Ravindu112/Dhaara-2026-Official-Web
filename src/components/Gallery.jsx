@@ -42,7 +42,7 @@ const Gallery = () => {
               </div>
               <div className="gallery-card__body">
                 <span className="gallery-card__tag">DHAARA</span>
-                <h3 className="gallery-card__title">Moment {index + 1}</h3>
+                {/* <h3 className="gallery-card__title">Moment {index + 1}</h3> */}
               </div>
             </li>
           ))}
