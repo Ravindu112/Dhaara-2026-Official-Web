@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/testimonials.css';
 import vcImage from '../assets/Images/vc.webp';
 import directorImage from '../assets/Images/erangaSir.webp';
-import advisorImage from '../assets/Images/ChathuMdm.webp';
+import advisorImage from '../assets/Images/Chathumdm.webp';
 import { image } from 'framer-motion/client';
 
 export default function Testimonials() {
