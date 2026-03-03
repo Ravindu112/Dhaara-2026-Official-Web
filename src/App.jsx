@@ -17,7 +17,7 @@ import {
 import TicketsCountdown from './components/TicketsCountdown'
 import { EVENT_CONFIG } from './constants'
 import { useVideoLoading } from './utils/hooks'
-// import bgVideo from './assets/Landing video/DHAARA BG WEB.mp4'
+import bgVideo from './assets/Landing video/DHAARA BG WEB.webm'
 
 import mobileBg from './assets/Background.webp'
 
@@ -26,12 +26,12 @@ function App() {
 
   return (
     <>
-      {/* <LoadingScreen isVideoLoaded={isVideoLoaded} />
+      <LoadingScreen isVideoLoaded={isVideoLoaded} />
       <BackgroundVideo
         bgVideo={bgVideo}
         mobileBackground={mobileBg}
         onLoadedData={handleVideoLoaded}
-      /> */}
+      />
 
       <div className="relative min-h-screen text-white overflow-x-hidden w-full">
         <Header />

@@ -15,6 +15,8 @@ export default function BackgroundVideo({ bgVideo, mobileBackground, onLoadedDat
         loop
         muted
         playsInline
+        preload="auto"
+        poster={mobileBackground}
         onLoadedData={onLoadedData}
         className="hidden md:block fixed inset-0 w-full h-full object-cover"
       >
