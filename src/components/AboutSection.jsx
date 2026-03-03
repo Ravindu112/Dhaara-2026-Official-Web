@@ -1,3 +1,5 @@
+import aboutVideo from '../assets/videos/BGRemove.mp4';
+
 export default function AboutSection() {
   return (
     <section id="about" className="relative py-12 md:py-24 px-4 overflow-hidden">
@@ -43,13 +45,14 @@ export default function AboutSection() {
             className="w-full mt-12 md:mt-0 flex justify-center"
           >
             <video
-              src="src/assets/videos/BGRemove.mp4"
               alt="About Section Video"
               className="w-full md:max-w-2xl h-auto rounded-lg shadow-lg object-cover object-[60%_40%]"
               autoPlay
               loop
               muted
-            />
+            >
+              <source src={aboutVideo} type="video/mp4" />
+            </video>
 
 
           </div>
