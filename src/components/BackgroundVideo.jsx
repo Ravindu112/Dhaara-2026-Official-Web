@@ -3,11 +3,28 @@ export default function BackgroundVideo({ bgVideo, mobileBackground, onLoadedDat
     <>
       {/* Mobile Background Image - Hidden on desktop */}
       {mobileBackground && (
-        <div
-          className="md:hidden fixed inset-0 w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${mobileBackground})` }}
-        />
+        // <div
+        //   className="md:hidden fixed inset-0 w-full h-full bg-cover bg-center"
+        //   style={{ backgroundImage: `url(${mobileBackground})` }}
+        // />
+
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster={mobileBackground}
+          onLoadedData={onLoadedData}
+          className="md:hidden fixed inset-0 w-full h-full object-cover object-center"
+        >
+          <source src={mobileBackground} type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+
       )}
+
+
 
       {/* Desktop Background Video - Hidden on mobile */}
       <video
