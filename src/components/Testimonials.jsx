@@ -7,13 +7,13 @@ import { image } from 'framer-motion/client';
 
 export default function Testimonials() {
   const testimonials = [
-    {
-      name: 'Vice Chancellor',
-      title: 'University of Sri Jayewardenepura',
-      image: vcImage,
-      quote: 'DHAARA represents the pinnacle of cultural excellence and artistic expression at our university. This competition embodies our commitment to nurturing talented musicians and fostering a vibrant arts community. It stands as a testament to the creativity and passion of our students.',
-      position: 'left'
-    },
+    // {
+    //   name: 'Vice Chancellor',
+    //   title: 'University of Sri Jayewardenepura',
+    //   image: vcImage,
+    //   quote: 'DHAARA represents the pinnacle of cultural excellence and artistic expression at our university. This competition embodies our commitment to nurturing talented musicians and fostering a vibrant arts community. It stands as a testament to the creativity and passion of our students.',
+    //   position: 'left'
+    // },
     {
       name: 'Director',
       title: 'Career Guidance Unit',
