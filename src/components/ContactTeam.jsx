@@ -51,8 +51,8 @@ const teamMembers = [
     name: "Maleesha Kalubowila",
     roleSubtitle: "Treasurer",
     imageSrc: mImage,
-    email: "maleeshakalubowila@gmail.com",
-    phone: "07769795732",
+    email: "maleekalubivila@gmail.com",
+    phone: "0769795732",
   },
   {
     id: 6,
