@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ticketImg from '../assets/ticket.png';
+/*import ticketImg1 from '../assets/Ticket Images/T1500.svg';
+import ticketImg2 from '../assets/Ticket Images/T2000.svg';
+import ticketImg3 from '../assets/Ticket Images/T3000.svg';
+import ticketImg4 from '../assets/Ticket Images/T5000.svg';*/
 
 const Tickets = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -7,10 +11,10 @@ const Tickets = () => {
 
   // Dynamic ticket data including sold-out percentages
   const ticketData = [
-    { label: "Early birds", price: "1500", percentage: 58, status: "Available" },
-    { label: "Standard", price: "2500", percentage: 72, status: "Available" },
-    { label: "VIP", price: "3500", percentage: 48, status: "Available" },
-    { label: "VVIP", price: "5000", percentage: 100, status: "Sold Out" },
+    { label: "Early birds", price: "1500", percentage: 0, status: "Available" },
+    { label: "Standard", price: "2000", percentage: 0, status: "Available" },
+    { label: "VIP", price: "3000", percentage: 0, status: "Available" },
+    { label: "VVIP", price: "5000", percentage: 0, status: "Available" },
   ];
 
   useEffect(() => {

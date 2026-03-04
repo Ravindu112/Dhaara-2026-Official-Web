@@ -24,7 +24,7 @@ export default function LoadingScreen({ isVideoLoaded }) {
       <div className="loading-spinner-container">
         <div className="loading-spinner"></div>
         <div className="loading-year">
-          D{EVENT_CONFIG.year}
+          DHAARA{EVENT_CONFIG.year}
         </div>
       </div>
       <p className="loading-text">
