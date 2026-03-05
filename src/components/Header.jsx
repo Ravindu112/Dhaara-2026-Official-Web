@@ -96,7 +96,7 @@ const Header = () => {
             }`}
         >
           <ul className="flex flex-col space-y-4 text-white bg-slate-900/80 backdrop-blur-xl p-6 rounded-xl">
-            {["home", "about", "gallery", "tickets", "contact"].map(
+            {["home", "about", "gallery", "Tickets", "contact"].map(
               // {["home", "about", "gallery", "Tickets", "sponsors", "contact"].map(
               (item) => (
                 <li key={item}>
