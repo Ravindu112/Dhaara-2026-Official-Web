@@ -10,8 +10,8 @@ import img9 from '../assets/Images/Gallery/9.webp';
 import img10 from '../assets/Images/Gallery/10.webp';
 import img11 from '../assets/Images/Gallery/11.webp';
 import img12 from '../assets/Images/Gallery/12.webp';
-import img13 from '../assets/Images/Gallery/3.jpeg';
-import img14 from '../assets/Images/Gallery/4.jpeg';
+import img13 from '../assets/Images/Gallery/13.webp';
+import img14 from '../assets/Images/Gallery/14.webp';
 import '../styles/gallery.css';
 
 const Gallery = () => {
