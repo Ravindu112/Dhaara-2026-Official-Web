@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import logo from '../assets/Dhaara Word.png';
+import logo from '../assets/logo_gold.png';
 import '../styles/header.css';
 
 const Header = () => {
@@ -73,7 +73,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="#Tickets" className="hover:text-amber-400 transition-colors">
+              <a href="#tickets" className="hover:text-amber-400 transition-colors">
                 Tickets
               </a>
             </li>
@@ -96,7 +96,7 @@ const Header = () => {
             }`}
         >
           <ul className="flex flex-col space-y-4 text-white bg-slate-900/80 backdrop-blur-xl p-6 rounded-xl">
-            {["home", "about", "gallery", "Tickets", "contact"].map(
+            {["home", "about", "gallery", "tickets", "contact"].map(
               // {["home", "about", "gallery", "Tickets", "sponsors", "contact"].map(
               (item) => (
                 <li key={item}>

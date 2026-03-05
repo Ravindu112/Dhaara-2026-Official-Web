@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ticketImg from '../assets/ticket.png';
+import TicketsCountdownOverlay from './TicketsCountdownOverlay';
+import { useTicketsCountdown } from './useTicketsCountdown';
 /*import ticketImg1 from '../assets/Ticket Images/T1500.svg';
 import ticketImg2 from '../assets/Ticket Images/T2000.svg';
 import ticketImg3 from '../assets/Ticket Images/T3000.svg';
@@ -8,6 +10,7 @@ import ticketImg4 from '../assets/Ticket Images/T5000.svg';*/
 const Tickets = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const timeLeft = useTicketsCountdown();
 
   // Dynamic ticket data including sold-out percentages
   const ticketData = [
@@ -36,8 +39,10 @@ const Tickets = () => {
     <section 
       id="tickets" 
       ref={sectionRef} 
-      className="relative py-20 px-4 overflow-hidden"
+      className="relative py-20 px-4 md:px-8 overflow-hidden"
     >
+      <TicketsCountdownOverlay />
+
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           

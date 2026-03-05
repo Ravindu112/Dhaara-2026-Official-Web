@@ -14,7 +14,6 @@ import {
   Sponsors,
   LeadershipTeam,
 } from './components'
-import TicketsCountdown from './components/TicketsCountdown'
 import { EVENT_CONFIG } from './constants'
 import { useVideoLoading } from './utils/hooks'
 import bgVideo from './assets/Landing video/DHAARA BG WEB.webm'
@@ -45,7 +44,6 @@ function App() {
           <Gallery />
           <Timeline />
           <Tickets />
-          <TicketsCountdown />
           <Testimonials />
           <Sponsors />
           <LeadershipTeam />
