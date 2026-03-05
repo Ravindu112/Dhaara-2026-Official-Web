@@ -45,6 +45,7 @@ function App() {
           <Gallery />
           <Timeline />
           {/* <Tickets /> */}
+          <TicketsCountdown />
           <Testimonials />
           <Sponsors />
           <LeadershipTeam />
