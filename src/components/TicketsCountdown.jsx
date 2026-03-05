@@ -34,7 +34,7 @@ function TicketsCountdown() {
         <section id="Tickets" className="relative py-20 md:py-24 px-4 md:px-6 bg-gradient-to-b from-[#050816] to-[#0c1225] text-white overflow-hidden">
             <div className="container mx-auto max-w-5xl text-center">
 
-                {/* 🔥 Heading */}
+                {/*  Heading */}
                 <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase leading-tight tracking-tight">
                     Tickets Will
                     <br />
@@ -43,12 +43,12 @@ function TicketsCountdown() {
                     </span>
                 </h2>
 
-                {/* 📅 Date */}
+                {/*  Date */}
                 <p className="mt-5 md:mt-6 text-base sm:text-lg md:text-2xl tracking-widest text-amber-400 font-semibold">
-                    March 8 • 7:00 PM
+                    March 10 • 7:00 PM
                 </p>
 
-                {/* ⏳ Countdown */}
+                {/*  Countdown */}
                 {timeLeft ? (
                     <div className="mt-12 md:mt-14 grid grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto">
 
@@ -75,7 +75,7 @@ function TicketsCountdown() {
                 ) : (
                     <div className="mt-12">
                         <h3 className="text-2xl md:text-3xl font-bold text-amber-400">
-                            🎉 Tickets Are Now Live!
+                            Tickets Are Now Live!
                         </h3>
                     </div>
                 )}
