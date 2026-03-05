@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 function TicketsCountdown() {
-    // 🎯 Release Date (March 8, 2026 - 7:00 PM)
-    const releaseDate = new Date("March 8, 2026 19:00:00").getTime();
+    // 🎯 Release Date (March 10, 2026 - 7:00 PM)
+    const releaseDate = new Date("March 10, 2026 19:00:00").getTime();
 
     const getTimeRemaining = () => {
         const now = new Date().getTime();
