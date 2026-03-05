@@ -9,7 +9,7 @@ import {
   Countdown,
   Gallery,
   Timeline,
-  // Tickets,
+  Tickets,
   Testimonials,
   Sponsors,
   LeadershipTeam,
@@ -44,10 +44,10 @@ function App() {
           <AboutSection />
           <Gallery />
           <Timeline />
-          {/* <Tickets /> */}
+          <Tickets /> 
           <TicketsCountdown />
           <Testimonials />
-          <Sponsors />
+          {/*<Sponsors />*/}
           <LeadershipTeam />
           <PageFooter />
         </section>

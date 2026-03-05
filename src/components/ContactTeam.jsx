@@ -12,7 +12,7 @@ const teamMembers = [
   {
     id: 1,
     roleTitle: "President",
-    name: "Kavinga Ranthilaka",
+    name: "Kavinga Anjana",
     roleSubtitle: "President",
     imageSrc: kImage,
     email: "ranthilakakavinga@gmail.com",
@@ -21,7 +21,7 @@ const teamMembers = [
   {
     id: 2,
     roleTitle: "Vice President-Education",
-    name: "Ushan Karunarathne",
+    name: "Ushan Karunarathna",
     roleSubtitle: "Vice President-Education",
     imageSrc: uImage,
     email: "karunarathnaushan22@gmail.com",
@@ -51,7 +51,7 @@ const teamMembers = [
     name: "Maleesha Kalubowila",
     roleSubtitle: "Treasurer",
     imageSrc: mImage,
-    email: "maleekalubivila@gmail.com",
+    email: "maleekalubovila@gmail.com",
     phone: "0769795732",
   },
   {

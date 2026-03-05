@@ -36,10 +36,10 @@ function TicketsCountdown() {
 
                 {/*  Heading */}
                 <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase leading-tight tracking-tight">
-                    Tickets Will
+                    Tickets go
                     <br />
                     <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
-                        Release On
+                        Live On
                     </span>
                 </h2>
 

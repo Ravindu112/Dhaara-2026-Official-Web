@@ -77,14 +77,14 @@ const Header = () => {
                 Tickets
               </a>
             </li>
-            <li>
+            {/*<li>
               <a href="#sponsors" className="hover:text-amber-400 transition-colors">
                 Sponsors
               </a>
-            </li>
+            </li>*/}
             <li>
               <a href="#contact" className="hover:text-amber-400 transition-colors">
-                Contact
+                Contact Us
               </a>
             </li>
           </ul>

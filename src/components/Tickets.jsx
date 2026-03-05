@@ -13,7 +13,7 @@ const Tickets = () => {
 
   // Dynamic ticket data including sold-out percentages
   const ticketData = [
-    { label: "Early birds", price: "1500", percentage: 0, status: "Available" },
+    { label: "Early bird", price: "1500", percentage: 0, status: "Available" },
     { label: "Standard", price: "2000", percentage: 0, status: "Available" },
     { label: "VIP", price: "3000", percentage: 0, status: "Available" },
     { label: "VVIP", price: "5000", percentage: 0, status: "Available" },
