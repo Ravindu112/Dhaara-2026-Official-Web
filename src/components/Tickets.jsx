@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ticketImg from '../assets/ticket.png';
-import TicketsCountdownOverlay from './TicketsCountdownOverlay';
 import { useTicketsCountdown } from './useTicketsCountdown';
 /*import ticketImg1 from '../assets/Ticket Images/T1500.svg';
 import ticketImg2 from '../assets/Ticket Images/T2000.svg';
@@ -36,16 +35,16 @@ const Tickets = () => {
   }, []);
 
   return (
-    <section 
-      id="tickets" 
-      ref={sectionRef} 
+    <section
+      id="tickets"
+      ref={sectionRef}
       className="relative py-20 px-4 md:px-8 overflow-hidden"
     >
-      <TicketsCountdownOverlay />
+
 
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left Column: Animated Fan Container */}
           <div className={`relative h-[350px] md:h-[550px] flex items-center justify-center order-2 md:order-1 ${isVisible ? 'is-visible' : ''}`}>
             <div className="relative w-48 h-72 md:w-80 md:h-[450px]">
@@ -90,7 +89,7 @@ const Tickets = () => {
 
                   {/* Progress Bar Container */}
                   <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
-                    <div 
+                    <div
                       className={`h-full transition-all duration-1000 ease-out rounded-full ${ticket.percentage === 100 ? 'bg-red-500' : 'bg-gradient-to-r from-amber-600 to-orange-500'}`}
                       style={{ width: isVisible ? `${ticket.percentage}%` : '0%' }}
                     ></div>
