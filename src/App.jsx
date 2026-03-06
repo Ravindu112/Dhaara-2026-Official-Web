@@ -14,11 +14,10 @@ import {
   Sponsors,
   LeadershipTeam,
 } from './components'
-import TicketsCountdown from './components/TicketsCountdown'
+import TicketSection from './components/TicketSection'
 import { EVENT_CONFIG } from './constants'
 import { useVideoLoading } from './utils/hooks'
 import bgVideo from './assets/Landing video/DHAARA BG WEB.webm'
-
 import mobileBg from './assets/Background.webm'
 
 function App() {
