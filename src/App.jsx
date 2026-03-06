@@ -43,9 +43,10 @@ function App() {
           <AboutSection />
           <Gallery />
           <Timeline />
-          <TicketSection />
+          <Tickets /> 
+          <TicketsCountdown />
           <Testimonials />
-          <Sponsors />
+          {/*<Sponsors />*/}
           <LeadershipTeam />
           <PageFooter />
         </section>

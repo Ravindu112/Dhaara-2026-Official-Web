@@ -9,21 +9,21 @@ export default function Testimonials() {
   const testimonials = [
 
     {
-      name: 'Director',
+      name: 'Dr. Eranga Jayasekara-Director',
       title: 'Career Guidance Unit',
       image: directorImage,
-      quote: 'DHAARA is more than just a competition—it\'s a movement that celebrates the heartbeat of our university. We witness incredible talent, dedication, and artistry every year. The platform we create allows young musicians to shine and inspire their peers across universities.',
+      quote: 'Aesthetic education helps individuals develop creativity, appreciation for beauty, and meaningful relationships with nature and others. Dhaara, the Inter-Faculty Singing Competition, has become a significant event at the University of Sri Jayewardenepura, providing undergraduates a platform to enhance their skills, gain confidence, and open doors to future opportunities',
       position: 'left'
     },
     {
-      name: 'Senior Career Advisor',
+      name: 'Mrs. Chathurangani Thennakoon-Senior Career Advisor',
       title: 'Career Guidance Unit',
       image: advisorImage,
-      quote: 'The evolution of DHAARA over the years has been remarkable. From auditions to the grand finale, every stage is meticulously crafted to provide the best experience for our participants and audience. We take pride in creating a space where music, passion, and excellence converge.',
+      quote: 'The Flair Club was established to nurture artistic talent among undergraduates of the University of Sri Jayewardenepura, providing a platform to develop creativity and professionalism in the arts. Dhaara identifies and guides talented singers towards excellence, offering them the opportunity to showcase their abilities and gain well-deserved recognition',
       position: 'right'
     },
     {
-      name: 'President',
+      name: 'Mr. Kavinga Anjana-President',
       title: 'Flair Club - University of Sri Jayewardenepura',
       image: kImage,
       quote: 'The Flair Club has grown through creative projects like Rhythm, Personality, Nachna, G-Tune, Theatro, and Susara Thelithuda, celebrating student talent and artistic expression. Now, DHAARA 2026 rises as a grand celebration of voice and courage, uniting passion, teamwork, and dreams proving that when many voices harmonize, extraordinary moments are created.',
@@ -38,7 +38,7 @@ export default function Testimonials() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-center uppercase tracking-tight mb-2">
             <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,165,0,0.3)]">
-              Words of Inspiration
+              Voices of Inspiration
             </span>
           </h2>
 

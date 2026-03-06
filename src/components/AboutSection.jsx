@@ -16,26 +16,25 @@ export default function AboutSection() {
 
             <div className="w-full space-y-4 md:space-y-6 text-gray-300 text-base md:text-lg leading-relaxed font-light">
               <p>
-                Dhaara '26 is the largest inter-university music competition
-                organized by the Flair Club of the University of Sri Jayewardenepura.
-                Celebrating creativity, passion, and musical excellence, Dhaara has become a prestigious
-                platform that brings together the most talented young musicians
-                from universities across Sri Lanka.
+                Dhaara 2026, the flagship singing competition of University of Sri Jayewardenepura organized by the 
+                Flair Club under the Career Guidance Unit,returns for its third consecutive year as a 
+                premier stage for emerging musical talent. From expert-led workshops to a grand, 
+                student-produced finale at the Nelum Pokuna Mahinda Rajapaksa Theatre, 
+                Dhaara offers a complete artistic journey powered entirely by students, 
+                from vocals and music to dance and event production.
               </p>
 
               <p>
-                This iconic event provides a vibrant stage for performers to showcase
-                their skills across diverse musical genres, encouraging originality,
-                teamwork, and artistic expression. More than just a competition,
-                Dhaara '26 is a cultural movement that unites students through the
-                universal language of music.
+                Building on the success of previous editions, Dhaara continues to provide valuable industry exposure,
+                professional development opportunities, and a platform for young artists to showcase their talent. 
+                More than a competition, Dhaara is a launchpad that transforms student talent into future 
+                stars of Sri Lanka's music industry.
               </p>
 
               <p>
-                With breathtaking performances, expert judging, and an electrifying
-                atmosphere, Dhaara '26 promises an unforgettable experience. It stands
-                as a testament to the University of Sri Jayewardenepura's commitment
-                to nurturing arts, talent, and youthful innovation.
+                With breathtaking performances, expert judging, and an electrifying atmosphere, 
+                Dhaara '26 promises an unforgettable experience, celebrating creativity, 
+                talent, and youthful innovation.
               </p>
             </div>
           </div>

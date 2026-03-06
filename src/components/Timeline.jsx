@@ -6,7 +6,7 @@ import dhaaraLogo from '../assets/logo_gold.png';
 const timelineData = [
   {
     id: 1,
-    title: "Application Calling",
+    title: "Applications Calling",
     date: "2026-01-25",
     happened: true,
   },
@@ -18,20 +18,32 @@ const timelineData = [
   },
   {
     id: 3,
-    title: "1ST ROUND AUDITIONS",
+    title: "1ST ROUND AUDITIONS - DAY 1",
     date: "2026-02-18",
     happened: true,
   },
   {
     id: 4,
+    title: "1ST ROUND AUDITIONS - DAY 2",
+    date: "2026-02-19",
+    happened: true,
+  },
+  {
+    id: 5,
     title: "Stage Performing Workshop",
     date: "2026-02-24",
     happened: true,
   },
   {
-    id: 5,
+    id: 6,
     title: "Event Management Workshop",
     date: "2026-02-26",
+    happened: true,
+  },
+  {
+    id: 7,
+    title: "1ST ROUND AUDITIONS - DAY 3",
+    date: "2026-03-04",
     happened: true,
   },
   // {
@@ -41,13 +53,13 @@ const timelineData = [
   //   happened: false,
   // },
   {
-    id: 6,
+    id: 8,
     title: "Semi Final",
     date: "2026-03-19",
     happened: false,
   },
   {
-    id: 7,
+    id: 9,
     title: "Final",
     date: "2026-04-24",
     happened: false,
@@ -130,7 +142,7 @@ const Timeline = () => {
           className="text-3xl md:text-7xl font-black text-center uppercase tracking-tight mb-16 
              bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent 
              drop-shadow-[0_0_25px_rgba(255,160,0,0.4)]">
-          Dhaara 2026 Timeline
+          Dhaara Roadmap
         </h2>
 
         <div className="relative">
