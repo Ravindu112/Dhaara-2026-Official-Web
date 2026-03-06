@@ -39,7 +39,7 @@ const Header = () => {
             <img
               src={dhaaraword}
               alt="DHAARA Word Logo"
-              className="hidden md:block h-10 w-auto object-contain hover:opacity-80 transition-opacity"
+              className="hidden md:block h-8 w-auto object-contain hover:opacity-80 transition-opacity"
             />
 
           </a>
