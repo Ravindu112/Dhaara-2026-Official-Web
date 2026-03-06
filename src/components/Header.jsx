@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import logo from '../assets/logo_gold.svg';
+import logo from '../assets/logo_gold.webp';
+import dhaaraword from '../assets/Dhaara Word.webp';
 import '../styles/header.css';
 
 const Header = () => {
@@ -23,13 +24,24 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="container mx-auto px-12 py-4">
         <div className="flex justify-between items-center">
+
           {/* Logo/Brand */}
           <a href="#home" className="flex items-center">
+
+            {/* Mobile Logo */}
             <img
               src={logo}
               alt="DHAARA Logo"
-              className="h-8 md:h-10 w-auto object-contain hover:opacity-80 transition-opacity"
+              className="h-8 w-auto object-contain hover:opacity-80 transition-opacity md:hidden"
             />
+
+            {/* Desktop Logo */}
+            <img
+              src={dhaaraword}
+              alt="DHAARA Word Logo"
+              className="hidden md:block h-10 w-auto object-contain hover:opacity-80 transition-opacity"
+            />
+
           </a>
 
           {/* Mobile Menu Button */}
@@ -96,22 +108,20 @@ const Header = () => {
             }`}
         >
           <ul className="flex flex-col space-y-4 text-white bg-slate-900/80 backdrop-blur-xl p-6 rounded-xl">
-            {["home", "about", "gallery", "Tickets", "contact"].map(
-              // {["home", "about", "gallery", "Tickets", "sponsors", "contact"].map(
-              (item) => (
-                <li key={item}>
-                  <a
-                    href={`#${item}`}
-                    className="block hover:text-amber-400 transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </a>
-                </li>
-              )
-            )}
+            {["home", "about", "gallery", "Tickets", "contact"].map((item) => (
+              <li key={item}>
+                <a
+                  href={`#${item}`}
+                  className="block hover:text-amber-400 transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
+
       </nav>
     </header>
   );
