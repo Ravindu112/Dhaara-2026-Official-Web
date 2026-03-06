@@ -1,15 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
-// Updated Imports
 import ticketImg1 from '../assets/Ticket Images/T1500.svg';
 import ticketImg2 from '../assets/Ticket Images/T2000.svg';
 import ticketImg3 from '../assets/Ticket Images/T3000.svg';
 import ticketImg4 from '../assets/Ticket Images/T5000.svg';
-import { useTicketsCountdown } from './useTicketsCountdown';
+
 
 const Tickets = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
-  const timeLeft = useTicketsCountdown();
+  
 
   const ticketData = [
     { label: "Early bird", price: "1500", percentage: 0, status: "Available" },
@@ -54,7 +53,8 @@ const Tickets = () => {
                   src={img} 
                   alt={`Ticket tier ${index + 1}`} 
                   // Added object-contain to prevent cropping
-                  className={`ticket-fan-base ticket-${index + 1} z-${(index + 1) * 10} drop-shadow-2xl object-contain w-full h-full`} 
+                  className={`ticket-fan-base ticket-${index + 1} drop-shadow-2xl object-contain w-full h-full`} 
+                  style={{ zIndex: (index + 1) * 10 }}
                 />
               ))}
             </div>

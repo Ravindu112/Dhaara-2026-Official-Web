@@ -6,10 +6,9 @@ function TicketsCountdown({ timeLeft }) {
         <section id="Tickets" className="relative py-20 md:py-24 px-4 md:px-6 bg-[#050816] text-white overflow-hidden">
             <div className="container mx-auto max-w-5xl text-center">
                 <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase leading-tight tracking-tight">
-                    Tickets go
-                    <br />
+                    Tickets Will <br />
                     <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
-                        Live On
+                        Release On
                     </span>
                 </h2>
 
