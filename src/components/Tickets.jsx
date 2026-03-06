@@ -1,17 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
-import ticketImg from '../assets/ticket.png';
-import { useTicketsCountdown } from './useTicketsCountdown';
-/*import ticketImg1 from '../assets/Ticket Images/T1500.svg';
+// Updated Imports
+import ticketImg1 from '../assets/Ticket Images/T1500.svg';
 import ticketImg2 from '../assets/Ticket Images/T2000.svg';
 import ticketImg3 from '../assets/Ticket Images/T3000.svg';
-import ticketImg4 from '../assets/Ticket Images/T5000.svg';*/
+import ticketImg4 from '../assets/Ticket Images/T5000.svg';
+import { useTicketsCountdown } from './useTicketsCountdown';
 
 const Tickets = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
   const timeLeft = useTicketsCountdown();
 
-  // Dynamic ticket data including sold-out percentages
   const ticketData = [
     { label: "Early birds", price: "1500", percentage: 0, status: "Available" },
     { label: "Standard", price: "2000", percentage: 0, status: "Available" },
@@ -19,18 +18,20 @@ const Tickets = () => {
     { label: "VVIP", price: "5000", percentage: 0, status: "Available" },
   ];
 
+  // Array to map the images to the fan
+  const ticketVisuals = [ticketImg4, ticketImg3, ticketImg2, ticketImg1];
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 } // Lowered slightly for better mobile trigger
     );
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
     return () => observer.disconnect();
   }, []);
 
@@ -38,20 +39,24 @@ const Tickets = () => {
     <section
       id="tickets"
       ref={sectionRef}
-      className="relative py-20 px-4 md:px-8 overflow-hidden"
+      className="relative py-12 md:py-20 px-4 md:px-8 overflow-hidden"
     >
-
-
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
 
           {/* Left Column: Animated Fan Container */}
-          <div className={`relative h-[350px] md:h-[550px] flex items-center justify-center order-2 md:order-1 ${isVisible ? 'is-visible' : ''}`}>
-            <div className="relative w-48 h-72 md:w-80 md:h-[450px]">
-              <img src={ticketImg} alt="Dhaara 2026 event ticket" className="ticket-fan-base ticket-4 z-10 drop-shadow-2xl" />
-              <img src={ticketImg} alt="Dhaara 2026 event ticket" className="ticket-fan-base ticket-3 z-20 drop-shadow-2xl" />
-              <img src={ticketImg} alt="Dhaara 2026 event ticket" className="ticket-fan-base ticket-2 z-30 drop-shadow-2xl" />
-              <img src={ticketImg} alt="Dhaara 2026 event ticket" className="ticket-fan-base ticket-1 z-40 drop-shadow-2xl" />
+          <div className={`relative h-[400px] md:h-[600px] flex items-center justify-center order-2 md:order-1 ${isVisible ? 'is-visible' : ''}`}>
+            {/* Added w-full and max-w-sm to ensure it doesn't bleed out on mobile */}
+            <div className="relative w-full max-w-[235px] md:max-w-[400px] aspect-[3/4]">
+              {ticketVisuals.map((img, index) => (
+                <img 
+                  key={index}
+                  src={img} 
+                  alt={`Ticket tier ${index + 1}`} 
+                  // Added object-contain to prevent cropping
+                  className={`ticket-fan-base ticket-${index + 1} z-${(index + 1) * 10} drop-shadow-2xl object-contain w-full h-full`} 
+                />
+              ))}
             </div>
           </div>
 
@@ -70,7 +75,7 @@ const Tickets = () => {
               </div>
             </div>
 
-            {/* Ticket Categories with Progress Bars */}
+            {/* Ticket Categories */}
             <div className="w-full max-w-md space-y-6 text-white">
               {ticketData.map((ticket, index) => (
                 <div key={index} className={`space-y-2 p-4 rounded-xl border transition-all ${ticket.percentage === 100 ? 'border-red-500/30 bg-red-500/5 opacity-60' : 'border-white/10 bg-white/5 hover:border-amber-500/30'}`}>
@@ -86,8 +91,6 @@ const Tickets = () => {
                       <p className="text-xs text-gray-500 mt-1">{ticket.percentage}% Sold Out</p>
                     </div>
                   </div>
-
-                  {/* Progress Bar Container */}
                   <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
                     <div
                       className={`h-full transition-all duration-1000 ease-out rounded-full ${ticket.percentage === 100 ? 'bg-red-500' : 'bg-gradient-to-r from-amber-600 to-orange-500'}`}
