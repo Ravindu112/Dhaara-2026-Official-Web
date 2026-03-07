@@ -106,11 +106,14 @@ const Tickets = () => {
             </div>
 
             <Link href="/booking">
-              <button className="w-full md:w-auto bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-black px-16 py-5 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-amber-500/20 uppercase tracking-widest text-lg disabled:grayscale disabled:opacity-50"
-                disabled={ticketData.every(t => t.percentage === 100)}
-              >
-                Get Tickets
-              </button></Link>
+              <a>
+                <button className="w-full md:w-auto bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-black px-16 py-5 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-amber-500/20 uppercase tracking-widest text-lg disabled:grayscale disabled:opacity-50"
+                  disabled={ticketData.every(t => t.percentage === 100)}
+                >
+                  Get Tickets
+                </button>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
