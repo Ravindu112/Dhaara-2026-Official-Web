@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export const useTicketsCountdown = () => {
   // 🎯 Release Date (March 10, 2026 - 7:00 PM)
-  const releaseDate = new Date("March 04, 2026 19:00:00").getTime();
+  const releaseDate = new Date("March 4, 2026 19:00:00").getTime();
 
   const getTimeRemaining = () => {
     const now = new Date().getTime();

@@ -33,7 +33,7 @@ export default function LoadingScreen({ isVideoLoaded }) {
       <div className="relative animate-scale-pulse">
         <div className="w-24 h-24 rounded-full border-4 border-transparent border-t-amber-400 border-b-orange-500 animate-spin"></div>
         <div className="absolute inset-0 flex items-center justify-center font-bold text-amber-500 text-xl animate-text-pulse">
-          DHAARA{EVENT_CONFIG.year}
+          DHAARA26
         </div>
       </div>
       <p className="mt-4 text-amber-400/80 font-light tracking-widest text-sm uppercase animate-text-pulse">
