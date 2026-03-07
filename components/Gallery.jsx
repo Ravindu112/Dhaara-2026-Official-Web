@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const img1 = '/assets/Images/Gallery/1.jpg.jpeg';
+const img1 = '/assets/Images/Gallery/14.webp';
 const img2 = '/assets/Images/Gallery/2.webp';
 const img3 = '/assets/Images/Gallery/2.jpg.jpeg';
 const img4 = '/assets/Images/Gallery/4.webp';
@@ -15,14 +15,15 @@ const img10 = '/assets/Images/Gallery/10.webp';
 const img11 = '/assets/Images/Gallery/11.webp';
 const img12 = '/assets/Images/Gallery/12.webp';
 const img13 = '/assets/Images/Gallery/13.webp';
-const img14 = '/assets/Images/Gallery/14.webp';
+const img14 = '/assets/Images/Gallery/3.webp';
+const img15 = '/assets/Images/Gallery/15.webp';
 
 const Gallery = () => {
   // Create array of gallery items
   const galleryItems = [
     img1, img2, img3, img4, img5,
     img6, img8, img7, img9, img10,
-    img11, img12, img13, img14];
+    img11, img12, img13, img14, img15];
 
   return (
     <section id="gallery" className="py-20 px-4">
