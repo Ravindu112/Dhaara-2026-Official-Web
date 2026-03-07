@@ -39,7 +39,7 @@ export default function AboutSection() {
 
               <p>
                 With breathtaking performances, expert judging, and an electrifying atmosphere,
-                Dhaara '26 promises an unforgettable experience, celebrating creativity,
+                Dhaara'26 promises an unforgettable experience, celebrating creativity,
                 talent, and youthful innovation.
               </p>
             </div>
