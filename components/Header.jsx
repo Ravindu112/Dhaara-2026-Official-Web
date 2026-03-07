@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-const logo = '/assets/logo_gold.svg';
+import dhaaraword from '../public/assets/Dhaara Word.png';
+const logo = '/assets/logo_gold.webp';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,13 +26,26 @@ const Header = () => {
       <nav className="container mx-auto px-12 py-4">
         <div className="flex justify-between items-center">
           {/* Logo/Brand */}
-          <a href="#home" className="flex items-center relative w-[100px] h-[32px] md:h-[40px]">
-            <Image
-              src={logo}
-              alt="DHAARA Logo"
-              fill
-              className="object-contain hover:opacity-80 transition-opacity"
-            />
+          <a href="#home" className="flex items-center">
+            {/* Mobile Logo: visible up to md */}
+            <div className="relative w-[100px] h-[32px] md:hidden">
+              <Image
+                src={logo}
+                alt="DHAARA Logo"
+                fill
+                className="object-contain hover:opacity-80 transition-opacity"
+              />
+            </div>
+
+            {/* Desktop Logo: visible from md and up */}
+            <div className="relative hidden md:block w-[150px] h-[30px]">
+              <Image
+                src={dhaaraword}
+                alt="DHAARA Word Logo"
+                fill
+                className="object-contain hover:opacity-80 transition-opacity"
+              />
+            </div>
           </a>
 
           {/* Mobile Menu Button */}
