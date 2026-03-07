@@ -19,7 +19,7 @@ import { EVENT_CONFIG } from '../constants'
 import { useVideoLoading } from '../utils/hooks'
 import { ScrollReveal } from '../components/ScrollReveal'
 
-const bgVideo = '/assets/Landing video/DHAARA BG WEB.webm'
+const bgVideo = '/assets/Landing video/DHAARA BG WEB2.webm'
 const mobileBg = '/assets/Background.webm'
 
 function App() {
