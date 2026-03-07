@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+
+@theme {
+    --animate-scroll-left: scroll-left 40s linear infinite;
+    --animate-float: float 3s ease-in-out infinite;
+    --animate-glow-pulse: glow-pulse 2s ease-in-out infinite;
+    --animate-particle-glow: particle-glow 1.5s ease-in-out infinite;
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes glow-pulse {
+
+        0%,
+        100% {
+            box-shadow: 0 0 20px rgba(251, 146, 60, 0.6), 0 0 40px rgba(251, 146, 60, 0.4);
+        }
+
+        50% {
+            box-shadow: 0 0 30px rgba(251, 146, 60, 0.8), 0 0 60px rgba(251, 146, 60, 0.6);
+        }
+    }
+
+    @keyframes particle-glow {
+
+        0%,
+        100% {
+            opacity: 1;
+            box-shadow: 0 0 10px rgba(251, 146, 60, 0.8);
+        }
+
+        50% {
+            opacity: 0.5;
+            box-shadow: 0 0 20px rgba(251, 146, 60, 1);
+        }
+    }
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer utilities {
+    .ticket-fan-base {
+        @apply absolute transition-all duration-1000 ease-out origin-bottom;
+        transform: rotate(0deg) translateX(0);
+    }
+
+    /* MOBILE: Smaller spread so they don't hit the screen edges */
+    .is-visible .ticket-1 {
+        transform: rotate(-15deg) translateX(-30px);
+    }
+
+    .is-visible .ticket-2 {
+        transform: rotate(-5deg) translateX(-10px);
+    }
+
+    .is-visible .ticket-3 {
+        transform: rotate(5deg) translateX(10px);
+    }
+
+    .is-visible .ticket-4 {
+        transform: rotate(15deg) translateX(30px);
+    }
+
+    /* DESKTOP: Full spread (md: 768px and up) */
+    @media (min-width: 768px) {
+        .is-visible .ticket-1 {
+            transform: rotate(-25deg) translateX(-60px);
+        }
+
+        .is-visible .ticket-2 {
+            transform: rotate(-10deg) translateX(-20px);
+        }
+
+        .is-visible .ticket-3 {
+            transform: rotate(5deg) translateX(20px);
+        }
+
+        .is-visible .ticket-4 {
+            transform: rotate(20deg) translateX(60px);
+        }
+    }
+}
+
+
+/* Global Styles */
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure mobile responsiveness */
+* {
+    box-sizing: border-box;
+}
+
+/* Remove default margins on body */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    scrollbar-gutter: stable;
+}
+
+#root {
+    margin: 0;
+    padding: 0;
+}
+
+@layer utilities {
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Custom utility classes that were complex to convert entirely inline */
+    .clip-rect-0 {
+        clip: rect(0, 0, 0, 0);
+    }
+}
+
+/* Base styles to fix scrollbars as per original design */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #343a40;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #495057;
+}
+
+body {
+    background-color: #121212;
+    color: #e9ecef;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
