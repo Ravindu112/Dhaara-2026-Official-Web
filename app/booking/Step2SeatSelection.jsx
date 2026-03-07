@@ -150,9 +150,9 @@ const Step2SeatSelection = ({ formData, setFormData, selectedSeats, setSelectedS
 
                     <hr className="mb-2.5 border-t border-[#343a40]" />
 
-                    <h4 className="mt-0 mb-2.5 text-[#e9ecef] text-left">Balcony Tickets</h4>
+                    <h4 className="mt-0 mb-2.5 text-[#e9ecef] text-left font-bold">Rs. 1500 Tickets(Balcony Only)</h4>
                     <div className="flex flex-col text-left mb-5">
-                        <label className="font-medium mb-2 text-[#e9ecef] text-sm">Rs. 1500 Tickets (No Seat IDs):</label>
+                        <label className="font-medium mb-2 text-[#e9ecef] text-sm">Number of Tickets:</label>
                         <select
                             name="balconyCount"
                             value={formData.balconyCount}
@@ -168,10 +168,17 @@ const Step2SeatSelection = ({ formData, setFormData, selectedSeats, setSelectedS
                         <div className="text-left text-[11px] font-bold mt-[1px]" style={{ color: balconyLimit <= 0 && !isLoading ? 'red' : 'inherit' }}>
                             {isLoading ? 'Fetching availability...' :
                                 balconyLimit <= 0 ? 'Sold out! No tickets remaining.' :
-                                    `Maximum available: ${balconyLimit} (You can buy up to ${userLimit})`
+                                    `Total available seats: ${balconyLimit} (You can buy up to ${userLimit})`
                             }
                         </div>
-                        <span className="block text-xs text-[#adb5bd] mb-2 mt-2">Note: Seating in the Balcony will be arranged on a first-come, first-served basis.</span>
+                        <span className="block text-xs text-amber-400 mb-2 mt-2">Seating numbers cannot be reserved for balcony tickets. Balcony seating is on a first-come, first-served basis.</span>
+                        <div className="text-xs text-gray-300 mt-2 bg-[#2c2c2c] border border-[rgba(255,255,255,0.05)] p-3 rounded-lg shadow-sm">
+                            <p className="mb-1"><strong className="text-amber-400">Balcony Division:</strong> Audience will be divided into two balconies based on ticket purchase order:</p>
+                            <ul className="list-disc pl-5 mt-1 space-y-1 text-gray-400">
+                                <li><strong className="text-gray-300">Balcony No. 01:</strong> First sold tickets</li>
+                                <li><strong className="text-gray-300">Balcony No. 02:</strong> Later sold tickets</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <hr className="mb-2.5 border-t border-[#343a40]" />

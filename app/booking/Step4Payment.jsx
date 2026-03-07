@@ -147,7 +147,13 @@ const Step4Payment = ({ formData, selectedSeats, prevStep, API_URL, onBookingCom
             </div>
 
             <div className="flex flex-col text-left mb-5">
-                <label className="font-medium mb-2 text-[#e9ecef] text-sm">Upload Payment Proof (Image/PDF):</label>
+                <label className="font-medium mb-2 text-[#e9ecef] text-sm">
+                    Upload Payment Proof (Image/PDF): <br />
+                    <span className="text-xs text-gray-400">
+                        Maximum file size: <b>5MB</b>. Please rename the file using <b>your full name</b> before uploading.
+                        Example: <b>Madhuka Dias.pdf</b>
+                    </span>
+                </label>
                 <div className="mt-2.5">
                     <input
                         type="file"
