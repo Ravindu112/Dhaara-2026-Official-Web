@@ -1,4 +1,4 @@
 export const EVENT_CONFIG = {
     year: ' 26',
-    targetDate: '2026-03-08T19:00:00',
+    targetDate: '2026-04-24T00:00:00', // Concert date
 };

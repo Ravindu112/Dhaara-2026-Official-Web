@@ -22,7 +22,33 @@ const Step2SeatSelection = ({ formData, setFormData, selectedSeats, setSelectedS
 
                 clearTimeout(timeoutId);
 
-                setMapData(data.grid);
+                let parsedGrid = data.grid;
+                if (!parsedGrid && data.gridCSV) {
+                    const rows = data.gridCSV.split('\n');
+                    parsedGrid = rows.map(row => {
+                        return row.split(',').map(cellString => {
+                            cellString = cellString.trim();
+                            if (!cellString) return { text: '', color: '#ffffff' };
+
+                            const parts = cellString.split('_');
+                            const text = parts[0];
+                            const type = parts[1]; // G, B, O
+                            const status = parts[2]; // T (Ticket available), F/other (Booked)
+
+                            let color = '#ffffff';
+                            if (status !== 'T') {
+                                color = '#ff0000'; // Booked
+                            } else {
+                                if (type === 'G') color = '#00ff00';
+                                else if (type === 'B') color = '#45818e';
+                                else if (type === 'O') color = '#ff9900';
+                            }
+                            return { text, color };
+                        });
+                    });
+                }
+
+                setMapData(parsedGrid);
                 setStageData(data.stage);
 
                 const limit = parseInt(data.balconyLimit) || 0;
