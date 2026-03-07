@@ -110,7 +110,8 @@ const TimelineItem = ({ data, index }) => {
       `}>
         <h3 className="font-bold text-lg md:text-xl mb-1 uppercase tracking-wider">{data.title}</h3>
         <p className={`text-sm font-medium ${active ? 'text-slate-800' : 'text-amber-500'}`}>
-          {new Date(data.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}
+          {/* Format date consistently to avoid SSR hydration mismatches */}
+          {new Date(data.date).toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}
         </p>
       </div>
 
