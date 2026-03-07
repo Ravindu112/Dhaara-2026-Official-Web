@@ -39,7 +39,7 @@ const Countdown = ({ targetDate = '2026-04-24' }) => {
       <div className="container mx-auto text-center">
 
         <h1 className="text-5xl md:text-9xl font-black uppercase leading-[0.9] tracking-tighter mb-4">
-          <span className="bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(255,160,0,0.4)]">
+          <span className="inline-block pr-2 md:pr-6 bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(255,160,0,0.4)]">
             DHAARA'26
           </span>
         </h1>
