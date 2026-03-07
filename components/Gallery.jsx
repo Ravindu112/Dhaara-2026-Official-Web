@@ -14,7 +14,7 @@ const img9 = '/assets/Images/Gallery/9.webp';
 const img10 = '/assets/Images/Gallery/10.webp';
 const img11 = '/assets/Images/Gallery/11.webp';
 const img12 = '/assets/Images/Gallery/17.webp';
-const img13 = '/assets/Images/Gallery/13.webp';
+const img13 = '/assets/Images/Gallery/20.webp';
 const img14 = '/assets/Images/Gallery/3.webp';
 const img15 = '/assets/Images/Gallery/15.webp';
 
