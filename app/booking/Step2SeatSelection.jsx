@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import SeatMap from './SeatMap';
 
 const Step2SeatSelection = ({ formData, setFormData, selectedSeats, setSelectedSeats, nextStep, prevStep, API_URL }) => {
+    const isOutsider = formData.faculty === 'Outside the University/Graduate';
     const [mapData, setMapData] = useState(null);
     const [stageData, setStageData] = useState(null);
     const [balconyLimit, setBalconyLimit] = useState(0);
@@ -76,7 +77,7 @@ const Step2SeatSelection = ({ formData, setFormData, selectedSeats, setSelectedS
     };
 
     const handleNext = () => {
-        const balcCount = parseInt(formData.balconyCount) || 0;
+        const balcCount = isOutsider ? 0 : (parseInt(formData.balconyCount) || 0);
         if (selectedSeats.size === 0 && balcCount === 0) {
             alert("Please select map seats or enter balcony tickets before proceeding to payment.");
             return;
@@ -107,7 +108,7 @@ const Step2SeatSelection = ({ formData, setFormData, selectedSeats, setSelectedS
         return count;
     };
 
-    const balcCount = parseInt(formData.balconyCount) || 0;
+    const balcCount = isOutsider ? 0 : (parseInt(formData.balconyCount) || 0);
     const count2000 = countColor('#00ff00');
     const count3000 = countColor('#45818e');
     const count5000 = countColor('#ff9900');
@@ -148,38 +149,43 @@ const Step2SeatSelection = ({ formData, setFormData, selectedSeats, setSelectedS
                         <div className="flex items-center"><span className="w-3 h-3 rounded-full inline-block mr-1.5 align-middle bg-[#dc3545] opacity-60"></span>Booked</div>
                     </div>
 
-                    <hr className="mb-2.5 border-t border-[#343a40]" />
+                    {/* Conditionally hide balcony tickets for outsiders */}
+                    {!isOutsider && (
+                        <>
+                            <hr className="mb-2.5 border-t border-[#343a40]" />
 
-                    <h4 className="mt-0 mb-2.5 text-[#e9ecef] text-left font-bold">Rs. 1500 Tickets(Balcony Only)</h4>
-                    <div className="flex flex-col text-left mb-5">
-                        <label className="font-medium mb-2 text-[#e9ecef] text-sm">Number of Tickets:</label>
-                        <select
-                            name="balconyCount"
-                            value={formData.balconyCount}
-                            onChange={handleBalconyChange}
-                            disabled={isLoading || balconyLimit <= 0}
-                            className="w-full p-2.5 border border-[#343a40] rounded-lg text-[15px] bg-[#2c2c2c] text-[#e9ecef] transition-all duration-200 focus:border-[#fd7e14] focus:outline-none focus:ring-[3px] focus:ring-[#fd7e14]/25 focus:bg-[#333]"
-                        >
-                            <option value="0">0</option>
-                            {[...Array(userLimit)].map((_, i) => (
-                                <option key={i + 1} value={i + 1}>{i + 1}</option>
-                            ))}
-                        </select>
-                        <div className="text-left text-[11px] font-bold mt-[1px]" style={{ color: balconyLimit <= 0 && !isLoading ? 'red' : 'inherit' }}>
-                            {isLoading ? 'Fetching availability...' :
-                                balconyLimit <= 0 ? 'Sold out! No tickets remaining.' :
-                                    `Total available seats: ${balconyLimit} (You can buy up to ${userLimit})`
-                            }
-                        </div>
-                        <span className="block text-xs text-amber-400 mb-2 mt-2">Seating numbers cannot be reserved for balcony tickets. Balcony seating is on a first-come, first-served basis.</span>
-                        <div className="text-xs text-gray-300 mt-2 bg-[#2c2c2c] border border-[rgba(255,255,255,0.05)] p-3 rounded-lg shadow-sm">
-                            <p className="mb-1"><strong className="text-amber-400">Balcony Division:</strong> Audience will be divided into two balconies based on ticket purchase order:</p>
-                            <ul className="list-disc pl-5 mt-1 space-y-1 text-gray-400">
-                                <li><strong className="text-gray-300">Balcony No. 01:</strong> First sold tickets</li>
-                                <li><strong className="text-gray-300">Balcony No. 02:</strong> Later sold tickets</li>
-                            </ul>
-                        </div>
-                    </div>
+                            <h4 className="mt-0 mb-2.5 text-[#e9ecef] text-left font-bold">Rs. 1500 Tickets(Balcony Only)</h4>
+                            <div className="flex flex-col text-left mb-5">
+                                <label className="font-medium mb-2 text-[#e9ecef] text-sm">Number of Tickets:</label>
+                                <select
+                                    name="balconyCount"
+                                    value={formData.balconyCount}
+                                    onChange={handleBalconyChange}
+                                    disabled={isLoading || balconyLimit <= 0}
+                                    className="w-full p-2.5 border border-[#343a40] rounded-lg text-[15px] bg-[#2c2c2c] text-[#e9ecef] transition-all duration-200 focus:border-[#fd7e14] focus:outline-none focus:ring-[3px] focus:ring-[#fd7e14]/25 focus:bg-[#333]"
+                                >
+                                    <option value="0">0</option>
+                                    {[...Array(userLimit)].map((_, i) => (
+                                        <option key={i + 1} value={i + 1}>{i + 1}</option>
+                                    ))}
+                                </select>
+                                <div className="text-left text-[11px] font-bold mt-[1px]" style={{ color: balconyLimit <= 0 && !isLoading ? 'red' : 'inherit' }}>
+                                    {isLoading ? 'Fetching availability...' :
+                                        balconyLimit <= 0 ? 'Sold out! No tickets remaining.' :
+                                            `Total available seats: ${balconyLimit} (You can buy up to ${userLimit})`
+                                    }
+                                </div>
+                                <span className="block text-xs text-amber-400 mb-2 mt-2">Seating numbers cannot be reserved for balcony tickets. Balcony seating is on a first-come, first-served basis.</span>
+                                <div className="text-xs text-gray-300 mt-2 bg-[#2c2c2c] border border-[rgba(255,255,255,0.05)] p-3 rounded-lg shadow-sm">
+                                    <p className="mb-1"><strong className="text-amber-400">Balcony Division:</strong> Audience will be divided into two balconies based on ticket purchase order:</p>
+                                    <ul className="list-disc pl-5 mt-1 space-y-1 text-gray-400">
+                                        <li><strong className="text-gray-300">Balcony No. 01:</strong> First sold tickets</li>
+                                        <li><strong className="text-gray-300">Balcony No. 02:</strong> Later sold tickets</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </>
+                    )}
 
                     <hr className="mb-2.5 border-t border-[#343a40]" />
 
