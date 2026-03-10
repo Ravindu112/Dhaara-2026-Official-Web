@@ -13,7 +13,7 @@ function TicketsCountdown({ timeLeft }) {
                 </h2>
 
                 <p className="mt-5 md:mt-6 text-base sm:text-lg md:text-2xl tracking-widest text-amber-400 font-semibold">
-                    March 11 • 7:00 PM
+                    March 12 • 9:00 AM
                 </p>
 
                 <div className="mt-12 md:mt-14 grid grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto">
