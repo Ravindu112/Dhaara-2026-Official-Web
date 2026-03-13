@@ -1,12 +1,16 @@
 import React from 'react';
+import TitlePatner from '../public/assets/Sponsor logos/Omegaline.webp'
+import Maliban from '../public/assets/Sponsor logos/Maliban.png'
+import S1 from '../public/assets/Sponsor logos/Other Sponsors/S1.webp'
+import S2 from '../public/assets/Sponsor logos/Other Sponsors/S2.webp'
 
 // Sponsor Data - Static content
 const sponsors = [
   {
     id: 1,
-    name: 'Title Partner ',
+    name: 'OMEGA LINE ',
     tier: 'title',
-    image: '👑',
+    image: <img src={TitlePatner.src} alt="Omegaline" className="h-[120px] w-auto object-contain" />,
     description: 'Premier Title Partner',
   },
   {
@@ -18,9 +22,9 @@ const sponsors = [
   },
   {
     id: 4,
-    name: 'Gold Partner ',
+    name: 'MALIBAN',
     tier: 'gold',
-    image: '🏆',
+    image: <img src={Maliban.src} alt="Maliban" className="h-[100px] w-auto object-contain" />,
     description: 'Gold Partnership',
   },
   {
@@ -40,14 +44,8 @@ const sponsors = [
 ];
 
 const otherSponsors = [
-  { id: 101, name: 'Partner A', icon: '🎯' },
-  { id: 102, name: 'Partner B', icon: '🎪' },
-  { id: 103, name: 'Partner C', icon: '🎨' },
-  { id: 104, name: 'Partner D', icon: '🎭' },
-  { id: 105, name: 'Partner E', icon: '🎬' },
-  { id: 106, name: 'Partner F', icon: '📱' },
-  { id: 107, name: 'Partner G', icon: '💡' },
-  { id: 108, name: 'Partner H', icon: '🌟' }
+  { id: 101, name: 'Partner A', icon: <img src={S1.src} alt="Partner A" className="h-full w-full object-contain p-2" /> },
+  { id: 102, name: 'Partner B', icon: <img src={S2.src} alt="Partner B" className="h-full w-full object-contain p-2" /> },
 ];
 
 export default function Sponsors() {
@@ -152,7 +150,7 @@ export default function Sponsors() {
           <div className="relative overflow-hidden bg-slate-900/30 rounded-[40px] p-[1.5px] bg-gradient-to-r from-amber-200 via-yellow-600 to-amber-800">
             <div className="bg-slate-950 rounded-[38px] p-12 overflow-hidden">
               <div className="flex w-max animate-scroll-left hover:[animation-play-state:paused] gap-12">
-                {[...otherSponsors, ...otherSponsors].map((sponsor, index) => (
+                {otherSponsors.map((sponsor, index) => (
                   <div key={index} className="flex flex-col items-center justify-center group w-40">
                     <div className="w-28 h-28 rounded-2xl bg-slate-800/30 border border-slate-700 flex items-center justify-center group-hover:border-amber-500/50 transition-all duration-300 group-hover:scale-110 shadow-lg">
                       <span className="text-5xl">{sponsor.icon}</span>

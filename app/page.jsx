@@ -12,7 +12,7 @@ import {
   Timeline,
   Testimonials,
   Sponsors,
-  LeadershipTeam,
+  LeadershipTeam
 } from '../components'
 import TicketSection from '../components/TicketSection'
 import { EVENT_CONFIG } from '../constants'

@@ -136,6 +136,13 @@ const Step4Payment = ({ formData, selectedSeats, prevStep, API_URL, onBookingCom
                 <p className="m-0 text-sm font-bold text-yellow-500">
                     ⚠️ Important: Please do not refresh or exit this page. Doing so may cause your booking information to be lost.
                 </p>
+                <p>
+                    If you have any issue, please contact:
+                    <br />
+                    Ushan: 077 827 0975
+                    <br />
+                    Nilsula: 077 812 2165
+                </p>
             </div>
 
             <h4 className="mt-5 mb-2.5 text-left text-[#e9ecef] font-semibold text-base">Payment Instructions</h4>
