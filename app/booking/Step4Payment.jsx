@@ -132,6 +132,12 @@ const Step4Payment = ({ formData, selectedSeats, prevStep, API_URL, onBookingCom
         <div className="animate-[slideUp_0.4s_ease-out]" id="step4">
             <h3 className="border-b-2 border-[#343a40] pb-4 m-0 mb-6 text-[#e9ecef] text-xl font-semibold text-left">Step 4: Payment Details</h3>
 
+            <div className="bg-[#2c2c2c] border-l-4 border-red-500 p-4 mb-6 rounded text-left">
+                <p className="m-0 text-sm font-bold text-yellow-500">
+                    ⚠️ Important: Please do not refresh or exit this page. Doing so may cause your booking information to be lost.
+                </p>
+            </div>
+
             <h4 className="mt-5 mb-2.5 text-left text-[#e9ecef] font-semibold text-base">Payment Instructions</h4>
             <div className="bg-[#2c2c2c] border-l-4 border-[#fd7e14] p-4 mb-5 rounded text-left">
                 <p className="mt-0 text-sm leading-snug text-[#e9ecef] mb-3">
