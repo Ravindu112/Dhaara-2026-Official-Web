@@ -3,6 +3,7 @@ import TitlePatner from '../public/assets/Sponsor logos/Omegaline.webp'
 import Maliban from '../public/assets/Sponsor logos/Maliban.png'
 import S1 from '../public/assets/Sponsor logos/Other Sponsors/S1.webp'
 import S2 from '../public/assets/Sponsor logos/Other Sponsors/S2.webp'
+import S3 from '../public/assets/Sponsor logos/Other Sponsors/S3.webp'
 
 // Sponsor Data - Static content
 const sponsors = [
@@ -46,6 +47,7 @@ const sponsors = [
 const otherSponsors = [
   { id: 101, name: 'Partner A', icon: <img src={S1.src} alt="Partner A" className="h-full w-full object-contain p-2" /> },
   { id: 102, name: 'Partner B', icon: <img src={S2.src} alt="Partner B" className="h-full w-full object-contain p-2" /> },
+  { id: 103, name: 'Partner C', icon: <img src={S3.src} alt="Partner C" className="h-full w-full object-contain p-2" /> },
 ];
 
 export default function Sponsors() {
