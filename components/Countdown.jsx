@@ -44,7 +44,7 @@ const Countdown = ({ targetDate = '2026-04-24' }) => {
           </span>
         </h1>
         <h3 className="text-1xl md:text-2xl font-semibold uppercase tracking-tight text-white mb-12">
-          <span className="text-gray-300">Nelum Pokuna Mahinda Rajapaksha Theatre, Colombo 07</span>
+          <span className="text-gray-300">Nelum Pokuna Mahinda Rajapaksha Indoor Theatre, Colombo 07</span>
         </h3>
         <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
           {/* Days */}
