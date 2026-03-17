@@ -55,7 +55,7 @@ const timelineData = [
   {
     id: 8,
     title: "Semi Final",
-    date: "2026-03-24",
+    date: "2026-03-30",
     happened: false,
   },
   {
