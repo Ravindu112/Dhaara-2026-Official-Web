@@ -14,9 +14,9 @@ const Tickets = () => {
 
 
   const ticketData = [
-    { label: "Early bird", price: "1500", percentage: 25, status: "Available" },
-    { label: "Standard", price: "2000", percentage: 0, status: "Available" },
-    { label: "VIP", price: "3000", percentage: 0, status: "Available" },
+    { label: "Early bird", price: "1500", percentage: 40, status: "Available" },
+    { label: "Standard", price: "2000", percentage: 5, status: "Available" },
+    { label: "VIP", price: "3000", percentage: 5, status: "Available" },
     { label: "VVIP", price: "5000", percentage: 0, status: "Available" },
   ];
 
