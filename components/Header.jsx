@@ -93,11 +93,11 @@ const Header = () => {
                 Tickets
               </a>
             </li>
-            {/*<li>
+            <li>
               <a href="#sponsors" className="hover:text-amber-400 transition-colors">
                 Sponsors
               </a>
-            </li>*/}
+            </li>
             <li>
               <a href="#contact" className="hover:text-amber-400 transition-colors">
                 Contact Us
@@ -108,12 +108,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div
+
           className={`md:hidden transition-all duration-500 overflow-hidden ${isMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
             }`}
         >
           <ul className="flex flex-col space-y-4 text-white bg-slate-900/80 backdrop-blur-xl p-6 rounded-xl">
-            {["home", "about", "gallery", "tickets", "contact"].map(
-              // {["home", "about", "gallery", "tickets", "sponsors", "contact"].map(
+
+            {["home", "about", "gallery", "tickets", "sponsors", "contact"].map(
               (item) => (
                 <li key={item}>
                   <a

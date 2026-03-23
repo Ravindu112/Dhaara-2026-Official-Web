@@ -13,7 +13,7 @@ const teamMembers = [
   {
     id: 1,
     roleTitle: "President",
-    name: "Kavinga Anjana",
+    name: "Kavinga Ranthilake",
     roleSubtitle: "President",
     imageSrc: kImage,
     email: "ranthilakakavinga@gmail.com",

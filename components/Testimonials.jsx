@@ -22,7 +22,7 @@ export default function Testimonials() {
       position: 'right'
     },
     {
-      name: 'Mr. Kavinga Anjana-President',
+      name: 'Mr. Kavinga Ranthilake-President',
       title: 'Flair Club - University of Sri Jayewardenepura',
       image: kImage,
       quote: 'The Flair Club has grown through creative projects like Rhythm, Personality, Nachna, G-Tune, Theatro, and Susara Thelithuda, celebrating student talent and artistic expression. Now, DHAARA 2026 rises as a grand celebration of voice and courage, uniting passion, teamwork, and dreams proving that when many voices harmonize, extraordinary moments are created.',

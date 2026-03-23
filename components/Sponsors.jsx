@@ -7,54 +7,61 @@ import S3 from '../public/assets/Sponsor logos/Other Sponsors/S3.webp'
 import S4 from '../public/assets/Sponsor logos/Other Sponsors/S4.webp'
 import S5 from '../public/assets/Sponsor logos/Other Sponsors/S5.webp'
 import S6 from '../public/assets/Sponsor logos/Other Sponsors/S6.webp'
+import S7 from '../public/assets/Sponsor logos/Other Sponsors/S7.webp'
+import S8 from '../public/assets/Sponsor logos/Other Sponsors/S8.webp'
 
 // Sponsor Data - Static content
 const sponsors = [
   {
     id: 1,
-    name: 'OMEGA LINE ',
+    name: 'OMEGA LINE Ltd ',
     tier: 'title',
     image: <img src={TitlePatner.src} alt="Omegaline" className="h-[120px] w-auto object-contain" />,
-    description: 'Premier Title Partner',
+    description: 'Omega Line was the first step towards the company producing its items in-house. Since 1999, the factory has grown into the largest exporter in Sri Lanka of clothing to Europe, producing and exporting more than 30 million items each year.',
+    link: 'https://www.oniverse.it/en/world-in-progress/supply-chain/our-production-facilities/our-production-plants/omega',
   },
-  {
-    id: 2,
-    name: 'Platinum Partner',
-    tier: 'platinum',
-    image: '💎',
-    description: 'Platinum Partnership',
-  },
+  // {
+  //   id: 2,
+  //   name: 'Platinum Partner',
+  //   tier: 'platinum',
+  //   image: '💎',
+  //   description: 'Platinum Partnership',
+  // },
   {
     id: 4,
     name: 'MALIBAN',
     tier: 'gold',
     image: <img src={Maliban.src} alt="Maliban" className="h-[100px] w-auto object-contain" />,
-    description: 'Gold Partnership',
+    description: 'Maliban Biscuit Manufactories, is one of the largest manufacturers, distributors and marketers of bakery products in Sri Lanka. Maliban is a privately owned limited liability company.',
+    link: 'https://www.malibangroup.com/',
   },
-  {
-    id: 5,
-    name: 'Silver Partner ',
-    tier: 'silver',
-    image: '⭐',
-    description: 'Silver Partnership',
-  },
-  {
-    id: 7,
-    name: 'Bronze Partner ',
-    tier: 'bronze',
-    image: '🎯',
-    description: 'Bronze Partnership',
-  },
+  // {
+  //   id: 5,
+  //   name: 'Silver Partner ',
+  //   tier: 'silver',
+  //   image: '⭐',
+  //   description: 'Silver Partnership',
+  // },
+  // {
+  //   id: 7,
+  //   name: 'Bronze Partner ',
+  //   tier: 'bronze',
+  //   image: '🎯',
+  //   description: 'Bronze Partnership',
+  // },
 ];
 
 const otherSponsors = [
-  { id: 101, name: 'Partner A', icon: <img src={S1.src} alt="Partner A" className="h-full w-full object-contain p-2" /> },
-  { id: 102, name: 'Partner B', icon: <img src={S2.src} alt="Partner B" className="h-full w-full object-contain p-2" /> },
-  { id: 103, name: 'Partner C', icon: <img src={S3.src} alt="Partner C" className="h-full w-full object-contain p-2" /> },
-  { id: 104, name: 'Partner D', icon: <img src={S4.src} alt="Partner D" className="h-full w-full object-contain p-2" /> },
-  { id: 105, name: 'Partner E', icon: <img src={S5.src} alt="Partner E" className="h-full w-full object-contain p-2" /> },
-  { id: 106, name: 'Partner F', icon: <img src={S6.src} alt="Partner F" className="h-full w-full object-contain p-2" /> },
+  { id: 101, name: 'Ceylon Today', icon: <img src={S1.src} alt="Partner A" className="h-full w-full object-contain p-2" /> },
+  { id: 102, name: 'Mawbima', icon: <img src={S2.src} alt="Partner B" className="h-full w-full object-contain p-2" /> },
+  { id: 103, name: 'Vevra Photography', icon: <img src={S3.src} alt="Partner C" className="h-full w-full object-contain p-2" /> },
+  { id: 104, name: 'WAYO', icon: <img src={S4.src} alt="Partner D" className="h-full w-full object-contain p-2" /> },
+  { id: 105, name: 'J\'Pura Flames', icon: <img src={S5.src} alt="Partner E" className="h-full w-full object-contain p-2" /> },
+  { id: 106, name: 'CSDS Society USJ', icon: <img src={S6.src} alt="Partner F" className="h-full w-full object-contain p-2" /> },
+  { id: 107, name: 'Perfect', icon: <img src={S7.src} alt="Partner G" className="h-full w-full object-contain p-2" /> },
+  { id: 108, name: 'Leron', icon: <img src={S8.src} alt="Partner H" className="h-full w-full object-contain p-2" /> },
 ];
+
 
 export default function Sponsors() {
 
@@ -110,12 +117,16 @@ export default function Sponsors() {
                 </p>
 
 
-                <button className={`relative z-10 px-8 py-3 rounded-full font-bold uppercase tracking-wider transition-all duration-300 ${isTitle
-                  ? 'bg-gradient-to-r from-amber-400 to-orange-600 text-black hover:scale-105 shadow-[0_5px_15px_-5px_rgba(251,191,36,0.5)]'
-                  : 'bg-gradient-to-r from-amber-100 to-amber-300 text-black hover:brightness-110 shadow-md'
-                  }`}>
+                <a
+                  href={sponsor.link || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-block relative z-10 px-8 py-3 rounded-full font-bold uppercase tracking-wider transition-all duration-300 text-center ${isTitle
+                    ? 'bg-gradient-to-r from-amber-400 to-orange-600 text-black hover:scale-105 shadow-[0_5px_15px_-5px_rgba(251,191,36,0.5)]'
+                    : 'bg-gradient-to-r from-amber-100 to-amber-300 text-black hover:brightness-110 shadow-md'
+                    }`}>
                   Learn More
-                </button>
+                </a>
               </div>
             </div>
           ))}
@@ -157,15 +168,29 @@ export default function Sponsors() {
 
           <div className="relative overflow-hidden bg-slate-900/30 rounded-[40px] p-[1.5px] bg-gradient-to-r from-amber-200 via-yellow-600 to-amber-800">
             <div className="bg-slate-950 rounded-[38px] p-12 overflow-hidden">
-              <div className="flex w-max animate-scroll-left hover:[animation-play-state:paused] gap-12">
-                {otherSponsors.map((sponsor, index) => (
-                  <div key={index} className="flex flex-col items-center justify-center group w-40">
-                    <div className="w-28 h-28 rounded-2xl bg-slate-800/30 border border-slate-700 flex items-center justify-center group-hover:border-amber-500/50 transition-all duration-300 group-hover:scale-110 shadow-lg">
-                      <span className="text-5xl">{sponsor.icon}</span>
+              <div className="flex w-max animate-scroll-left hover:[animation-play-state:paused]">
+                {/* Original set */}
+                <div className="flex gap-12 pr-12">
+                  {otherSponsors.map((sponsor, index) => (
+                    <div key={index} className="flex flex-col items-center justify-center group w-40">
+                      <div className="w-28 h-28 rounded-2xl bg-slate-800/30 border border-slate-700 flex items-center justify-center group-hover:border-amber-500/50 transition-all duration-300 group-hover:scale-110 shadow-lg">
+                        <span className="text-5xl">{sponsor.icon}</span>
+                      </div>
+                      <p className="text-gray-400 font-bold text-center mt-4 text-sm group-hover:text-amber-300 transition-colors uppercase tracking-tight">{sponsor.name}</p>
                     </div>
-                    <p className="text-gray-400 font-bold text-center mt-4 text-sm group-hover:text-amber-300 transition-colors uppercase tracking-tight">{sponsor.name}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
+                {/* Duplicated set for seamless loop */}
+                <div className="flex gap-12 pr-12" aria-hidden="true">
+                  {otherSponsors.map((sponsor, index) => (
+                    <div key={`dup-${index}`} className="flex flex-col items-center justify-center group w-40">
+                      <div className="w-28 h-28 rounded-2xl bg-slate-800/30 border border-slate-700 flex items-center justify-center group-hover:border-amber-500/50 transition-all duration-300 group-hover:scale-110 shadow-lg">
+                        <span className="text-5xl">{sponsor.icon}</span>
+                      </div>
+                      <p className="text-gray-400 font-bold text-center mt-4 text-sm group-hover:text-amber-300 transition-colors uppercase tracking-tight">{sponsor.name}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -179,11 +204,6 @@ export default function Sponsors() {
           <p className="relative z-10 text-gray-300 text-base md:text-lg font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
             Shape DHAARA' 26 into an unforgettable experience. Partner with us to showcase your brand, engage a vibrant audience, and create moments that inspire.
           </p>
-          <div className="flex justify-center">
-            <a href="#leadership" className="relative z-10 px-14 py-6 bg-gradient-to-r from-amber-200 to-amber-800 text-black font-black rounded-full hover:scale-110 transition-all transform duration-500 uppercase tracking-tighter shadow-[0_0_40px_-10px_rgba(251,191,36,0.6)] border-2 border-amber-400 active:scale-95">
-              Sponsorship Opportunities
-            </a>
-          </div>
         </div>
 
       </div>

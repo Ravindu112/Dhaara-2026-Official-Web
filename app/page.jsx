@@ -47,7 +47,7 @@ function App() {
           <ScrollReveal direction="up" delay={0.1}><Timeline /></ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}><TicketSection /></ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}><Testimonials /></ScrollReveal>
-          {/* <ScrollReveal direction="up" delay={0.1}><Sponsors /></ScrollReveal> */}
+          <ScrollReveal direction="up" delay={0.1}><Sponsors /></ScrollReveal>
           <ScrollReveal direction="up" delay={0.1}><LeadershipTeam /></ScrollReveal>
           <ScrollReveal direction="up" delay={0.2}><PageFooter /></ScrollReveal>
         </section>

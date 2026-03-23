@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "DHAARA '26 | Sri Lanka's Premier Inter-University Music Competition",
+  title: "DHAARA '26 | Sri Lanka's Premier Inter-Faculty Music Competition",
   icons: {
     icon: "/assets/logo_gold.webp",
   },
