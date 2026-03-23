@@ -52,14 +52,14 @@ const sponsors = [
 ];
 
 const otherSponsors = [
-  { id: 101, name: 'Ceylon Today', icon: <img src={S1.src} alt="Partner A" className="h-full w-full object-contain p-2" /> },
-  { id: 102, name: 'Mawbima', icon: <img src={S2.src} alt="Partner B" className="h-full w-full object-contain p-2" /> },
-  { id: 103, name: 'Vevra Photography', icon: <img src={S3.src} alt="Partner C" className="h-full w-full object-contain p-2" /> },
-  { id: 104, name: 'WAYO', icon: <img src={S4.src} alt="Partner D" className="h-full w-full object-contain p-2" /> },
-  { id: 105, name: 'J\'Pura Flames', icon: <img src={S5.src} alt="Partner E" className="h-full w-full object-contain p-2" /> },
-  { id: 106, name: 'CSDS Society USJ', icon: <img src={S6.src} alt="Partner F" className="h-full w-full object-contain p-2" /> },
-  { id: 107, name: 'Perfect', icon: <img src={S7.src} alt="Partner G" className="h-full w-full object-contain p-2" /> },
-  { id: 108, name: 'Leron', icon: <img src={S8.src} alt="Partner H" className="h-full w-full object-contain p-2" /> },
+  { id: 101, name: 'Ceylon Today', link: 'https://ceylontoday.lk/', icon: <img src={S1.src} alt="Partner A" className="h-full w-full object-contain p-2" /> },
+  { id: 102, name: 'Mawbima', link: 'https://mawbima.lk/', icon: <img src={S2.src} alt="Partner B" className="h-full w-full object-contain p-2" /> },
+  { id: 103, name: 'Vevra Photography', link: 'https://web.facebook.com/vevrasrilanka/?_rdc=1&_rdr#', icon: <img src={S3.src} alt="Partner C" className="h-full w-full object-contain p-2" /> },
+  { id: 104, name: 'WAYO', link: 'https://web.facebook.com/wayosl/?_rdc=1&_rdr#', icon: <img src={S4.src} alt="Partner D" className="h-full w-full object-contain p-2" /> },
+  { id: 105, name: 'J\'Pura Flames', link: 'https://web.facebook.com/Jpuraflames/?_rdc=1&_rdr#', icon: <img src={S5.src} alt="Partner E" className="h-full w-full object-contain p-2" /> },
+  { id: 106, name: 'CSDS Society USJ', link: 'https://web.facebook.com/sjpcsds/?_rdc=1&_rdr#', icon: <img src={S6.src} alt="Partner F" className="h-full w-full object-contain p-2" /> },
+  { id: 107, name: 'Perfect Sounds', link: 'https://web.facebook.com/people/Perfect-Events/100091950007528/?_rdc=1&_rdr#', icon: <img src={S7.src} alt="Partner G" className="h-full w-full object-contain p-2" /> },
+  { id: 108, name: 'Leron', link: 'https://web.facebook.com/profile.php?id=100088872685308&sk=photos', icon: <img src={S8.src} alt="Partner H" className="h-full w-full object-contain p-2" /> },
 ];
 
 
@@ -172,23 +172,23 @@ export default function Sponsors() {
                 {/* Original set */}
                 <div className="flex gap-12 pr-12">
                   {otherSponsors.map((sponsor, index) => (
-                    <div key={index} className="flex flex-col items-center justify-center group w-40">
+                    <a href={sponsor.link || '#'} target="_blank" rel="noopener noreferrer" key={index} className="flex flex-col items-center justify-center group w-40 cursor-pointer">
                       <div className="w-28 h-28 rounded-2xl bg-slate-800/30 border border-slate-700 flex items-center justify-center group-hover:border-amber-500/50 transition-all duration-300 group-hover:scale-110 shadow-lg">
                         <span className="text-5xl">{sponsor.icon}</span>
                       </div>
                       <p className="text-gray-400 font-bold text-center mt-4 text-sm group-hover:text-amber-300 transition-colors uppercase tracking-tight">{sponsor.name}</p>
-                    </div>
+                    </a>
                   ))}
                 </div>
                 {/* Duplicated set for seamless loop */}
                 <div className="flex gap-12 pr-12" aria-hidden="true">
                   {otherSponsors.map((sponsor, index) => (
-                    <div key={`dup-${index}`} className="flex flex-col items-center justify-center group w-40">
+                    <a href={sponsor.link || '#'} target="_blank" rel="noopener noreferrer" key={`dup-${index}`} className="flex flex-col items-center justify-center group w-40 cursor-pointer">
                       <div className="w-28 h-28 rounded-2xl bg-slate-800/30 border border-slate-700 flex items-center justify-center group-hover:border-amber-500/50 transition-all duration-300 group-hover:scale-110 shadow-lg">
                         <span className="text-5xl">{sponsor.icon}</span>
                       </div>
                       <p className="text-gray-400 font-bold text-center mt-4 text-sm group-hover:text-amber-300 transition-colors uppercase tracking-tight">{sponsor.name}</p>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>
