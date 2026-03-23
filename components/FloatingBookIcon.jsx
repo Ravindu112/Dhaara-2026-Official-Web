@@ -74,7 +74,7 @@ export default function FloatingBookIcon() {
                   href="/ES.pdf"
                   download="E-Souvenir.pdf"
                   className="flex items-center gap-2 text-sm font-semibold text-amber-500 bg-amber-500/10 hover:bg-amber-500 hover:text-white px-3 py-1.5 rounded-lg transition-all border border-amber-500/30 group"
-                  title="Download E-Souvenir"
+                  title="Download PDF"
                 >
                   <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
