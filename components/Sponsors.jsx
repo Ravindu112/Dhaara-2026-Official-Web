@@ -166,33 +166,33 @@ export default function Sponsors() {
             OUR IN-KIND Partners
           </h3>
 
-          <div className="relative overflow-hidden bg-slate-900/30 rounded-[40px] p-[1.5px] bg-gradient-to-r from-amber-200 via-yellow-600 to-amber-800">
-            <div className="bg-slate-950 rounded-[38px] p-12 overflow-hidden">
+          <div className="relative overflow-hidden bg-slate-900/30 rounded-[30px] md:rounded-[40px] p-[1.5px] bg-gradient-to-r from-amber-200 via-yellow-600 to-amber-800">
+            <div className="bg-slate-950 rounded-[28px] md:rounded-[38px] p-6 md:p-12 overflow-hidden">
               <div className="flex w-max animate-scroll-left hover:[animation-play-state:paused]">
                 {/* Original set */}
-                <div className="flex gap-12 pr-12">
+                <div className="flex gap-6 pr-6 md:gap-12 md:pr-12">
                   {otherSponsors.map((sponsor, index) => (
-                    <a href={sponsor.link || '#'} target="_blank" rel="noopener noreferrer" key={index} className="flex flex-col items-center justify-start group w-48 cursor-pointer">
-                      <div className="w-28 h-28 rounded-2xl bg-slate-800/30 border border-slate-700 flex items-center justify-center group-hover:border-amber-500/50 transition-all duration-300 group-hover:scale-110 shadow-lg shrink-0">
-                        <span className="text-5xl">{sponsor.icon}</span>
+                    <a href={sponsor.link || '#'} target="_blank" rel="noopener noreferrer" key={index} className="flex flex-col items-center justify-start group w-32 md:w-48 cursor-pointer">
+                      <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-slate-800/30 border border-slate-700 flex items-center justify-center group-hover:border-amber-500/50 transition-all duration-300 group-hover:scale-110 shadow-lg shrink-0">
+                        <span className="text-4xl md:text-5xl">{sponsor.icon}</span>
                       </div>
-                      <div className="flex flex-col items-center mt-4 h-16">
-                        <p className="text-gray-400 font-bold text-center text-sm group-hover:text-amber-300 transition-colors uppercase tracking-tight">{sponsor.name}</p>
-                        <p className="text-gray-400 font-semibold text-center text-[11px] mt-1 tracking-widest uppercase">{sponsor.subtopic}</p>
+                      <div className="flex flex-col items-center mt-3 md:mt-4 h-16 md:h-16">
+                        <p className="text-gray-400 font-bold text-center text-[11px] md:text-sm group-hover:text-amber-300 transition-colors uppercase tracking-tight">{sponsor.name}</p>
+                        <p className="text-gray-400 font-semibold text-center text-[9px] md:text-[11px] mt-1 tracking-widest uppercase">{sponsor.subtopic}</p>
                       </div>
                     </a>
                   ))}
                 </div>
                 {/* Duplicated set for seamless loop */}
-                <div className="flex gap-12 pr-12" aria-hidden="true">
+                <div className="flex gap-6 pr-6 md:gap-12 md:pr-12" aria-hidden="true">
                   {otherSponsors.map((sponsor, index) => (
-                    <a href={sponsor.link || '#'} target="_blank" rel="noopener noreferrer" key={`dup-${index}`} className="flex flex-col items-center justify-start group w-48 cursor-pointer">
-                      <div className="w-28 h-28 rounded-2xl bg-slate-800/30 border border-slate-700 flex items-center justify-center group-hover:border-amber-500/50 transition-all duration-300 group-hover:scale-110 shadow-lg shrink-0">
-                        <span className="text-5xl">{sponsor.icon}</span>
+                    <a href={sponsor.link || '#'} target="_blank" rel="noopener noreferrer" key={`dup-${index}`} className="flex flex-col items-center justify-start group w-32 md:w-48 cursor-pointer">
+                      <div className="w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-slate-800/30 border border-slate-700 flex items-center justify-center group-hover:border-amber-500/50 transition-all duration-300 group-hover:scale-110 shadow-lg shrink-0">
+                        <span className="text-4xl md:text-5xl">{sponsor.icon}</span>
                       </div>
-                      <div className="flex flex-col items-center mt-4 h-16">
-                        <p className="text-gray-400 font-bold text-center text-sm group-hover:text-amber-300 transition-colors uppercase tracking-tight">{sponsor.name}</p>
-                        <p className="text-gray-400 font-semibold text-center text-[11px] mt-1 tracking-widest uppercase">{sponsor.subtopic}</p>
+                      <div className="flex flex-col items-center mt-3 md:mt-4 h-16 md:h-16">
+                        <p className="text-gray-400 font-bold text-center text-[11px] md:text-sm group-hover:text-amber-300 transition-colors uppercase tracking-tight">{sponsor.name}</p>
+                        <p className="text-gray-400 font-semibold text-center text-[9px] md:text-[11px] mt-1 tracking-widest uppercase">{sponsor.subtopic}</p>
                       </div>
                     </a>
                   ))}
