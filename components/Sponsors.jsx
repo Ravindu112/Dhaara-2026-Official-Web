@@ -9,6 +9,7 @@ import S5 from '../public/assets/Sponsor logos/Other Sponsors/S5.webp'
 import S6 from '../public/assets/Sponsor logos/Other Sponsors/S6.webp'
 import S7 from '../public/assets/Sponsor logos/Other Sponsors/S7.webp'
 import S8 from '../public/assets/Sponsor logos/Other Sponsors/S8.webp'
+import S9 from '../public/assets/Sponsor logos/Other Sponsors/S9.webp'
 
 // Sponsor Data - Static content
 const sponsors = [
@@ -60,6 +61,7 @@ const otherSponsors = [
   { id: 106, name: 'CSDS Society USJ', subtopic: 'Community Partner', link: 'https://web.facebook.com/sjpcsds/?_rdc=1&_rdr#', icon: <img src={S6.src} alt="Partner F" className="h-full w-full object-contain p-2" /> },
   { id: 107, name: 'Perfect Sounds', subtopic: 'Official Sound Partner', link: 'https://web.facebook.com/people/Perfect-Events/100091950007528/?_rdc=1&_rdr#', icon: <img src={S7.src} alt="Partner G" className="h-full w-full object-contain p-2" /> },
   { id: 108, name: 'Leron', subtopic: 'Official Hair,Makeup & Styling Partner', link: 'https://web.facebook.com/profile.php?id=100088872685308&sk=photos', icon: <img src={S8.src} alt="Partner H" className="h-full w-full object-contain p-2" /> },
+  { id: 109, name: 'Selyn', subtopic: 'Official Photography Partner', link: 'https://www.selyn.lk/', icon: <img src={S9.src} alt="Partner I" className="h-full w-full object-contain p-2" /> },
 ];
 
 
