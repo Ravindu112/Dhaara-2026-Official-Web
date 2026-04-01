@@ -11,7 +11,7 @@ import S7 from '../public/assets/Sponsor logos/Other Sponsors/S7.webp'
 import S8 from '../public/assets/Sponsor logos/Other Sponsors/S8.webp'
 import S9 from '../public/assets/Sponsor logos/Other Sponsors/S9.webp'
 import S10 from '../public/assets/Sponsor logos/Other Sponsors/S10.webp'
-import S11 from
+import S11 from '../public/assets/Sponsor logos/Other Sponsors/S11.webp'
 
 // Sponsor Data - Static content
 const sponsors = [
