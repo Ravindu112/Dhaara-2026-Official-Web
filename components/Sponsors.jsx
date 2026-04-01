@@ -11,6 +11,7 @@ import S7 from '../public/assets/Sponsor logos/Other Sponsors/S7.webp'
 import S8 from '../public/assets/Sponsor logos/Other Sponsors/S8.webp'
 import S9 from '../public/assets/Sponsor logos/Other Sponsors/S9.webp'
 import S10 from '../public/assets/Sponsor logos/Other Sponsors/S10.webp'
+import S11 from
 
 // Sponsor Data - Static content
 const sponsors = [
@@ -64,6 +65,7 @@ const otherSponsors = [
   { id: 108, name: 'Leron', subtopic: 'Official Hair,Makeup & Styling Partner', link: 'https://web.facebook.com/profile.php?id=100088872685308&sk=photos', icon: <img src={S8.src} alt="Partner H" className="h-full w-full object-contain p-2" /> },
   { id: 109, name: 'Behance.lk', subtopic: 'Official Photography Partner', link: 'https://www.facebook.com/Behance.lk/', icon: <img src={S9.src} alt="Partner I" className="h-full w-full object-contain p-2" /> },
   { id: 110, name: 'Varun Beverages', subtopic: 'Official Hydration Partner', link: 'https://www.varunbeverages.com/', icon: <img src={S10.src} alt="Partner J" className="h-full w-full object-contain p-2" /> },
+  { id: 111, name: 'Brandix', subtopic: 'Official Software Skills Development Partner', link: 'https://brandix.com/', icon: <img src={S11.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
 ];
 
 
