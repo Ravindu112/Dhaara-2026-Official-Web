@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 
-const Countdown = ({ targetDate = '2026-04-24' }) => {
+const Countdown = ({ targetDate = '2026-04-24T18:00:00+05:30' }) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -13,6 +13,10 @@ const Countdown = ({ targetDate = '2026-04-24' }) => {
   useEffect(() => {
     const calculateTimeLeft = () => {
       const concertDate = new Date(targetDate);
+      if (Number.isNaN(concertDate.getTime())) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
       const now = new Date();
       const difference = concertDate - now;
 
