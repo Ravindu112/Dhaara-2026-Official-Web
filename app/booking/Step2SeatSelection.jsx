@@ -114,7 +114,8 @@ const Step2SeatSelection = ({ formData, setFormData, selectedSeats, setSelectedS
     const count5000 = countColor('#ff9900');
 
     const totalTickets = selectedSeats.size + balcCount;
-    const totalAmt = (balcCount * 1500) + (count2000 * 2000) + (count3000 * 3000) + (count5000 * 5000);
+    const price3000 = count3000 >= 2 ? 2500 : 3000;
+    const totalAmt = (balcCount * 1500) + (count2000 * 2000) + (count3000 * price3000) + (count5000 * 5000);
 
     const userLimit = Math.min(4, balconyLimit);
 
@@ -210,9 +211,12 @@ const Step2SeatSelection = ({ formData, setFormData, selectedSeats, setSelectedS
 
                         {count3000 > 0 && (
                             <div className="flex items-center mb-1 text-sm">
-                                <span className="flex-1">Rs. 3000 Tickets</span>
+                                <span className="flex-1">
+                                    Rs. 3000 Tickets
+                                    {count3000 >= 2 && <span className="ml-2 text-[#00ff00] text-[11px] font-semibold">(Special Discount: @Rs. 2500)</span>}
+                                </span>
                                 <span className="w-[50px] text-center text-[#e9ecef]">x <span className="qty">{count3000}</span></span>
-                                <span className="font-medium font-mono text-right w-[80px]">Rs. {count3000 * 3000}</span>
+                                <span className="font-medium font-mono text-right w-[80px]">Rs. {count3000 * price3000}</span>
                             </div>
                         )}
 
