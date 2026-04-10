@@ -12,6 +12,11 @@ import S8 from '../public/assets/Sponsor logos/Other Sponsors/S8.webp'
 import S9 from '../public/assets/Sponsor logos/Other Sponsors/S9.webp'
 import S10 from '../public/assets/Sponsor logos/Other Sponsors/S10.webp'
 import S11 from '../public/assets/Sponsor logos/Other Sponsors/S11.webp'
+import S12 from '../public/assets/Sponsor logos/Other Sponsors/S12.webp'
+import S13 from '../public/assets/Sponsor logos/Other Sponsors/S13.webp'
+import S14 from '../public/assets/Sponsor logos/Other Sponsors/S14.webp'
+import S15 from '../public/assets/Sponsor logos/Other Sponsors/S15.webp'
+import S16 from '../public/assets/Sponsor logos/Other Sponsors/S16.webp'
 
 // Sponsor Data - Static content
 const sponsors = [
@@ -66,6 +71,11 @@ const otherSponsors = [
   { id: 109, name: 'Behance.lk', subtopic: 'Official Photography Partner', link: 'https://www.facebook.com/Behance.lk/', icon: <img src={S9.src} alt="Partner I" className="h-full w-full object-contain p-2" /> },
   { id: 110, name: 'Varun Beverages', subtopic: 'Official Hydration Partner', link: 'https://www.varunbeverages.com/', icon: <img src={S10.src} alt="Partner J" className="h-full w-full object-contain p-2" /> },
   { id: 111, name: 'Brandix', subtopic: 'Official Soft Skills Development Partner', link: 'https://brandix.com/', icon: <img src={S11.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
+  { id: 112, name: 'Sweet Ant', subtopic: 'Official Food Partner', icon: <img src={S12.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
+  { id: 113, name: 'Finagle', subtopic: 'Official Food Partner', link: 'https://www.finagle.lk/', icon: <img src={S13.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
+  { id: 114, name: 'Queen Brownie', subtopic: 'Official Food Partner', link: 'https://web.facebook.com/profile.php?id=61551265953908&locale=en_GB#', icon: <img src={S14.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
+  { id: 115, name: 'MIWIE', subtopic: 'Official Gift Partner', link: 'https://web.facebook.com/p/Miwieoffl-61558734074626/?_rdc=1&_rdr#', icon: <img src={S15.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
+  { id: 116, name: 'Ada derana Education', subtopic: 'Official Digital Media Partner', link: 'https://web.facebook.com/adaderanaeducation/reels/?_rdc=1&_rdr#', icon: <img src={S16.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
 ];
 
 
