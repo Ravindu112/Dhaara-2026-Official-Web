@@ -15,7 +15,8 @@ const Step3Review = ({ formData, selectedSeats, nextStep, prevStep }) => {
     const count3000 = countColor('#45818e');
     const count5000 = countColor('#ff9900');
 
-    const totalAmt = (balcCount * 1500) + (count2000 * 2000) + (count3000 * 3000) + (count5000 * 5000);
+    const price3000 = count3000 >= 2 ? 2500 : 3000;
+    const totalAmt = (balcCount * 1500) + (count2000 * 2000) + (count3000 * price3000) + (count5000 * 5000);
     const seatsString = Array.from(selectedSeats.keys()).join(", ") || 'None';
 
     return (
@@ -36,7 +37,7 @@ const Step3Review = ({ formData, selectedSeats, nextStep, prevStep }) => {
                 <div id="reviewTickets" className="leading-relaxed text-[#e9ecef] text-sm">
                     {balcCount > 0 && <span>Balcony Tickets (Rs. 1500): {balcCount}<br /></span>}
                     {count2000 > 0 && <span>Rs. 2000 Tickets: {count2000}<br /></span>}
-                    {count3000 > 0 && <span>Rs. 3000 Tickets: {count3000}<br /></span>}
+                    {count3000 > 0 && <span>Rs. 3000 Tickets: {count3000} {count3000 >= 2 && <span className="ml-1 text-[#00ff00] text-[11px] font-semibold">(Special Discount: @Rs. 2500)</span>}<br /></span>}
                     {count5000 > 0 && <span>Rs. 5000 Tickets: {count5000}<br /></span>}
 
                     <strong>Selected Map Seats:</strong> {seatsString}<br />

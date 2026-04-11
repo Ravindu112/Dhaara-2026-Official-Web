@@ -22,8 +22,11 @@ const Step1PersonalDetails = ({ formData, setFormData, nextStep }) => {
 
         // Faculty logic for external users
         if (name === 'faculty') {
-            if (value === 'Outside the University/Graduate' || value === 'University Staff') {
+            if (value === 'Outside the University/Graduate') {
                 setFormData({ ...formData, faculty: value, academicYear: 'External' });
+                return;
+            } else if (value === 'University Staff') {
+                setFormData({ ...formData, faculty: value, academicYear: 'Academic Staff' });
                 return;
             }
         }
@@ -150,6 +153,7 @@ const Step1PersonalDetails = ({ formData, setFormData, nextStep }) => {
                     <option value="3rd Year">3rd Year</option>
                     <option value="4th Year">4th Year</option>
                     <option value="External" hidden>External</option>
+                    <option value="Academic Staff" hidden>Academic Staff</option>
                 </select>
             </div>
 
