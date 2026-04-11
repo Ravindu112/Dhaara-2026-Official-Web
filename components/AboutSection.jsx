@@ -34,7 +34,7 @@ export default function AboutSection() {
                 Building on the success of previous editions, Dhaara continues to provide valuable industry exposure,
                 professional development opportunities, and a platform for young artists to showcase their talent.
                 More than a competition, Dhaara is a launchpad that transforms student talent into future
-                stars of Sri Lanka's music industry.
+                stars of Sri Lanka's Performing Arts Industry.
               </p>
 
               <p>
