@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import SeatMap from './SeatMap';
 
 const Step2SeatSelection = ({ formData, setFormData, selectedSeats, setSelectedSeats, nextStep, prevStep, API_URL }) => {
-    const isOutsider = formData.faculty === 'Outside the University/Graduate';
+    const isOutsider = formData.faculty === 'Outside the University/Graduate' || formData.faculty === 'University Staff';
     const [mapData, setMapData] = useState(null);
     const [stageData, setStageData] = useState(null);
     const [balconyLimit, setBalconyLimit] = useState(0);

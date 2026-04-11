@@ -22,7 +22,7 @@ const Step1PersonalDetails = ({ formData, setFormData, nextStep }) => {
 
         // Faculty logic for external users
         if (name === 'faculty') {
-            if (value === 'Outside the University/Graduate') {
+            if (value === 'Outside the University/Graduate' || value === 'University Staff') {
                 setFormData({ ...formData, faculty: value, academicYear: 'External' });
                 return;
             }
@@ -36,7 +36,7 @@ const Step1PersonalDetails = ({ formData, setFormData, nextStep }) => {
         const cleanPhone = formData.phone.replace(/\s+/g, '');
         const isOnlyDigits = /^\d+$/.test(cleanPhone);
 
-        if (!formData.name || !formData.email || !formData.phone || !formData.faculty || (!formData.academicYear && formData.faculty !== 'Outside the University/Graduate')) {
+        if (!formData.name || !formData.email || !formData.phone || !formData.faculty || (!formData.academicYear && formData.faculty !== 'Outside the University/Graduate' && formData.faculty !== 'University Staff')) {
             alert("Please fill out all required fields.");
             return;
         }
@@ -49,7 +49,7 @@ const Step1PersonalDetails = ({ formData, setFormData, nextStep }) => {
         nextStep();
     };
 
-    const isExternal = formData.faculty === 'Outside the University/Graduate';
+    const isExternal = formData.faculty === 'Outside the University/Graduate' || formData.faculty === 'University Staff';
 
     return (
         <div className="animate-[slideUp_0.4s_ease-out]" id="step1">
@@ -109,7 +109,7 @@ const Step1PersonalDetails = ({ formData, setFormData, nextStep }) => {
             </div>
 
             <div className="flex flex-col text-left mb-5">
-                <label className="font-medium mb-2 text-[#e9ecef] text-sm">Faculty (or outside the University):</label>
+                <label className="font-medium mb-2 text-[#e9ecef] text-sm">Faculty (University Staff or outside the University):</label>
                 <select
                     name="faculty"
                     value={formData.faculty}
@@ -118,6 +118,8 @@ const Step1PersonalDetails = ({ formData, setFormData, nextStep }) => {
                     className="w-full p-2.5 border border-[#343a40] rounded-lg text-[15px] bg-[#2c2c2c] text-[#e9ecef] transition-all duration-200 focus:border-[#fd7e14] focus:outline-none focus:ring-[3px] focus:ring-[#fd7e14]/25 focus:bg-[#333]"
                 >
                     <option value="" disabled>Select your Faculty</option>
+                    <option value="Outside the University/Graduate" className="text-[#ffc107] font-semibold bg-[#2c2c2c]">Outside the University/Graduate</option>
+                    <option value="University Staff" className="text-[#ffc107] font-semibold bg-[#2c2c2c]">University Staff</option>
                     <option value="Faculty of Humanities & Social Sciences">Faculty of Humanities & Social Sciences</option>
                     <option value="Faculty of Management Studies & Commerce">Faculty of Management Studies & Commerce</option>
                     <option value="Faculty of Applied Sciences">Faculty of Applied Sciences</option>
@@ -128,7 +130,7 @@ const Step1PersonalDetails = ({ formData, setFormData, nextStep }) => {
                     <option value="Faculty of Urban & Aquatic Bio Resources">Faculty of Urban & Aquatic Bio Resources</option>
                     <option value="Faculty of Dental Sciences">Faculty of Dental Sciences</option>
                     <option value="Faculty of Computing">Faculty of Computing</option>
-                    <option value="Outside the University/Graduate">Outside the University/Graduate</option>
+
                 </select>
             </div>
 
