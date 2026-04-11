@@ -30,7 +30,7 @@ const Step3Review = ({ formData, selectedSeats, nextStep, prevStep }) => {
                     <strong>Email:</strong> {formData.email || 'N/A'}<br />
                     <strong>Phone:</strong> {formData.countryCode} {formData.phone || 'N/A'}<br />
                     <strong>Faculty:</strong> {formData.faculty || 'N/A'}<br />
-                    <strong>Academic Year:</strong> {formData.academicYear || 'N/A'}
+                    <strong>Academic Year:</strong> {formData.academicYear === 'Academic Staff' ? 'University Staff' : (formData.academicYear || 'N/A')}
                 </div>
 
                 <h4 className="mt-0 border-b-2 border-[#fd7e14] pb-1.5 mb-2.5 font-semibold text-[#e9ecef] text-base">Ticket Details</h4>
