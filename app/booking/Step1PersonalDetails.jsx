@@ -153,7 +153,7 @@ const Step1PersonalDetails = ({ formData, setFormData, nextStep }) => {
                     <option value="3rd Year">3rd Year</option>
                     <option value="4th Year">4th Year</option>
                     <option value="External" hidden>External</option>
-                    <option value="Academic Staff" hidden>Academic Staff</option>
+                    <option value="Academic Staff" hidden>University Staff</option>
                 </select>
             </div>
 
