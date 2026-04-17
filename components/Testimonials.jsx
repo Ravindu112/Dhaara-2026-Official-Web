@@ -3,7 +3,7 @@ import Image from 'next/image';
 const kImage = '/assets/Images/k.webp';
 const directorImage = '/assets/Images/erangaSir.webp';
 const advisorImage = '/assets/Images/Chathumdm.webp';
-const vcImage = '/assets/Images/vc.webp';
+const vcImage = '/assets/Images/VC.webp';
 
 export default function Testimonials() {
   const testimonials = [
