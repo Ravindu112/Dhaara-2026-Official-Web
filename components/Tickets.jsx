@@ -15,9 +15,9 @@ const Tickets = () => {
 
   const ticketData = [
     { label: "Early bird", price: "1500", percentage: 100, status: "Sold Out" },
-    { label: "Standard", price: "2000", percentage: 50, status: "Available" },
-    { label: "VIP", price: "3000", percentage: 15, status: "Available" },
-    { label: "VVIP", price: "5000", percentage: 5, status: "Available" },
+    { label: "Standard", price: "2000", percentage: 60, status: "Available" },
+    { label: "VIP", price: "3000", percentage: 40, status: "Available" },
+    { label: "VVIP", price: "5000", percentage: 10, status: "Available" },
   ];
 
   // Array to map the images to the fan

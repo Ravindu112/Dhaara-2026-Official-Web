@@ -3,30 +3,39 @@ import Image from 'next/image';
 const kImage = '/assets/Images/k.webp';
 const directorImage = '/assets/Images/erangaSir.webp';
 const advisorImage = '/assets/Images/Chathumdm.webp';
+const vcImage = '/assets/Images/vc.webp';
 
 export default function Testimonials() {
   const testimonials = [
+
+    {
+      name: 'Senior Professor M. M. Pathmalal - Vice-Chancellor',
+      title: 'University of Sri Jayewardenepura',
+      image: vcImage,
+      quote: 'Dhaara 2026 celebrates creativity, talent, and student expression, highlighting the importance of balancing academic excellence with the arts. It fosters unity, confidence, and personal growth while enriching university life. Appreciation is extended to participants and organizers, with hopes that the event inspires creativity and leaves lasting, meaningful memories.',
+      position: 'left'
+    },
 
     {
       name: 'Dr. Eranga Jayasekara-Director',
       title: 'Career Guidance Unit',
       image: directorImage,
       quote: 'Aesthetic education helps individuals develop creativity, appreciation for beauty, and meaningful relationships with nature and others. Dhaara, the Inter-Faculty Singing Competition, has become a significant event at the University of Sri Jayewardenepura, providing undergraduates a platform to enhance their skills, gain confidence, and open doors to future opportunities',
-      position: 'left'
+      position: 'right'
     },
     {
       name: 'Mrs. Chathurangani Thennakoon-Senior Career Advisor',
       title: 'Career Guidance Unit',
       image: advisorImage,
       quote: 'The Flair Club was established to nurture artistic talent among undergraduates of the University of Sri Jayewardenepura, providing a platform to develop creativity and professionalism in the arts. Dhaara identifies and guides talented singers towards excellence, offering them the opportunity to showcase their abilities and gain well-deserved recognition',
-      position: 'right'
+      position: 'left'
     },
     {
       name: 'Mr. Kavinga Ranthilake-President',
       title: 'Flair Club - University of Sri Jayewardenepura',
       image: kImage,
       quote: 'The Flair Club has grown through creative projects like Rhythm, Personality, Nachna, G-Tune, Theatro, and Susara Thelithuda, celebrating student talent and artistic expression. Now, DHAARA 2026 rises as a grand celebration of voice and courage, uniting passion, teamwork, and dreams proving that when many voices harmonize, extraordinary moments are created.',
-      position: 'left'
+      position: 'right'
     },
   ];
 

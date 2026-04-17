@@ -16,6 +16,7 @@ import S12 from '../public/assets/Sponsor logos/Other Sponsors/S12.webp'
 import S13 from '../public/assets/Sponsor logos/Other Sponsors/S13.webp'
 import S14 from '../public/assets/Sponsor logos/Other Sponsors/S14.webp'
 import S16 from '../public/assets/Sponsor logos/Other Sponsors/S16.webp'
+import S17 from '../public/assets/Sponsor logos/Other Sponsors/S17.webp'
 
 // Sponsor Data - Static content
 const sponsors = [
@@ -74,6 +75,7 @@ const otherSponsors = [
   { id: 113, name: 'Finagle', subtopic: 'Official Food Partner', link: 'https://www.finagle.lk/', icon: <img src={S13.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
   { id: 114, name: 'Queen Brownie', subtopic: 'Official Food Partner', link: 'https://web.facebook.com/profile.php?id=61551265953908&locale=en_GB#', icon: <img src={S14.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
   { id: 116, name: 'Ada derana Education', subtopic: 'Official Digital Media Partner', link: 'https://web.facebook.com/adaderanaeducation/reels/?_rdc=1&_rdr#', icon: <img src={S16.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
+  { id: 117, name: 'SLT Mobitel', subtopic: 'Official TeleCommuication Partner', link: 'https://www.slt.lk/', icon: <img src={S17.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
 ];
 
 
