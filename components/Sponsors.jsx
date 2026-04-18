@@ -22,7 +22,7 @@ import S17 from '../public/assets/Sponsor logos/Other Sponsors/S17.webp'
 const sponsors = [
   {
     id: 1,
-    name: 'OMEGA LINE Ltd ',
+    name: 'OMEGA LINE Group ',
     tier: 'title',
     image: <img src={TitlePatner.src} alt="Omegaline" className="h-[120px] w-auto object-contain" />,
     description: 'Omega Line was the first step towards the company producing its items in-house. Since 1999, the factory has grown into the largest exporter in Sri Lanka of clothing to Europe, producing and exporting more than 30 million items each year.',
