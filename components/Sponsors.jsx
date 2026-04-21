@@ -17,6 +17,7 @@ import S13 from '../public/assets/Sponsor logos/Other Sponsors/S13.webp'
 import S14 from '../public/assets/Sponsor logos/Other Sponsors/S14.webp'
 import S16 from '../public/assets/Sponsor logos/Other Sponsors/S16.webp'
 import S17 from '../public/assets/Sponsor logos/Other Sponsors/S17.webp'
+import S18 from '../public/assets/Sponsor logos/Other Sponsors/S18.webp'
 
 // Sponsor Data - Static content
 const sponsors = [
@@ -76,6 +77,7 @@ const otherSponsors = [
   { id: 114, name: 'Queen Brownie', subtopic: 'Official Food Partner', link: 'https://web.facebook.com/profile.php?id=61551265953908&locale=en_GB#', icon: <img src={S14.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
   { id: 116, name: 'Ada derana Education', subtopic: 'Official Digital Media Partner', link: 'https://web.facebook.com/adaderanaeducation/reels/?_rdc=1&_rdr#', icon: <img src={S16.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
   { id: 117, name: 'SLT Mobitel', subtopic: 'Official TeleCommuication Partner', link: 'https://www.slt.lk/', icon: <img src={S17.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
+  { id: 118, name: 'Swisstek Ceylon PLC', subtopic: 'Official Bronze Partner', link: 'https://swisstekceylon.com/language/en/swisstek-ceylon-plc/', icon: <img src={S18.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
 ];
 
 
