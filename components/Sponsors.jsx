@@ -53,7 +53,7 @@ const sponsors = [
   // },
   {
     id: 7,
-    name: 'Bronze Partner ',
+    name: 'Swisstek Ceylon PLC',
     tier: 'bronze',
     image: <img src={Swisstek.src} alt="Swisstek" className="h-[100px] w-auto object-contain" />,
     description: 'SWISSPARKETT was founded in 1967, after a collaboration with a Swiss Company, pioneering the flooring market locally. By the year 1983, we were listed in the Colombo Stock Exchange marking our first milestone. We aimed to be the best in optimising quality and providing the best products at affordable prices, this mission was strengthened in 2003, when we joined the Lanka Walltiles Group, garnering a wider corporate base for our establishment. Later in the year 2011, we rebranded to Swisstek Ceylon PLC, to establish brand value and create brand awareness. This rebrand widened our corporate landscape and marked the start of a new journey under the Lanka Wall Tiles PLC banner.',
