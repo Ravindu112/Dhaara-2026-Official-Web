@@ -1,6 +1,7 @@
 import React from 'react';
 import TitlePatner from '../public/assets/Sponsor logos/Omegaline.webp'
 import Maliban from '../public/assets/Sponsor logos/Maliban.png'
+import Swisstek from '../public/assets/Sponsor logos/Swisstek.webp'
 import S1 from '../public/assets/Sponsor logos/Other Sponsors/S1.webp'
 import S2 from '../public/assets/Sponsor logos/Other Sponsors/S2.webp'
 import S3 from '../public/assets/Sponsor logos/Other Sponsors/S3.webp'
@@ -17,7 +18,6 @@ import S13 from '../public/assets/Sponsor logos/Other Sponsors/S13.webp'
 import S14 from '../public/assets/Sponsor logos/Other Sponsors/S14.webp'
 import S16 from '../public/assets/Sponsor logos/Other Sponsors/S16.webp'
 import S17 from '../public/assets/Sponsor logos/Other Sponsors/S17.webp'
-import S18 from '../public/assets/Sponsor logos/Other Sponsors/S18.webp'
 
 // Sponsor Data - Static content
 const sponsors = [
@@ -51,13 +51,14 @@ const sponsors = [
   //   image: '⭐',
   //   description: 'Silver Partnership',
   // },
-  // {
-  //   id: 7,
-  //   name: 'Bronze Partner ',
-  //   tier: 'bronze',
-  //   image: '🎯',
-  //   description: 'Bronze Partnership',
-  // },
+  {
+    id: 7,
+    name: 'Bronze Partner ',
+    tier: 'bronze',
+    image: <img src={Swisstek.src} alt="Swisstek" className="h-[100px] w-auto object-contain" />,
+    description: 'SWISSPARKETT was founded in 1967, after a collaboration with a Swiss Company, pioneering the flooring market locally. By the year 1983, we were listed in the Colombo Stock Exchange marking our first milestone. We aimed to be the best in optimising quality and providing the best products at affordable prices, this mission was strengthened in 2003, when we joined the Lanka Walltiles Group, garnering a wider corporate base for our establishment. Later in the year 2011, we rebranded to Swisstek Ceylon PLC, to establish brand value and create brand awareness. This rebrand widened our corporate landscape and marked the start of a new journey under the Lanka Wall Tiles PLC banner.',
+    link: 'https://swisstekceylon.com/language/en/swisstek-ceylon-plc/',
+  },
 ];
 
 const otherSponsors = [
@@ -77,7 +78,6 @@ const otherSponsors = [
   { id: 114, name: 'Queen Brownie', subtopic: 'Official Food Partner', link: 'https://web.facebook.com/profile.php?id=61551265953908&locale=en_GB#', icon: <img src={S14.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
   { id: 116, name: 'Ada derana Education', subtopic: 'Official Digital Media Partner', link: 'https://web.facebook.com/adaderanaeducation/reels/?_rdc=1&_rdr#', icon: <img src={S16.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
   { id: 117, name: 'SLT Mobitel', subtopic: 'Official TeleCommuication Partner', link: 'https://www.slt.lk/', icon: <img src={S17.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
-  { id: 118, name: 'Swisstek Ceylon PLC', subtopic: 'Official Bronze Partner', link: 'https://swisstekceylon.com/language/en/swisstek-ceylon-plc/', icon: <img src={S18.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
 ];
 
 
