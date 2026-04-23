@@ -88,11 +88,11 @@ const Header = () => {
                 Gallery
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#tickets" className="hover:text-amber-400 transition-colors">
                 Tickets
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="#sponsors" className="hover:text-amber-400 transition-colors">
                 Sponsors
@@ -114,7 +114,7 @@ const Header = () => {
         >
           <ul className="flex flex-col space-y-4 text-white bg-slate-900/80 backdrop-blur-xl p-6 rounded-xl">
 
-            {["home", "about", "gallery", "tickets", "sponsors", "contact"].map(
+            {["home", "about", "gallery", "sponsors", "contact"].map(
               (item) => (
                 <li key={item}>
                   <a
