@@ -62,7 +62,7 @@ const timelineData = [
     id: 9,
     title: "Final",
     date: "2026-04-24",
-    happened: false,
+    happened: true,
   }
 ];
 
