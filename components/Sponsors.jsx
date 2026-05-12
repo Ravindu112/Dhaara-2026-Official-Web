@@ -18,6 +18,10 @@ import S13 from '../public/assets/Sponsor logos/Other Sponsors/S13.webp'
 import S14 from '../public/assets/Sponsor logos/Other Sponsors/S14.webp'
 import S16 from '../public/assets/Sponsor logos/Other Sponsors/S16.webp'
 import S17 from '../public/assets/Sponsor logos/Other Sponsors/S17.webp'
+import S18 from '../public/assets/Sponsor logos/Other Sponsors/S18.webp'
+import S19 from '../public/assets/Sponsor logos/Other Sponsors/S19.webp'
+import S20 from '../public/assets/Sponsor logos/Other Sponsors/S20.webp'
+
 
 // Sponsor Data - Static content
 const sponsors = [
@@ -78,6 +82,9 @@ const otherSponsors = [
   { id: 114, name: 'Queen Brownie', subtopic: 'Official Food Partner', link: 'https://web.facebook.com/profile.php?id=61551265953908&locale=en_GB#', icon: <img src={S14.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
   { id: 116, name: 'Ada derana Education', subtopic: 'Official Digital Media Partner', link: 'https://web.facebook.com/adaderanaeducation/reels/?_rdc=1&_rdr#', icon: <img src={S16.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
   { id: 117, name: 'SLT Mobitel', subtopic: 'Official TeleCommuication Partner', link: 'https://www.slt.lk/', icon: <img src={S17.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
+  { id: 118, name: 'Dreamron', subtopic: 'Official Gift Partner', link: 'https://dreamron.lk/', icon: <img src={S19.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
+  { id: 119, name: 'Bellose', subtopic: 'Official Gift Partner', link: 'https://www.bellose.com/bellose/?srsltid=AfmBOopW7aQ_WBAei0hak8xaWUKG__lgTdOQMV30uHSs7497qJNkisoo', icon: <img src={S18.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
+  { id: 120, name: 'Lassana.com', subtopic: 'Official Gift Partner', link: 'https://lassana.com/', icon: <img src={S20.src} alt="Partner K" className="h-full w-full object-contain p-2" /> },
 ];
 
 
