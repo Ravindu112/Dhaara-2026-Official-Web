@@ -38,6 +38,8 @@ const Countdown = ({ targetDate = '2026-04-24T18:00:00+05:30' }) => {
     return () => clearInterval(timer);
   }, [targetDate]);
 
+  const isEnded = new Date(targetDate).getTime() <= Date.now();
+
   return (
     <section className="py-20 px-6 relative">
       <div className="container mx-auto text-center">
@@ -91,6 +93,13 @@ const Countdown = ({ targetDate = '2026-04-24T18:00:00+05:30' }) => {
             </div>
           </div>
         </div>
+        {isEnded && (
+          <div className="mt-8">
+            <p className="text-lg md:text-2xl font-semibold text-amber-400">
+              DHAARA'26 successfully concluded. Thank you so much for joining us!
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
