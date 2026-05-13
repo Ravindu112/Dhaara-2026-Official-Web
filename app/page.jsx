@@ -18,6 +18,7 @@ import TicketSection from '../components/TicketSection'
 import { EVENT_CONFIG } from '../constants'
 import { useVideoLoading } from '../utils/hooks'
 import { ScrollReveal } from '../components/ScrollReveal'
+<meta name="google-site-verification" content="UUqhe3o7e6JZ8PGzTyqN8MBroEKCiYnVrzreG5BUfqQ" />
 
 const bgVideo = '/assets/Landing video/DHAARA BG WEB2.webm'
 const mobileBg = '/assets/Background.webm'
