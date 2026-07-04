@@ -2,9 +2,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const img1 = '/assets/Images/Gallery/14.webp';
+const img1 = '/assets/Images/Gallery/1.webp';
 const img2 = '/assets/Images/Gallery/2.webp';
-const img3 = '/assets/Images/Gallery/2.jpg.jpeg';
+const img3 = '/assets/Images/Gallery/3.webp';
 const img4 = '/assets/Images/Gallery/4.webp';
 const img5 = '/assets/Images/Gallery/5.webp';
 const img6 = '/assets/Images/Gallery/6.webp';
@@ -13,17 +13,24 @@ const img8 = '/assets/Images/Gallery/8.webp';
 const img9 = '/assets/Images/Gallery/9.webp';
 const img10 = '/assets/Images/Gallery/10.webp';
 const img11 = '/assets/Images/Gallery/11.webp';
-const img12 = '/assets/Images/Gallery/17.webp';
-const img13 = '/assets/Images/Gallery/20.webp';
-const img14 = '/assets/Images/Gallery/3.webp';
+const img12 = '/assets/Images/Gallery/12.webp';
+const img13 = '/assets/Images/Gallery/13.webp';
+const img14 = '/assets/Images/Gallery/14.webp';
 const img15 = '/assets/Images/Gallery/15.webp';
+const img16 = '/assets/Images/Gallery/16.webp';
+const img17 = '/assets/Images/Gallery/17.webp';
+const img18 = '/assets/Images/Gallery/18.webp';
+const img19 = '/assets/Images/Gallery/19.webp';
+const img20 = '/assets/Images/Gallery/20.webp';
+
 
 const Gallery = () => {
   // Create array of gallery items
   const galleryItems = [
     img1, img2, img3, img4, img5,
-    img6, img8, img7, img9, img10,
-    img11, img12, img13, img14, img15];
+    img6, img7, img8, img9, img10,
+    img11, img12, img13, img14, img15, img16, img17, img18, img19, img20];
+
 
   return (
     <section id="gallery" className="py-20 px-4">
